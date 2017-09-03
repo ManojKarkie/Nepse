@@ -1,0 +1,440 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF5AFC881F5C519400414214 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5AFC871F5C519400414214 /* AppDelegate.swift */; };
+		AF5AFC8A1F5C519400414214 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5AFC891F5C519400414214 /* ViewController.swift */; };
+		AF5AFC8D1F5C519400414214 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5AFC8B1F5C519400414214 /* Main.storyboard */; };
+		AF5AFC901F5C519400414214 /* Nepse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF5AFC8E1F5C519400414214 /* Nepse.xcdatamodeld */; };
+		AF5AFC921F5C519400414214 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF5AFC911F5C519400414214 /* Assets.xcassets */; };
+		AF5AFC951F5C519400414214 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5AFC931F5C519400414214 /* LaunchScreen.storyboard */; };
+		AF5AFCA01F5C519400414214 /* NepseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5AFC9F1F5C519400414214 /* NepseTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF5AFC9C1F5C519400414214 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF5AFC7C1F5C519400414214 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF5AFC831F5C519400414214;
+			remoteInfo = Nepse;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AF5AFC841F5C519400414214 /* Nepse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nepse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF5AFC871F5C519400414214 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AF5AFC891F5C519400414214 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AF5AFC8C1F5C519400414214 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF5AFC8F1F5C519400414214 /* Nepse.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nepse.xcdatamodel; sourceTree = "<group>"; };
+		AF5AFC911F5C519400414214 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF5AFC941F5C519400414214 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AF5AFC961F5C519400414214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF5AFC9B1F5C519400414214 /* NepseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NepseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF5AFC9F1F5C519400414214 /* NepseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NepseTests.swift; sourceTree = "<group>"; };
+		AF5AFCA11F5C519400414214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF5AFC811F5C519400414214 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF5AFC981F5C519400414214 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF5AFC7B1F5C519400414214 = {
+			isa = PBXGroup;
+			children = (
+				AF5AFC861F5C519400414214 /* Nepse */,
+				AF5AFC9E1F5C519400414214 /* NepseTests */,
+				AF5AFC851F5C519400414214 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF5AFC851F5C519400414214 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF5AFC841F5C519400414214 /* Nepse.app */,
+				AF5AFC9B1F5C519400414214 /* NepseTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF5AFC861F5C519400414214 /* Nepse */ = {
+			isa = PBXGroup;
+			children = (
+				AF5AFC871F5C519400414214 /* AppDelegate.swift */,
+				AF5AFC891F5C519400414214 /* ViewController.swift */,
+				AF5AFC8B1F5C519400414214 /* Main.storyboard */,
+				AF5AFC911F5C519400414214 /* Assets.xcassets */,
+				AF5AFC931F5C519400414214 /* LaunchScreen.storyboard */,
+				AF5AFC961F5C519400414214 /* Info.plist */,
+				AF5AFC8E1F5C519400414214 /* Nepse.xcdatamodeld */,
+			);
+			path = Nepse;
+			sourceTree = "<group>";
+		};
+		AF5AFC9E1F5C519400414214 /* NepseTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF5AFC9F1F5C519400414214 /* NepseTests.swift */,
+				AF5AFCA11F5C519400414214 /* Info.plist */,
+			);
+			path = NepseTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF5AFC831F5C519400414214 /* Nepse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF5AFCA41F5C519400414214 /* Build configuration list for PBXNativeTarget "Nepse" */;
+			buildPhases = (
+				AF5AFC801F5C519400414214 /* Sources */,
+				AF5AFC811F5C519400414214 /* Frameworks */,
+				AF5AFC821F5C519400414214 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Nepse;
+			productName = Nepse;
+			productReference = AF5AFC841F5C519400414214 /* Nepse.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF5AFC9A1F5C519400414214 /* NepseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF5AFCA71F5C519400414214 /* Build configuration list for PBXNativeTarget "NepseTests" */;
+			buildPhases = (
+				AF5AFC971F5C519400414214 /* Sources */,
+				AF5AFC981F5C519400414214 /* Frameworks */,
+				AF5AFC991F5C519400414214 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF5AFC9D1F5C519400414214 /* PBXTargetDependency */,
+			);
+			name = NepseTests;
+			productName = NepseTests;
+			productReference = AF5AFC9B1F5C519400414214 /* NepseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF5AFC7C1F5C519400414214 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Swiftech;
+				TargetAttributes = {
+					AF5AFC831F5C519400414214 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+					AF5AFC9A1F5C519400414214 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AF5AFC831F5C519400414214;
+					};
+				};
+			};
+			buildConfigurationList = AF5AFC7F1F5C519400414214 /* Build configuration list for PBXProject "Nepse" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF5AFC7B1F5C519400414214;
+			productRefGroup = AF5AFC851F5C519400414214 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF5AFC831F5C519400414214 /* Nepse */,
+				AF5AFC9A1F5C519400414214 /* NepseTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF5AFC821F5C519400414214 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF5AFC951F5C519400414214 /* LaunchScreen.storyboard in Resources */,
+				AF5AFC921F5C519400414214 /* Assets.xcassets in Resources */,
+				AF5AFC8D1F5C519400414214 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF5AFC991F5C519400414214 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF5AFC801F5C519400414214 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF5AFC901F5C519400414214 /* Nepse.xcdatamodeld in Sources */,
+				AF5AFC8A1F5C519400414214 /* ViewController.swift in Sources */,
+				AF5AFC881F5C519400414214 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF5AFC971F5C519400414214 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF5AFCA01F5C519400414214 /* NepseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF5AFC9D1F5C519400414214 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF5AFC831F5C519400414214 /* Nepse */;
+			targetProxy = AF5AFC9C1F5C519400414214 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AF5AFC8B1F5C519400414214 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF5AFC8C1F5C519400414214 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AF5AFC931F5C519400414214 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF5AFC941F5C519400414214 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF5AFCA21F5C519400414214 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF5AFCA31F5C519400414214 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF5AFCA51F5C519400414214 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Nepse/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftech.Nepse;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AF5AFCA61F5C519400414214 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Nepse/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftech.Nepse;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		AF5AFCA81F5C519400414214 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = NepseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftech.NepseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nepse.app/Nepse";
+			};
+			name = Debug;
+		};
+		AF5AFCA91F5C519400414214 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = NepseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftech.NepseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nepse.app/Nepse";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF5AFC7F1F5C519400414214 /* Build configuration list for PBXProject "Nepse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF5AFCA21F5C519400414214 /* Debug */,
+				AF5AFCA31F5C519400414214 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF5AFCA41F5C519400414214 /* Build configuration list for PBXNativeTarget "Nepse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF5AFCA51F5C519400414214 /* Debug */,
+				AF5AFCA61F5C519400414214 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AF5AFCA71F5C519400414214 /* Build configuration list for PBXNativeTarget "NepseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF5AFCA81F5C519400414214 /* Debug */,
+				AF5AFCA91F5C519400414214 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AF5AFC8E1F5C519400414214 /* Nepse.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AF5AFC8F1F5C519400414214 /* Nepse.xcdatamodel */,
+			);
+			currentVersion = AF5AFC8F1F5C519400414214 /* Nepse.xcdatamodel */;
+			path = Nepse.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AF5AFC7C1F5C519400414214 /* Project object */;
+}
