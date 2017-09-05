@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		3AF74A800678150CF32CDF59 /* Pods_NepseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B5502440A17E09AD54100C8 /* Pods_NepseTests.framework */; };
 		AF5AFC881F5C519400414214 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5AFC871F5C519400414214 /* AppDelegate.swift */; };
-		AF5AFC8A1F5C519400414214 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5AFC891F5C519400414214 /* ViewController.swift */; };
-		AF5AFC8D1F5C519400414214 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5AFC8B1F5C519400414214 /* Main.storyboard */; };
 		AF5AFC901F5C519400414214 /* Nepse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF5AFC8E1F5C519400414214 /* Nepse.xcdatamodeld */; };
 		AF5AFC921F5C519400414214 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF5AFC911F5C519400414214 /* Assets.xcassets */; };
 		AF5AFC951F5C519400414214 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5AFC931F5C519400414214 /* LaunchScreen.storyboard */; };
@@ -34,8 +32,6 @@
 		8B5502440A17E09AD54100C8 /* Pods_NepseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NepseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF5AFC841F5C519400414214 /* Nepse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nepse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF5AFC871F5C519400414214 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF5AFC891F5C519400414214 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AF5AFC8C1F5C519400414214 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF5AFC8F1F5C519400414214 /* Nepse.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nepse.xcdatamodel; sourceTree = "<group>"; };
 		AF5AFC911F5C519400414214 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF5AFC941F5C519400414214 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,8 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				AF5AFC871F5C519400414214 /* AppDelegate.swift */,
-				AF5AFC891F5C519400414214 /* ViewController.swift */,
-				AF5AFC8B1F5C519400414214 /* Main.storyboard */,
 				AF5AFC911F5C519400414214 /* Assets.xcassets */,
 				AF5AFC931F5C519400414214 /* LaunchScreen.storyboard */,
 				AF5AFC961F5C519400414214 /* Info.plist */,
@@ -222,7 +216,6 @@
 			files = (
 				AF5AFC951F5C519400414214 /* LaunchScreen.storyboard in Resources */,
 				AF5AFC921F5C519400414214 /* Assets.xcassets in Resources */,
-				AF5AFC8D1F5C519400414214 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,7 +327,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF5AFC901F5C519400414214 /* Nepse.xcdatamodeld in Sources */,
-				AF5AFC8A1F5C519400414214 /* ViewController.swift in Sources */,
 				AF5AFC881F5C519400414214 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,14 +350,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AF5AFC8B1F5C519400414214 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF5AFC8C1F5C519400414214 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AF5AFC931F5C519400414214 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -547,6 +531,7 @@
 				AF5AFCA61F5C519400414214 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF5AFCA71F5C519400414214 /* Build configuration list for PBXNativeTarget "NepseTests" */ = {
 			isa = XCConfigurationList;
@@ -555,6 +540,7 @@
 				AF5AFCA91F5C519400414214 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
