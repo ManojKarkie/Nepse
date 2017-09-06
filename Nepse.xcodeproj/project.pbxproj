@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2418D9D71F5F064E0035626B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2418D9D61F5F064E0035626B /* Login.storyboard */; };
+		2418D9D91F5F06660035626B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2418D9D81F5F06660035626B /* LoginViewController.swift */; };
+		2418D9DB1F5F156D0035626B /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2418D9DA1F5F156D0035626B /* Register.storyboard */; };
+		2418D9DD1F5F157E0035626B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2418D9DC1F5F157E0035626B /* RegisterViewController.swift */; };
 		AF5AFC881F5C519400414214 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5AFC871F5C519400414214 /* AppDelegate.swift */; };
 		AF5AFC8A1F5C519400414214 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5AFC891F5C519400414214 /* ViewController.swift */; };
 		AF5AFC8D1F5C519400414214 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5AFC8B1F5C519400414214 /* Main.storyboard */; };
@@ -27,6 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2418D9D61F5F064E0035626B /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		2418D9D81F5F06660035626B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2418D9DA1F5F156D0035626B /* Register.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		2418D9DC1F5F157E0035626B /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AF5AFC841F5C519400414214 /* Nepse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nepse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF5AFC871F5C519400414214 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF5AFC891F5C519400414214 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +66,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2418D9D31F5F06020035626B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF5AFC8B1F5C519400414214 /* Main.storyboard */,
+				2418D9D61F5F064E0035626B /* Login.storyboard */,
+				2418D9DA1F5F156D0035626B /* Register.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2418D9D41F5F060D0035626B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AF5AFC891F5C519400414214 /* ViewController.swift */,
+				2418D9D81F5F06660035626B /* LoginViewController.swift */,
+				2418D9DC1F5F157E0035626B /* RegisterViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2418D9D51F5F06170035626B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		AF5AFC7B1F5C519400414214 = {
 			isa = PBXGroup;
 			children = (
@@ -79,9 +114,10 @@
 		AF5AFC861F5C519400414214 /* Nepse */ = {
 			isa = PBXGroup;
 			children = (
+				2418D9D51F5F06170035626B /* Model */,
+				2418D9D31F5F06020035626B /* View */,
+				2418D9D41F5F060D0035626B /* Controller */,
 				AF5AFC871F5C519400414214 /* AppDelegate.swift */,
-				AF5AFC891F5C519400414214 /* ViewController.swift */,
-				AF5AFC8B1F5C519400414214 /* Main.storyboard */,
 				AF5AFC911F5C519400414214 /* Assets.xcassets */,
 				AF5AFC931F5C519400414214 /* LaunchScreen.storyboard */,
 				AF5AFC961F5C519400414214 /* Info.plist */,
@@ -149,6 +185,7 @@
 				TargetAttributes = {
 					AF5AFC831F5C519400414214 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 8FVUQ89F2G;
 						ProvisioningStyle = Automatic;
 					};
 					AF5AFC9A1F5C519400414214 = {
@@ -182,9 +219,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2418D9D71F5F064E0035626B /* Login.storyboard in Resources */,
 				AF5AFC951F5C519400414214 /* LaunchScreen.storyboard in Resources */,
 				AF5AFC921F5C519400414214 /* Assets.xcassets in Resources */,
 				AF5AFC8D1F5C519400414214 /* Main.storyboard in Resources */,
+				2418D9DB1F5F156D0035626B /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +241,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2418D9D91F5F06660035626B /* LoginViewController.swift in Sources */,
+				2418D9DD1F5F157E0035626B /* RegisterViewController.swift in Sources */,
 				AF5AFC901F5C519400414214 /* Nepse.xcdatamodeld in Sources */,
 				AF5AFC8A1F5C519400414214 /* ViewController.swift in Sources */,
 				AF5AFC881F5C519400414214 /* AppDelegate.swift in Sources */,
@@ -345,6 +386,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8FVUQ89F2G;
 				INFOPLIST_FILE = Nepse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiftech.Nepse;
@@ -357,6 +399,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8FVUQ89F2G;
 				INFOPLIST_FILE = Nepse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiftech.Nepse;
@@ -412,6 +455,7 @@
 				AF5AFCA61F5C519400414214 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF5AFCA71F5C519400414214 /* Build configuration list for PBXNativeTarget "NepseTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +464,7 @@
 				AF5AFCA91F5C519400414214 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
