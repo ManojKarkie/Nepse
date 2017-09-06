@@ -27,12 +27,21 @@ class DashboardViewController: UIViewController {
     }
     
     func setup() {
+        self.title = "Dashboard"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         self.navigationController?.navigationBar.tintColor = UIColor.white
         sideMenuController?.swipeGestureArea = .full
         sideMenuController?.leftViewBackgroundBlurEffect = UIBlurEffect(style: .regular)
         chartViewContainer.layer.cornerRadius = 5
         chartViewContainer.layer.borderColor = UIColor.lightGray.cgColor
         chartViewContainer.layer.borderWidth = 1
+        self.tableView.layer.borderColor = UIColor.lightGray.cgColor
+        self.tableView.layer.borderWidth = 1
+        self.tableView.layer.cornerRadius = 5
+        self.tableView.layer.shadowColor = UIColor.lightGray.cgColor
+        self.tableView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        self.tableView.layer.shadowRadius = 2
+        self.tableView.layer.shadowOpacity = 0.40
     }
 
     override func didReceiveMemoryWarning() {

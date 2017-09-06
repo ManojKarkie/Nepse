@@ -7,7 +7,7 @@ target 'Nepse' do
 
   # Pods for Nepse
   pod 'LGSideMenuController'
-
+  pod 'Charts'
   target 'NepseTests' do
     inherit! :search_paths
     # Pods for testing

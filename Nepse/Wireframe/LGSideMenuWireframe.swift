@@ -20,7 +20,7 @@ class LGSideMenuWireframe {
         let home = Wireframe.shared.getDashboard()
         let leftMenu = Wireframe.shared.getSideMenu()
         let homeNav = UINavigationController(rootViewController: home)
-        
+        homeNav.navigationBar.barTintColor = UIColor(red: 35/255.0, green: 78/255.0, blue: 102/255.0, alpha: 1)
         let slideMenuController = LGSideMenuController(rootViewController: homeNav, leftViewController: leftMenu, rightViewController: nil)
         self.view = slideMenuController
         return slideMenuController
