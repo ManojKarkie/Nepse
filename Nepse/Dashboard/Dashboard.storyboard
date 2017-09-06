@@ -24,19 +24,19 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yUp-oc-krL">
                                 <rect key="frame" x="10" y="74" width="355" height="195"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hAz-ob-kyK">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hAz-ob-kyK" customClass="LineChartView" customModule="Charts">
                                         <rect key="frame" x="10" y="36" width="335" height="100"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="jvl-uU-Dsb"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eb-sb-96f" customClass="RoundCornerButton" customModule="Nepse" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="156" width="70" height="25"/>
+                                        <rect key="frame" x="12" y="156" width="70" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="aVw-EP-hBm"/>
-                                            <constraint firstAttribute="height" constant="25" id="sp7-Y1-jtd"/>
+                                            <constraint firstAttribute="height" constant="30" id="sp7-Y1-jtd"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="1 month">
@@ -44,7 +44,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7W-fV-axK" customClass="RoundCornerButton" customModule="Nepse" customModuleProvider="target">
-                                        <rect key="frame" x="142.5" y="156" width="70" height="25"/>
+                                        <rect key="frame" x="142.5" y="156" width="70" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="3 month">
@@ -52,7 +52,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdO-Ql-Z0t" customClass="RoundCornerButton" customModule="Nepse" customModuleProvider="target">
-                                        <rect key="frame" x="277" y="156" width="70" height="25"/>
+                                        <rect key="frame" x="273" y="156" width="70" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="6 month">
@@ -113,16 +113,16 @@
                                     <constraint firstItem="0RZ-J1-6eV" firstAttribute="leading" secondItem="LKX-rG-fEO" secondAttribute="trailing" constant="10" id="X58-RP-hUC"/>
                                     <constraint firstAttribute="height" constant="195" id="cDF-JQ-IXY"/>
                                     <constraint firstAttribute="trailing" secondItem="hAz-ob-kyK" secondAttribute="trailing" constant="10" id="f6d-6x-VQ8"/>
-                                    <constraint firstItem="7eb-sb-96f" firstAttribute="leading" secondItem="yUp-oc-krL" secondAttribute="leading" constant="8" id="fiW-bG-D17"/>
+                                    <constraint firstItem="7eb-sb-96f" firstAttribute="leading" secondItem="yUp-oc-krL" secondAttribute="leading" constant="12" id="fiW-bG-D17"/>
                                     <constraint firstItem="N7W-fV-axK" firstAttribute="centerX" secondItem="yUp-oc-krL" secondAttribute="centerX" id="lWF-Ct-rQ7"/>
                                     <constraint firstItem="hAz-ob-kyK" firstAttribute="top" secondItem="tE7-4U-cx4" secondAttribute="bottom" constant="5" id="pI9-gU-2tI"/>
                                     <constraint firstItem="LKX-rG-fEO" firstAttribute="height" secondItem="0RZ-J1-6eV" secondAttribute="height" id="sZo-8s-mQk"/>
-                                    <constraint firstAttribute="trailing" secondItem="FdO-Ql-Z0t" secondAttribute="trailing" constant="8" id="wGt-dO-9TL"/>
+                                    <constraint firstAttribute="trailing" secondItem="FdO-Ql-Z0t" secondAttribute="trailing" constant="12" id="wGt-dO-9TL"/>
                                     <constraint firstItem="N7W-fV-axK" firstAttribute="width" secondItem="7eb-sb-96f" secondAttribute="width" id="xDc-Ed-TSr"/>
                                     <constraint firstItem="N7W-fV-axK" firstAttribute="height" secondItem="7eb-sb-96f" secondAttribute="height" id="yaF-JA-HGp"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sau-os-TSW">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="35" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sau-os-TSW">
                                 <rect key="frame" x="10" y="277" width="355" height="382"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -134,7 +134,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFp-Tq-OyB">
-                                                    <rect key="frame" x="81" y="4" width="24.5" height="21"/>
+                                                    <rect key="frame" x="81" y="4.5" width="24.5" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="oqN-NH-Prw"/>
                                                     </constraints>
@@ -143,7 +143,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ByL-Fg-XQD">
-                                                    <rect key="frame" x="165.5" y="4" width="24.5" height="21"/>
+                                                    <rect key="frame" x="165.5" y="4.5" width="24.5" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="hb1-ww-fSP"/>
                                                     </constraints>
@@ -152,7 +152,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKf-Q0-Y41">
-                                                    <rect key="frame" x="241" y="4" width="24.5" height="21"/>
+                                                    <rect key="frame" x="241" y="4.5" width="24.5" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="xP6-7n-hui"/>
                                                     </constraints>
@@ -161,7 +161,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dG6-1p-PU4">
-                                                    <rect key="frame" x="320.5" y="4" width="24.5" height="21"/>
+                                                    <rect key="frame" x="320.5" y="4.5" width="24.5" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="Nea-V2-HlL"/>
                                                     </constraints>
@@ -169,8 +169,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oko-ls-lap">
-                                                    <rect key="frame" x="10" y="5" width="33" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MNBBL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oko-ls-lap">
+                                                    <rect key="frame" x="10" y="4.5" width="45.5" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="oGZ-QI-XZk"/>
                                                     </constraints>
@@ -192,7 +192,14 @@
                                                 <constraint firstAttribute="trailing" secondItem="dG6-1p-PU4" secondAttribute="trailing" constant="10" id="rHh-YI-pp0"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.85762631378803156" green="0.85762631378803156" blue="0.85762631378803156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="costLabel" destination="eKf-Q0-Y41" id="n9l-lH-40e"/>
+                                            <outlet property="profitLabel" destination="dG6-1p-PU4" id="g44-Ja-y6X"/>
+                                            <outlet property="symDataLabel" destination="oko-ls-lap" id="DQn-af-5py"/>
+                                            <outlet property="valueLabel" destination="ByL-Fg-XQD" id="8Lv-D5-mui"/>
+                                            <outlet property="volumeLabel" destination="nFp-Tq-OyB" id="X7M-oz-rBH"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

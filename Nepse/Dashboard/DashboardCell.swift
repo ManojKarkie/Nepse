@@ -10,6 +10,11 @@ import UIKit
 
 class DashboardCell: UITableViewCell {
 
+    @IBOutlet weak var profitLabel: UILabel!
+    @IBOutlet weak var costLabel: UILabel!
+    @IBOutlet weak var valueLabel: UILabel!
+    @IBOutlet weak var volumeLabel: UILabel!
+    @IBOutlet weak var symDataLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +25,7 @@ class DashboardCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    
 
 }
