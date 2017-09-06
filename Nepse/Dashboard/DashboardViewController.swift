@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import LGSideMenuController
+
 
 class DashboardViewController: UIViewController {
 
+    @IBOutlet var header: UIView!
     @IBOutlet weak var chartView: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var chartViewContainer: UIView!
@@ -19,11 +22,15 @@ class DashboardViewController: UIViewController {
         setup()
         tableView.delegate = self
         tableView.dataSource = self
+        
         // Do any additional setup after loading the view.
     }
     
     func setup() {
-        chartViewContainer.layer.cornerRadius = chartViewContainer.frame.size.height/8
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        sideMenuController?.swipeGestureArea = .full
+        sideMenuController?.leftViewBackgroundBlurEffect = UIBlurEffect(style: .regular)
+        chartViewContainer.layer.cornerRadius = 5
         chartViewContainer.layer.borderColor = UIColor.lightGray.cgColor
         chartViewContainer.layer.borderWidth = 1
     }
@@ -42,14 +49,27 @@ extension DashboardViewController: UITableViewDelegate {
 
 extension DashboardViewController: UITableViewDataSource {
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DashboardCell") as! DashboardCell
+        
+        return cell
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return header
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
+    }
 }
 
 class RoundCornerButton: UIButton {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LGSideMenuController
 
 class SideMenuViewController: UITableViewController {
 

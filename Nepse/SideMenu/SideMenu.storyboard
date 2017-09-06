@@ -12,7 +12,7 @@
         <!--Side Menu View Controller-->
         <scene sceneID="lZ3-3a-0Xp">
             <objects>
-                <tableViewController id="9Ut-1v-Yea" customClass="SideMenuViewController" customModule="Nepse" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SideMenuViewController" id="9Ut-1v-Yea" customClass="SideMenuViewController" customModule="Nepse" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="aVF-cF-wEV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -164,7 +164,7 @@
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rPv-QF-rF9">
                                                     <rect key="frame" x="25" y="69" width="330" height="1"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="0.098619707336065357" green="0.22348573946051895" blue="0.29394891067208118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="yEQ-iH-Pqo"/>
                                                     </constraints>
@@ -273,7 +273,7 @@
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aie-Hp-FDV">
                                                     <rect key="frame" x="25" y="58" width="330" height="1"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="0.098619707340000001" green="0.2234857395" blue="0.29394891070000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="bdO-UX-Jlq"/>
                                                     </constraints>
