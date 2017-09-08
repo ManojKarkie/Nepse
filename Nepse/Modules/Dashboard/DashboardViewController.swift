@@ -28,8 +28,6 @@ class DashboardViewController: UIViewController {
     
     func setup() {
         self.title = "Dashboard"
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
-        self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(sideMenuController?.showLeftViewAnimated))
         sideMenuController?.swipeGestureArea = .full
         sideMenuController?.leftViewBackgroundBlurEffect = UIBlurEffect(style: .regular)

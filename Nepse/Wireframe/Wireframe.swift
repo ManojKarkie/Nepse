@@ -12,11 +12,15 @@ import LGSideMenuController
 
 protocol SideMenu {
     func openDashboard()
+    func openFloorsheet()
+    func openLiveTrading()
 }
 
 struct StoryboardNames {
     static let sideMenu = "SideMenu"
     static let dashboard = "Dashboard"
+    static let floorsheet = "Floorsheet"
+    static let liveTrading = "LiveTrading"
 }
 
 class Wireframe {
@@ -30,6 +34,15 @@ class Wireframe {
     func getSideMenu() -> SideMenuViewController {
         return UIStoryboard(name: StoryboardNames.sideMenu, bundle: nil).instantiateViewController(withIdentifier: "SideMenuViewController") as! SideMenuViewController
     }
+    
+    func getFloorsheet() -> FloorsheetViewController {
+        return UIStoryboard(name: StoryboardNames.floorsheet, bundle: nil).instantiateViewController(withIdentifier: "FloorsheetViewController") as! FloorsheetViewController
+    }
+    
+    func getLiveTrading() -> LiveTradingViewController {
+        return UIStoryboard(name: StoryboardNames.liveTrading, bundle: nil).instantiateViewController(withIdentifier: "LiveTradingViewController") as! LiveTradingViewController
+    }
+    
 }
 
 extension Wireframe: SideMenu {
@@ -37,5 +50,15 @@ extension Wireframe: SideMenu {
     func openDashboard() {
         let sideMenu = UIApplication.shared.keyWindow?.rootViewController?.sideMenuController?.rootViewController as? UINavigationController
         sideMenu?.viewControllers = [getDashboard()]
+    }
+    
+    func openFloorsheet() {
+        let sideMenu = UIApplication.shared.keyWindow?.rootViewController?.sideMenuController?.rootViewController as? UINavigationController
+        sideMenu?.viewControllers = [getFloorsheet()]
+    }
+    
+    func openLiveTrading() {
+        let sideMenu = UIApplication.shared.keyWindow?.rootViewController?.sideMenuController?.rootViewController as? UINavigationController
+        sideMenu?.viewControllers = [getLiveTrading()]
     }
 }

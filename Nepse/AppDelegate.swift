@@ -20,9 +20,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         self.window?.rootViewController = LGSideMenuWireframe().getMainView()
         UIApplication.shared.statusBarStyle = .lightContent
+        setupNavBar()
         return true
     }
 
+    private func setupNavBar() {
+        let navBarAppearance = UINavigationBar.appearance()
+        navBarAppearance.titleTextAttributes = [
+            NSForegroundColorAttributeName: UIColor.white]
+        navBarAppearance.barTintColor = UIColor(hex: "#234E66")
+
+        navBarAppearance.tintColor = UIColor.white
+    }
 
     // MARK: - Core Data stack
 
