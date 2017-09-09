@@ -8,8 +8,8 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
-
+class LoginViewController: UIViewController{
+    
     @IBOutlet weak var loginbnt: UIButton!
     @IBOutlet weak var password_txt: UITextField!
     @IBOutlet weak var email_txt: UITextField!
@@ -23,23 +23,17 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    let appdelegate = UIApplication.shared.delegate as? AppDelegate
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     @IBAction func btn_login(_ sender: Any) {
-        
+        appdelegate?.window?.rootViewController = LGSideMenuWireframe().getMainView()
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    
 
 }

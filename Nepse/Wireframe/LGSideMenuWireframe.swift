@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import LGSideMenuController
 
-class LGSideMenuWireframe {
+class LGSideMenuWireframe: WireframeInput {
     
     var view: UIViewController!
     var storyboardName: String  = ""

@@ -18,7 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-//        self.window?.rootViewController = LGSideMenuWireframe().getMainView()
+        let nav = UINavigationController.init(rootViewController: Wireframe.shared.getLogin())
+        self.window?.rootViewController = nav
+        
         UIApplication.shared.statusBarStyle = .lightContent
         setupNavBar()
         return true

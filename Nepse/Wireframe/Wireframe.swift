@@ -15,6 +15,7 @@ protocol SideMenu {
     func openFloorsheet()
     func openLiveTrading()
     func openCalculator()
+ 
 }
 
 struct StoryboardNames {
@@ -23,6 +24,7 @@ struct StoryboardNames {
     static let floorsheet = "Floorsheet"
     static let liveTrading = "LiveTrading"
     static let calculator = "Calculator"
+    static let login = "Login"
 }
 
 class Wireframe {
@@ -48,6 +50,11 @@ class Wireframe {
     func getCalculator() -> CalculatorViewController {
         return UIStoryboard(name: StoryboardNames.calculator, bundle: nil).instantiateViewController(withIdentifier: "CalculatorViewController") as! CalculatorViewController
     }
+    
+    func getLogin() -> LoginViewController {
+        return UIStoryboard(name: StoryboardNames.login, bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+    }
+
     
 }
 

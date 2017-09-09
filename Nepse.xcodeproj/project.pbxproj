@@ -34,6 +34,7 @@
 		1AB44F571F643D76002F578A /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB44F551F643D76002F578A /* CustomCell.swift */; };
 		1AB44F581F643D76002F578A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB44F561F643D76002F578A /* ViewController.swift */; };
 		1AB44F5A1F643D89002F578A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB44F591F643D89002F578A /* Main.storyboard */; };
+		1AB44F5C1F645063002F578A /* WireframeInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB44F5B1F645063002F578A /* WireframeInput.swift */; };
 		3AF74A800678150CF32CDF59 /* Pods_NepseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B5502440A17E09AD54100C8 /* Pods_NepseTests.framework */; };
 		AF5AFC881F5C519400414214 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5AFC871F5C519400414214 /* AppDelegate.swift */; };
 		AF5AFC901F5C519400414214 /* Nepse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF5AFC8E1F5C519400414214 /* Nepse.xcdatamodeld */; };
@@ -86,6 +87,7 @@
 		1AB44F551F643D76002F578A /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		1AB44F561F643D76002F578A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1AB44F591F643D89002F578A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1AB44F5B1F645063002F578A /* WireframeInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WireframeInput.swift; sourceTree = "<group>"; };
 		207A2067C6E633BB40528589 /* Pods-Nepse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nepse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nepse/Pods-Nepse.debug.xcconfig"; sourceTree = "<group>"; };
 		8B5502440A17E09AD54100C8 /* Pods_NepseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NepseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF5AFC841F5C519400414214 /* Nepse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nepse.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +187,7 @@
 		1A25B66E1F5FBCEB004C5451 /* Wireframe */ = {
 			isa = PBXGroup;
 			children = (
+				1AB44F5B1F645063002F578A /* WireframeInput.swift */,
 				1A25B66F1F5FBCF5004C5451 /* Wireframe.swift */,
 				1A25B6711F5FC098004C5451 /* LGSideMenuWireframe.swift */,
 			);
@@ -541,6 +544,7 @@
 				1A25B6931F605020004C5451 /* LoginViewController.swift in Sources */,
 				1A250E271F62A02400BDCE62 /* SupportViewController.swift in Sources */,
 				1A25B6901F605020004C5451 /* DashboardCell.swift in Sources */,
+				1AB44F5C1F645063002F578A /* WireframeInput.swift in Sources */,
 				1A25B6911F605020004C5451 /* DashboardViewController.swift in Sources */,
 				1A25B6951F605020004C5451 /* RegisterViewController.swift in Sources */,
 				1A250E181F624D4300BDCE62 /* FloorsheetCell.swift in Sources */,
