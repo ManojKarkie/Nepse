@@ -27,6 +27,7 @@ class CalculatorViewController: UIViewController {
     }
 
     func setup() {
+        self.title = "Calculator"
         topView.layer.borderColor = UIColor.lightGray.cgColor
         topView.layer.cornerRadius = 5
         topView.layer.shadowColor = UIColor.lightGray.cgColor
@@ -46,6 +47,8 @@ class CalculatorViewController: UIViewController {
         bottomInnerView.layer.borderWidth = 1
         buyBtn.frame.size.width = buttonView.frame.size.width/2
         sellBtn.frame.size.width = buttonView.frame.size.width/2
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(sideMenuController?.showLeftViewAnimated))
+        sideMenuController?.swipeGestureArea = .full
     }
     
     @IBAction func buyBtnTapped(_ sender: Any) {
