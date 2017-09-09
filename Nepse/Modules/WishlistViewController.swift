@@ -14,7 +14,9 @@ class WishlistViewController: UIViewController {
     @IBOutlet weak var searchField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      
+        
+        self.AddBtn.layer.cornerRadius = 5.0
 
         // Do any additional setup after loading the view.
     }
