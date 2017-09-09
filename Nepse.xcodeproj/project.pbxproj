@@ -31,8 +31,9 @@
 		1A25B6951F605020004C5451 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A25B68B1F605020004C5451 /* RegisterViewController.swift */; };
 		1A25B6961F605020004C5451 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A25B68D1F605020004C5451 /* SideMenu.storyboard */; };
 		1A25B6971F605020004C5451 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A25B68E1F605020004C5451 /* SideMenuViewController.swift */; };
-		1A25B69A1F6058AE004C5451 /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A25B6991F6058AE004C5451 /* MainCollectionViewController.swift */; };
-		1A25B69C1F6058D3004C5451 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A25B69B1F6058D3004C5451 /* Main.storyboard */; };
+		1AB44F571F643D76002F578A /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB44F551F643D76002F578A /* CustomCell.swift */; };
+		1AB44F581F643D76002F578A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB44F561F643D76002F578A /* ViewController.swift */; };
+		1AB44F5A1F643D89002F578A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB44F591F643D89002F578A /* Main.storyboard */; };
 		3AF74A800678150CF32CDF59 /* Pods_NepseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B5502440A17E09AD54100C8 /* Pods_NepseTests.framework */; };
 		AF5AFC881F5C519400414214 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5AFC871F5C519400414214 /* AppDelegate.swift */; };
 		AF5AFC901F5C519400414214 /* Nepse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF5AFC8E1F5C519400414214 /* Nepse.xcdatamodeld */; };
@@ -82,8 +83,9 @@
 		1A25B68B1F605020004C5451 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		1A25B68D1F605020004C5451 /* SideMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
 		1A25B68E1F605020004C5451 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
-		1A25B6991F6058AE004C5451 /* MainCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
-		1A25B69B1F6058D3004C5451 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1AB44F551F643D76002F578A /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		1AB44F561F643D76002F578A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1AB44F591F643D89002F578A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		207A2067C6E633BB40528589 /* Pods-Nepse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nepse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nepse/Pods-Nepse.debug.xcconfig"; sourceTree = "<group>"; };
 		8B5502440A17E09AD54100C8 /* Pods_NepseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NepseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF5AFC841F5C519400414214 /* Nepse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nepse.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,11 +201,11 @@
 		1A25B6811F605020004C5451 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				1AB44F541F643D76002F578A /* Main */,
 				1A250E2C1F62BECA00BDCE62 /* Calculator */,
 				1A250E231F62A01300BDCE62 /* Support */,
 				1A250E1C1F62922300BDCE62 /* LiveTrading */,
 				1A250E121F624D1300BDCE62 /* Floorsheet */,
-				1A25B6981F60587E004C5451 /* Main */,
 				1A25B6821F605020004C5451 /* Dashboard */,
 				1A25B6861F605020004C5451 /* Login */,
 				1A25B6891F605020004C5451 /* Registration */,
@@ -249,11 +251,12 @@
 			path = SideMenu;
 			sourceTree = "<group>";
 		};
-		1A25B6981F60587E004C5451 /* Main */ = {
+		1AB44F541F643D76002F578A /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				1A25B6991F6058AE004C5451 /* MainCollectionViewController.swift */,
-				1A25B69B1F6058D3004C5451 /* Main.storyboard */,
+				1AB44F591F643D89002F578A /* Main.storyboard */,
+				1AB44F551F643D76002F578A /* CustomCell.swift */,
+				1AB44F561F643D76002F578A /* ViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -413,12 +416,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A25B69C1F6058D3004C5451 /* Main.storyboard in Resources */,
 				1A250E1E1F62922D00BDCE62 /* LiveTrading.storyboard in Resources */,
 				1A25B6961F605020004C5451 /* SideMenu.storyboard in Resources */,
 				1A25B6921F605020004C5451 /* Login.storyboard in Resources */,
 				1A250E2E1F62BED300BDCE62 /* Calculator.storyboard in Resources */,
 				AF5AFC951F5C519400414214 /* LaunchScreen.storyboard in Resources */,
+				1AB44F5A1F643D89002F578A /* Main.storyboard in Resources */,
 				1A25B68F1F605020004C5451 /* Dashboard.storyboard in Resources */,
 				1A250E251F62A01A00BDCE62 /* Support.storyboard in Resources */,
 				AF5AFC921F5C519400414214 /* Assets.xcassets in Resources */,
@@ -537,13 +540,14 @@
 				1A250E161F624D3100BDCE62 /* FloorsheetViewController.swift in Sources */,
 				1A25B6931F605020004C5451 /* LoginViewController.swift in Sources */,
 				1A250E271F62A02400BDCE62 /* SupportViewController.swift in Sources */,
-				1A25B69A1F6058AE004C5451 /* MainCollectionViewController.swift in Sources */,
 				1A25B6901F605020004C5451 /* DashboardCell.swift in Sources */,
 				1A25B6911F605020004C5451 /* DashboardViewController.swift in Sources */,
 				1A25B6951F605020004C5451 /* RegisterViewController.swift in Sources */,
 				1A250E181F624D4300BDCE62 /* FloorsheetCell.swift in Sources */,
 				1A25B6721F5FC098004C5451 /* LGSideMenuWireframe.swift in Sources */,
+				1AB44F571F643D76002F578A /* CustomCell.swift in Sources */,
 				AF5AFC901F5C519400414214 /* Nepse.xcdatamodeld in Sources */,
+				1AB44F581F643D76002F578A /* ViewController.swift in Sources */,
 				1A250E201F62924200BDCE62 /* LiveTradingCell.swift in Sources */,
 				1A250E291F62A03F00BDCE62 /* SendCell.swift in Sources */,
 				1A25B6701F5FBCF5004C5451 /* Wireframe.swift in Sources */,

@@ -10,11 +10,15 @@ import UIKit
 
 class CalculatorViewController: UIViewController {
 
+    
+    @IBOutlet weak var buttonView: UIView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var sellUnderline: UIView!
     @IBOutlet weak var buyUnderline: UIView!
     @IBOutlet weak var bottomInnerView: UIView!
+    @IBOutlet weak var buyBtn: UIButton!
+    @IBOutlet weak var sellBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +44,8 @@ class CalculatorViewController: UIViewController {
         bottomView.layer.borderWidth = 1
         bottomInnerView.layer.borderColor = UIColor.lightGray.cgColor
         bottomInnerView.layer.borderWidth = 1
+        buyBtn.frame.size.width = buttonView.frame.size.width/2
+        sellBtn.frame.size.width = buttonView.frame.size.width/2
     }
     
     @IBAction func buyBtnTapped(_ sender: Any) {
