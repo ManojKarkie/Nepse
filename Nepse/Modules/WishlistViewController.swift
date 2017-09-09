@@ -15,6 +15,7 @@ class WishlistViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+
         // Do any additional setup after loading the view.
     }
 
@@ -44,6 +45,7 @@ extension WishlistViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WishListCell") as? WishListCell
+        cell?.setUp()
         return cell!
         
     }
