@@ -1,0 +1,17 @@
+PODS:
+  - Charts (3.0.2):
+    - Charts/Core (= 3.0.2)
+  - Charts/Core (3.0.2)
+  - LGSideMenuController (2.1.1)
+
+DEPENDENCIES:
+  - Charts
+  - LGSideMenuController
+
+SPEC CHECKSUMS:
+  Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
+  LGSideMenuController: ae40c80983ab8b8801c7cef0a6804d43aaa72d45
+
+PODFILE CHECKSUM: d8de8264bbba11f36e2028be672c0f6cd69b76b6
+
+COCOAPODS: 1.2.1
