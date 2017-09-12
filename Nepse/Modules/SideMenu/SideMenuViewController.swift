@@ -22,7 +22,21 @@ class SideMenuViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        sideMenuController?.hideLeftViewAnimated()
+        switch indexPath.row {
+        case 0:
+            Wireframe.shared.openDashboard()
+        case 1:
+            Wireframe.shared.openFloorsheet()
+        case 2:
+            Wireframe.shared.openLiveTrading()
+        case 8:
+            Wireframe.shared.openCalculator()
+        default:
+            break
+        }
+    }
     
 
 }

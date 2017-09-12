@@ -18,11 +18,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        self.window?.rootViewController = LGSideMenuWireframe().getMainView()
+        let nav = UINavigationController.init(rootViewController: Wireframe.shared.getLogin())
+        self.window?.rootViewController = nav
+        
         UIApplication.shared.statusBarStyle = .lightContent
+        setupNavBar()
         return true
     }
 
+    private func setupNavBar() {
+        let navBarAppearance = UINavigationBar.appearance()
+        navBarAppearance.titleTextAttributes = [
+            NSForegroundColorAttributeName: UIColor.white]
+        navBarAppearance.barTintColor = UIColor(hex: "#234E66")
+
+        navBarAppearance.tintColor = UIColor.white
+    }
 
     // MARK: - Core Data stack
 
