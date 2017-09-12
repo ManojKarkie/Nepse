@@ -16,5 +16,7 @@ class CustomCell: UICollectionViewCell {
 
     @IBOutlet weak var imgView: UIView!
     
-    
+    func setup () {
+        imgView.layer.cornerRadius = 50.0
+    }
 }

@@ -15,7 +15,7 @@ protocol SideMenu {
     func openFloorsheet()
     func openLiveTrading()
     func openCalculator()
- 
+    func openMain()
 }
 
 struct StoryboardNames {
@@ -25,6 +25,7 @@ struct StoryboardNames {
     static let liveTrading = "LiveTrading"
     static let calculator = "Calculator"
     static let login = "Login"
+    static let main = "Main"
 }
 
 class Wireframe {
@@ -55,6 +56,9 @@ class Wireframe {
         return UIStoryboard(name: StoryboardNames.login, bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
     }
 
+    func getMain() -> ViewController {
+        return UIStoryboard(name: StoryboardNames.main , bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
+    }
     
 }
 
@@ -78,5 +82,10 @@ extension Wireframe: SideMenu {
     func openCalculator() {
         let sideMenu = UIApplication.shared.keyWindow?.rootViewController?.sideMenuController?.rootViewController as? UINavigationController
         sideMenu?.viewControllers = [getCalculator()]
+    }
+    
+    func openMain() {
+        let sideMenu = UIApplication.shared.keyWindow?.rootViewController?.sideMenuController?.rootViewController as? UINavigationController
+        sideMenu?.viewControllers = [getMain()]
     }
 }
