@@ -39,7 +39,7 @@ extension ViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
         cell.mainImage.image = Images[indexPath.row]
         cell.mainTitle.text! = naTitle[indexPath.row]
-        cell.imgView.layer.cornerRadius = 50.0
+        cell.setup()
         return cell
     }
 }
