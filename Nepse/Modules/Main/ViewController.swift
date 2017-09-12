@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+class ViewController: UIViewController {
     
     
     var Images = [UIImage(named:"1"),UIImage(named:"2"),UIImage(named:"3"),UIImage(named:"4"),UIImage(named:"5"),UIImage(named:"6"),UIImage(named:"7"),UIImage(named:"8"),UIImage(named:"9")]
@@ -25,8 +25,12 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
    
+
+}
+
+extension ViewController: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return Images.count
     }
@@ -35,13 +39,12 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
         cell.mainImage.image = Images[indexPath.row]
         cell.mainTitle.text! = naTitle[indexPath.row]
-            cell.imgView.layer.cornerRadius = 50.0
-        
-        
+        cell.imgView.layer.cornerRadius = 50.0
         return cell
     }
-   
+}
 
+
+extension ViewController: UICollectionViewDelegate {
     
-
 }
