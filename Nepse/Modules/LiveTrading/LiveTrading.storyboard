@@ -114,8 +114,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhh-dF-HVi">
-                                                    <rect key="frame" x="247" y="4.5" width="14" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhh-dF-HVi">
+                                                    <rect key="frame" x="227" y="4.5" width="14" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="8Op-5E-atX"/>
                                                     </constraints>
@@ -123,14 +123,14 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="44" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rl3-36-NWm">
-                                                    <rect key="frame" x="320" y="7" width="17" height="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="44" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rl3-36-NWm">
+                                                    <rect key="frame" x="281" y="7" width="17" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="44" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAu-kZ-lyg">
-                                                    <rect key="frame" x="382" y="4.5" width="17" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="44" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAu-kZ-lyg">
+                                                    <rect key="frame" x="343" y="4.5" width="17" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="bFj-k4-3Ya"/>
                                                     </constraints>
@@ -157,7 +157,7 @@
                                                 <constraint firstItem="xOb-eH-32K" firstAttribute="leading" secondItem="qES-58-MEu" secondAttribute="trailing" constant="20" id="Do8-vj-B2L"/>
                                                 <constraint firstItem="xOb-eH-32K" firstAttribute="centerY" secondItem="4aP-yW-fwM" secondAttribute="centerY" id="IHm-hs-qz7"/>
                                                 <constraint firstItem="AAu-kZ-lyg" firstAttribute="centerY" secondItem="4aP-yW-fwM" secondAttribute="centerY" id="M73-op-aJc"/>
-                                                <constraint firstItem="rl3-36-NWm" firstAttribute="leading" secondItem="Uhh-dF-HVi" secondAttribute="trailing" constant="59" id="OPy-W7-rco"/>
+                                                <constraint firstItem="rl3-36-NWm" firstAttribute="leading" secondItem="Uhh-dF-HVi" secondAttribute="trailing" constant="40" id="OPy-W7-rco"/>
                                                 <constraint firstItem="wVC-N9-fR6" firstAttribute="centerX" secondItem="4aP-yW-fwM" secondAttribute="centerX" id="RP8-g3-la8"/>
                                                 <constraint firstItem="SM0-NN-MkD" firstAttribute="leading" secondItem="xOb-eH-32K" secondAttribute="trailing" constant="20" id="e6E-Yw-wvT"/>
                                                 <constraint firstItem="Uhh-dF-HVi" firstAttribute="leading" secondItem="wVC-N9-fR6" secondAttribute="trailing" constant="30" id="i8P-0h-aDU"/>
@@ -168,6 +168,14 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="buyer" destination="Uhh-dF-HVi" id="Ruf-EM-1Fd"/>
+                                            <outlet property="contact" destination="xOb-eH-32K" id="rkA-Kd-x8q"/>
+                                            <outlet property="qty" destination="AAu-kZ-lyg" id="aoO-r3-mPi"/>
+                                            <outlet property="seller" destination="rl3-36-NWm" id="Qyk-Pn-P63"/>
+                                            <outlet property="sn" destination="qES-58-MEu" id="DZq-Wt-rzf"/>
+                                            <outlet property="sym" destination="SM0-NN-MkD" id="CgR-GM-s9k"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

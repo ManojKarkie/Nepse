@@ -19,12 +19,15 @@ class LiveTradingViewController: UIViewController {
     @IBOutlet weak var searchSellerTextField: UITextField!
     @IBOutlet weak var searchBuyerTextfield: UITextField!
     
+    var data = [LiveTrading]()
+    let service = LiveTradingService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableview.delegate = self
         tableview.dataSource = self
         setup()
-        
+        fetchData()
     }
     
     func setup(){
@@ -43,6 +46,14 @@ class LiveTradingViewController: UIViewController {
         super.didReceiveMemoryWarning()
         
     }
+    
+    func fetchData() {
+        service.fetchLiveTrading(completion: {
+            (data) in
+            self.data = data
+            self.tableview.reloadData()
+        })
+    }
 
 }
 
@@ -53,11 +64,13 @@ extension LiveTradingViewController: UITableViewDelegate {
 extension LiveTradingViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return self.data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LiveTradingCell") as? LiveTradingCell
+        cell?.data = self.data[indexPath.row]
+        cell?.setup()
         if indexPath.row % 2 == 0{
             cell?.contentView.backgroundColor = UIColor(red: 238/255.0, green: 238/255.0, blue: 238/255.0, alpha: 1)
         }
