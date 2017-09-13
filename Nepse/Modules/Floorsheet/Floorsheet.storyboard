@@ -167,6 +167,14 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="buyer" destination="9kg-Tu-1Yk" id="i2q-fz-H5p"/>
+                                            <outlet property="contact" destination="AEH-Ta-Rzn" id="F60-5f-pWb"/>
+                                            <outlet property="qty" destination="zxw-lt-fgH" id="eIK-QI-7SW"/>
+                                            <outlet property="seller" destination="zyv-MN-3W0" id="SlZ-Lk-B0a"/>
+                                            <outlet property="sn" destination="7Ek-0x-vSN" id="r91-B4-ZjL"/>
+                                            <outlet property="sym" destination="F9H-rq-iZ3" id="uJr-pi-TdL"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

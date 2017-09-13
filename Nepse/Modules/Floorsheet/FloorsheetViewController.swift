@@ -40,7 +40,7 @@ class FloorsheetViewController: UIViewController {
         service.fetchFloorsheet(completion: {
             (data) in
             self.data = data
-            
+            self.tableview.reloadData()
         })
     }
     
@@ -59,7 +59,8 @@ extension FloorsheetViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FloorsheetCell") as? FloorsheetCell
-        
+        cell?.data = self.data[indexPath.row]
+        cell?.setup()
         if indexPath.row % 2 == 0{
             cell?.contentView.backgroundColor = UIColor(red: 238/255.0, green: 238/255.0, blue: 238/255.0, alpha: 1)
         }
