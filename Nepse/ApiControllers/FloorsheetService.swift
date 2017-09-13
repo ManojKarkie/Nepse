@@ -23,9 +23,10 @@ class FloorsheetService {
                 if let array = dictionaryValue[key] as? [String]{
                     self.data["sn"] = array[0]
                     self.data["contact"] = array[1]
-                    self.data["buyer"] = array[2]
-                    self.data["seller"] = array[3]
-                    self.data["qty"] = array[4]
+                    self.data["sym"] = array[2]
+                    self.data["buyer"] = array[3]
+                    self.data["seller"] = array[4]
+                    self.data["qty"] = array[5]
                     let flowsheet = Mapper<Flowsheet>().map(JSON: self.data)
                     self.floorsheetData.append(flowsheet!)
                 }
