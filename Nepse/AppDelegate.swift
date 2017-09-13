@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-
+let appdelegate = UIApplication.shared.delegate as? AppDelegate
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

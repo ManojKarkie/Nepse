@@ -15,13 +15,15 @@ class FloorsheetViewController: UIViewController {
     @IBOutlet weak var searchSymbolTextField: UITextField!
     @IBOutlet weak var searchSellerTextField: UITextField!
     @IBOutlet weak var searchBuyerTextfield: UITextField!
+    let service = FloorsheetService()
+    var data = [Flowsheet]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableview.delegate = self
         tableview.dataSource = self
         setup()
-        
+        fetchData() 
     }
     
     func setup(){
@@ -34,6 +36,14 @@ class FloorsheetViewController: UIViewController {
         sideMenuController?.swipeGestureArea = .full
     }
 
+    func fetchData(){
+        service.fetchFloorsheet(completion: {
+            (data) in
+            self.data = data
+            
+        })
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
@@ -44,11 +54,12 @@ class FloorsheetViewController: UIViewController {
 extension FloorsheetViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FloorsheetCell") as? FloorsheetCell
+        
         if indexPath.row % 2 == 0{
             cell?.contentView.backgroundColor = UIColor(red: 238/255.0, green: 238/255.0, blue: 238/255.0, alpha: 1)
         }

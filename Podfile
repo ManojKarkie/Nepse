@@ -8,6 +8,8 @@ target 'Nepse' do
   # Pods for Nepse
   pod 'LGSideMenuController'
   pod 'Charts'
+  pod 'Alamofire'
+  pod 'ObjectMapper+Realm'
   target 'NepseTests' do
     inherit! :search_paths
     # Pods for testing

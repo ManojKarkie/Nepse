@@ -22,8 +22,6 @@ class LoginViewController: UIViewController{
 
         // Do any additional setup after loading the view.
     }
-
-    let appdelegate = UIApplication.shared.delegate as? AppDelegate
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

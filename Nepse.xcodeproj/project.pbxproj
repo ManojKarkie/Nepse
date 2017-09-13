@@ -32,6 +32,9 @@
 		1A25B6951F605020004C5451 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A25B68B1F605020004C5451 /* RegisterViewController.swift */; };
 		1A25B6961F605020004C5451 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A25B68D1F605020004C5451 /* SideMenu.storyboard */; };
 		1A25B6971F605020004C5451 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A25B68E1F605020004C5451 /* SideMenuViewController.swift */; };
+		1A6C23D41F68EDFE00F0FCAF /* FloorsheetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23D31F68EDFE00F0FCAF /* FloorsheetService.swift */; };
+		1A6C23D61F68EF4E00F0FCAF /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23D51F68EF4E00F0FCAF /* ApiManager.swift */; };
+		1A6C23D81F68FF0B00F0FCAF /* Flowsheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23D71F68FF0B00F0FCAF /* Flowsheet.swift */; };
 		1AB44F571F643D76002F578A /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB44F551F643D76002F578A /* CustomCell.swift */; };
 		1AB44F581F643D76002F578A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB44F561F643D76002F578A /* ViewController.swift */; };
 		1AB44F5A1F643D89002F578A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB44F591F643D89002F578A /* Main.storyboard */; };
@@ -88,6 +91,9 @@
 		1A25B68B1F605020004C5451 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		1A25B68D1F605020004C5451 /* SideMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
 		1A25B68E1F605020004C5451 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		1A6C23D31F68EDFE00F0FCAF /* FloorsheetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorsheetService.swift; sourceTree = "<group>"; };
+		1A6C23D51F68EF4E00F0FCAF /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		1A6C23D71F68FF0B00F0FCAF /* Flowsheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flowsheet.swift; sourceTree = "<group>"; };
 		1AB44F551F643D76002F578A /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		1AB44F561F643D76002F578A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1AB44F591F643D89002F578A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -204,6 +210,7 @@
 		1A25B6731F5FD96A004C5451 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1A6C23D71F68FF0B00F0FCAF /* Flowsheet.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -262,6 +269,15 @@
 			path = SideMenu;
 			sourceTree = "<group>";
 		};
+		1A6C23D21F68EDEC00F0FCAF /* ApiControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A6C23D31F68EDFE00F0FCAF /* FloorsheetService.swift */,
+				1A6C23D51F68EF4E00F0FCAF /* ApiManager.swift */,
+			);
+			path = ApiControllers;
+			sourceTree = "<group>";
+		};
 		1AB44F541F643D76002F578A /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,6 +330,7 @@
 		AF5AFC861F5C519400414214 /* Nepse */ = {
 			isa = PBXGroup;
 			children = (
+				1A6C23D21F68EDEC00F0FCAF /* ApiControllers */,
 				1A250E191F628B5700BDCE62 /* Extensions */,
 				1A25B6811F605020004C5451 /* Modules */,
 				1A25B6731F5FD96A004C5451 /* Models */,
@@ -572,6 +589,7 @@
 				1AB44F571F643D76002F578A /* CustomCell.swift in Sources */,
 				AF5AFC901F5C519400414214 /* Nepse.xcdatamodeld in Sources */,
 				241EC8FE1F64514900343316 /* WishlistViewController.swift in Sources */,
+				1A6C23D61F68EF4E00F0FCAF /* ApiManager.swift in Sources */,
 				1AB44F581F643D76002F578A /* ViewController.swift in Sources */,
 				1A250E201F62924200BDCE62 /* LiveTradingCell.swift in Sources */,
 				1A250E291F62A03F00BDCE62 /* SendCell.swift in Sources */,
@@ -582,6 +600,8 @@
 				241EC9021F6457B100343316 /* WishListCell.swift in Sources */,
 				1A250E221F62925700BDCE62 /* LiveTradingViewController.swift in Sources */,
 				AF5AFC881F5C519400414214 /* AppDelegate.swift in Sources */,
+				1A6C23D81F68FF0B00F0FCAF /* Flowsheet.swift in Sources */,
+				1A6C23D41F68EDFE00F0FCAF /* FloorsheetService.swift in Sources */,
 				1A250E1B1F628B6700BDCE62 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

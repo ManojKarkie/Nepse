@@ -47,4 +47,12 @@ extension ViewController: UICollectionViewDataSource {
 
 extension ViewController: UICollectionViewDelegate {
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            appdelegate?.window?.rootViewController = LGSideMenuWireframe().getMainView()
+        default:
+            break
+        }
+    }
 }
