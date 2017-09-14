@@ -28,8 +28,9 @@ class FloorsheetService {
                     self.data["buyer"] = array[3]
                     self.data["seller"] = array[4]
                     self.data["qty"] = array[5]
-                    let flowsheet = Mapper<Flowsheet>().map(JSON: self.data)
-                    self.floorsheetData.append(flowsheet!)
+                    if let flowsheet = Mapper<Flowsheet>().map(JSON: self.data) {
+                        self.floorsheetData.append(flowsheet)
+                    }
                 }
             }
             completion(self.floorsheetData)

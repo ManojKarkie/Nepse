@@ -18,7 +18,7 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var chartViewContainer: UIView!
     
     let service = DashboardService()
-    
+    var data = [Dashboard]()
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -52,7 +52,9 @@ class DashboardViewController: UIViewController {
     
     func fetchData() {
         service.fetchDashboard(completion: { 
-            
+            (data) in
+            self.data = data
+            self.tableView.reloadData()
         })
     }
     
@@ -70,16 +72,18 @@ extension DashboardViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return self.data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DashboardCell") as! DashboardCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DashboardCell") as? DashboardCell
+        cell?.data = self.data[indexPath.row]
+        cell?.setup()
         if indexPath.row % 2 == 0{
-            cell.contentView.backgroundColor = UIColor(red: 240/255.0, green: 240/255.0, blue: 240/255.0, alpha: 1)
+            cell?.contentView.backgroundColor = UIColor(red: 240/255.0, green: 240/255.0, blue: 240/255.0, alpha: 1)
         }
         
-        return cell
+        return cell!
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
