@@ -19,7 +19,7 @@ class LiveTradingCell: UITableViewCell {
     @IBOutlet weak var sn: UILabel!
     
     var data: LiveTrading?
-    
+    var index: Int?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -32,6 +32,9 @@ class LiveTradingCell: UITableViewCell {
         sym.text = data?.sym
         contact.text = data?.contactNum
         sn.text = data?.sn
+        if (index ?? 0) % 2 == 0{
+            self.contentView.backgroundColor = UIColor(red: 240/255.0, green: 240/255.0, blue: 240/255.0, alpha: 1)
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

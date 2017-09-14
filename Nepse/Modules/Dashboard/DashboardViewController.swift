@@ -77,11 +77,12 @@ extension DashboardViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DashboardCell") as? DashboardCell
-        cell?.data = self.data[indexPath.row]
-        cell?.setup()
         if indexPath.row % 2 == 0{
             cell?.contentView.backgroundColor = UIColor(red: 240/255.0, green: 240/255.0, blue: 240/255.0, alpha: 1)
         }
+        cell?.data = self.data[indexPath.row]
+        cell?.setup()
+        
         
         return cell!
     }
