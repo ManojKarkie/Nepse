@@ -17,12 +17,14 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var chartViewContainer: UIView!
     
+    let service = DashboardService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         tableView.delegate = self
         tableView.dataSource = self
-        
+        fetchData()
         // Do any additional setup after loading the view.
     }
     
@@ -46,6 +48,12 @@ class DashboardViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
        
+    }
+    
+    func fetchData() {
+        service.fetchDashboard(completion: { 
+            
+        })
     }
     
 

@@ -15,9 +15,14 @@ class DashboardCell: UITableViewCell {
     @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var volumeLabel: UILabel!
     @IBOutlet weak var symDataLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func setup() {
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

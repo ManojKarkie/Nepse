@@ -7,3 +7,18 @@
 //
 
 import Foundation
+import ObjectMapper
+
+class DashboardService {
+    
+    var DashboardData = [Dashboard]()
+    var data = [String:Any]()
+    
+    func fetchDashboard(completion: @escaping () -> ()) {
+        let url = URL(string: "http://www.zeronebits.com/zerone_bits/topStocksBySharesTraded.php")
+        ApiManager.shared.fetchData(url: url!, completion: {
+            (data) in
+            
+        })
+    }
+}
