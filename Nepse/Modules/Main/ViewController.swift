@@ -56,8 +56,7 @@ extension ViewController: UICollectionViewDelegate {
         case 2:
             self.navigationController?.pushViewController(Wireframe.shared.getLiveTrading(), animated: true)
         case 3:
-            let nav = UINavigationController(rootViewController: Wireframe.shared.getLogin())
-            appdelegate?.window?.rootViewController = nav
+            break
         case 4:
             self.navigationController?.pushViewController(Wireframe.shared.getWatchList(), animated: true)
         default:

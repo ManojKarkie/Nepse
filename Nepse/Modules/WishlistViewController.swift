@@ -12,12 +12,13 @@ class WishlistViewController: UIViewController {
 
     @IBOutlet weak var AddBtn: UIButton!
     @IBOutlet weak var searchField: UITextField!
+    
+    var status: GlobalConstant.Status = .notLogged
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-        
         self.AddBtn.layer.cornerRadius = 5.0
-
+        setup()
         // Do any additional setup after loading the view.
     }
 
@@ -26,16 +27,11 @@ class WishlistViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func setup() {
+        if status != .notLogged {
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(sideMenuController?.showLeftViewAnimated))
+        }
     }
-    */
 
 }
 

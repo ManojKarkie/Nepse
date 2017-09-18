@@ -297,9 +297,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Vls-GU-PX6">
-                        <barButtonItem key="leftBarButtonItem" title="Wishlist" id="821-6H-Dlm">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="l3d-bM-3Cy">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>

@@ -16,7 +16,6 @@ class LoginViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         self.loginbnt.layer.cornerRadius = 10.0
     
 
@@ -29,7 +28,8 @@ class LoginViewController: UIViewController{
     }
     
     @IBAction func btn_login(_ sender: Any) {
-        appdelegate?.window?.rootViewController = Wireframe.shared.getMain()
+        appdelegate?.window?.rootViewController = LGSideMenuWireframe().getMainView()
+        
     }
     
     

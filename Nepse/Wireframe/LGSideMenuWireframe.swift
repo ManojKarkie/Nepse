@@ -13,14 +13,13 @@ import LGSideMenuController
 class LGSideMenuWireframe: WireframeInput {
     
     var view: UIViewController!
-    static var shared = LGSideMenuWireframe()
     var storyboardName: String  = ""
-    var home: UIViewController?
+    
     func getMainView() -> UIViewController {
-        
-        let home = self.home
+        let home = Wireframe.shared.getDashboard()
         let leftMenu = Wireframe.shared.getSideMenu()
-        let homeNav = UINavigationController(rootViewController: home ?? UIViewController())
+        home.status = .loggedIn
+        let homeNav = UINavigationController(rootViewController: home)
         homeNav.navigationBar.barTintColor = UIColor(red: 35/255.0, green: 78/255.0, blue: 102/255.0, alpha: 1)
         let slideMenuController = LGSideMenuController(rootViewController: homeNav, leftViewController: leftMenu, rightViewController: nil)
         self.view = slideMenuController
