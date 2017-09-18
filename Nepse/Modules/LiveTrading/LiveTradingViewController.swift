@@ -21,6 +21,7 @@ class LiveTradingViewController: UIViewController {
     
     var data = [LiveTrading]()
     let service = LiveTradingService()
+    var status: GlobalConstant.Status = .notLogged
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,8 +39,10 @@ class LiveTradingViewController: UIViewController {
         header.frame.size.width = self.view.frame.size.width
         tradingSwitch.onTintColor = UIColor.white
         tradingSwitch.thumbTintColor = UIColor(hex: "#234E66")
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(sideMenuController?.showLeftViewAnimated))
-        sideMenuController?.swipeGestureArea = .full
+        if status != .notLogged {
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(sideMenuController?.showLeftViewAnimated))
+            sideMenuController?.swipeGestureArea = .full
+        }
     }
     
     override func didReceiveMemoryWarning() {

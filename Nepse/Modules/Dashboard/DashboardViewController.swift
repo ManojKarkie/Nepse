@@ -28,9 +28,14 @@ class DashboardViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    var status: GlobalConstant.Status = .notLogged
+    
+    
     func setup() {
         self.title = "Dashboard"
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(sideMenuController?.showLeftViewAnimated))
+        if status != .notLogged {
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(sideMenuController?.showLeftViewAnimated))
+        }
         sideMenuController?.swipeGestureArea = .full
         sideMenuController?.leftViewBackgroundBlurEffect = UIBlurEffect(style: .regular)
         chartViewContainer.layer.cornerRadius = 5

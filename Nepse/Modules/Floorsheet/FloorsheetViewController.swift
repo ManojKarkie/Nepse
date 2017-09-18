@@ -17,6 +17,7 @@ class FloorsheetViewController: UIViewController {
     @IBOutlet weak var searchBuyerTextfield: UITextField!
     let service = FloorsheetService()
     var data = [Flowsheet]()
+    var status : GlobalConstant.Status = .notLogged
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +33,10 @@ class FloorsheetViewController: UIViewController {
         searchSellerTextField.frame.size.width = (self.view.frame.size.width - 90)/3
         searchSymbolTextField.frame.size.width = (self.view.frame.size.width - 90)/3
         header.frame.size.width = self.view.frame.size.width
+        if status != .notLogged {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(sideMenuController?.showLeftViewAnimated))
         sideMenuController?.swipeGestureArea = .full
+        }
     }
 
     func fetchData(){

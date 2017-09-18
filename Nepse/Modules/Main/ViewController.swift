@@ -50,7 +50,16 @@ extension ViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
-            appdelegate?.window?.rootViewController = LGSideMenuWireframe().getMainView()
+            self.navigationController?.pushViewController(Wireframe.shared.getDashboard(), animated: true)
+        case 1:
+            self.navigationController?.pushViewController(Wireframe.shared.getFloorsheet(), animated: true)
+        case 2:
+            self.navigationController?.pushViewController(Wireframe.shared.getLiveTrading(), animated: true)
+        case 3:
+            let nav = UINavigationController(rootViewController: Wireframe.shared.getLogin())
+            appdelegate?.window?.rootViewController = nav
+        case 4:
+            self.navigationController?.pushViewController(Wireframe.shared.getWatchList(), animated: true)
         default:
             break
         }

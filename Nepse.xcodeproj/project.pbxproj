@@ -39,6 +39,7 @@
 		1A6C23D81F68FF0B00F0FCAF /* Flowsheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23D71F68FF0B00F0FCAF /* Flowsheet.swift */; };
 		1A6C23DA1F69283E00F0FCAF /* LiveTradingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23D91F69283E00F0FCAF /* LiveTradingService.swift */; };
 		1A6C23DC1F69286F00F0FCAF /* LiveTrading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23DB1F69286F00F0FCAF /* LiveTrading.swift */; };
+		1A9DCC9B1F6FB7010005BC94 /* GlobalConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DCC9A1F6FB7010005BC94 /* GlobalConstant.swift */; };
 		1AB44F571F643D76002F578A /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB44F551F643D76002F578A /* CustomCell.swift */; };
 		1AB44F581F643D76002F578A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB44F561F643D76002F578A /* ViewController.swift */; };
 		1AB44F5A1F643D89002F578A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB44F591F643D89002F578A /* Main.storyboard */; };
@@ -102,6 +103,7 @@
 		1A6C23D71F68FF0B00F0FCAF /* Flowsheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flowsheet.swift; sourceTree = "<group>"; };
 		1A6C23D91F69283E00F0FCAF /* LiveTradingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTradingService.swift; sourceTree = "<group>"; };
 		1A6C23DB1F69286F00F0FCAF /* LiveTrading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTrading.swift; sourceTree = "<group>"; };
+		1A9DCC9A1F6FB7010005BC94 /* GlobalConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstant.swift; sourceTree = "<group>"; };
 		1AB44F551F643D76002F578A /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		1AB44F561F643D76002F578A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1AB44F591F643D89002F578A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -290,6 +292,14 @@
 			path = ApiControllers;
 			sourceTree = "<group>";
 		};
+		1A9DCC991F6FB6EC0005BC94 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				1A9DCC9A1F6FB7010005BC94 /* GlobalConstant.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		1AB44F541F643D76002F578A /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,6 +352,7 @@
 		AF5AFC861F5C519400414214 /* Nepse */ = {
 			isa = PBXGroup;
 			children = (
+				1A9DCC991F6FB6EC0005BC94 /* Constants */,
 				1A6C23D21F68EDEC00F0FCAF /* ApiControllers */,
 				1A250E191F628B5700BDCE62 /* Extensions */,
 				1A25B6811F605020004C5451 /* Modules */,
@@ -592,6 +603,7 @@
 				1A250E161F624D3100BDCE62 /* FloorsheetViewController.swift in Sources */,
 				1A25B6931F605020004C5451 /* LoginViewController.swift in Sources */,
 				1A250E271F62A02400BDCE62 /* SupportViewController.swift in Sources */,
+				1A9DCC9B1F6FB7010005BC94 /* GlobalConstant.swift in Sources */,
 				1A25B6901F605020004C5451 /* DashboardCell.swift in Sources */,
 				1AB44F5C1F645063002F578A /* WireframeInput.swift in Sources */,
 				1A25B6911F605020004C5451 /* DashboardViewController.swift in Sources */,

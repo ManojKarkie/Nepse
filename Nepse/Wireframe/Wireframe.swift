@@ -16,6 +16,8 @@ protocol SideMenu {
     func openLiveTrading()
     func openCalculator()
     func openMain()
+    func openWatchList()
+    func openLogin()
 }
 
 struct StoryboardNames {
@@ -26,6 +28,7 @@ struct StoryboardNames {
     static let calculator = "Calculator"
     static let login = "Login"
     static let main = "Main"
+    static let watchList = "WishList"
 }
 
 class Wireframe {
@@ -60,6 +63,9 @@ class Wireframe {
         return UIStoryboard(name: StoryboardNames.main , bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
     }
     
+    func getWatchList() -> WishlistViewController {
+        return UIStoryboard(name: StoryboardNames.watchList , bundle: nil).instantiateViewController(withIdentifier: "WishlistViewController") as! WishlistViewController
+    }
 }
 
 extension Wireframe: SideMenu {
@@ -87,5 +93,14 @@ extension Wireframe: SideMenu {
     func openMain() {
         let sideMenu = UIApplication.shared.keyWindow?.rootViewController?.sideMenuController?.rootViewController as? UINavigationController
         sideMenu?.viewControllers = [getMain()]
+    }
+    
+    func openWatchList() {
+        let sideMenu = UIApplication.shared.keyWindow?.rootViewController?.sideMenuController?.rootViewController as? UINavigationController
+        sideMenu?.viewControllers = [getWatchList()]
+    }
+    
+    func openLogin() {
+        appdelegate?.window?.rootViewController = getLogin()
     }
 }
