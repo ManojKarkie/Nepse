@@ -34,6 +34,7 @@
 		1A25B6961F605020004C5451 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A25B68D1F605020004C5451 /* SideMenu.storyboard */; };
 		1A25B6971F605020004C5451 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A25B68E1F605020004C5451 /* SideMenuViewController.swift */; };
 		1A29A7291F697DBD00AAF1A4 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A29A7281F697DBD00AAF1A4 /* Dashboard.swift */; };
+		1A2B6AE61F70E34E005AA1CD /* SellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B6AE51F70E34E005AA1CD /* SellViewController.swift */; };
 		1A6C23D41F68EDFE00F0FCAF /* FloorsheetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23D31F68EDFE00F0FCAF /* FloorsheetService.swift */; };
 		1A6C23D61F68EF4E00F0FCAF /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23D51F68EF4E00F0FCAF /* ApiManager.swift */; };
 		1A6C23D81F68FF0B00F0FCAF /* Flowsheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23D71F68FF0B00F0FCAF /* Flowsheet.swift */; };
@@ -98,6 +99,7 @@
 		1A25B68D1F605020004C5451 /* SideMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
 		1A25B68E1F605020004C5451 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		1A29A7281F697DBD00AAF1A4 /* Dashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		1A2B6AE51F70E34E005AA1CD /* SellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellViewController.swift; sourceTree = "<group>"; };
 		1A6C23D31F68EDFE00F0FCAF /* FloorsheetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorsheetService.swift; sourceTree = "<group>"; };
 		1A6C23D51F68EF4E00F0FCAF /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		1A6C23D71F68FF0B00F0FCAF /* Flowsheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flowsheet.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			children = (
 				1A250E2D1F62BED300BDCE62 /* Calculator.storyboard */,
 				1A250E2F1F62BEE800BDCE62 /* CalculatorViewController.swift */,
+				1A2B6AE51F70E34E005AA1CD /* SellViewController.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -602,6 +605,7 @@
 			files = (
 				1A250E161F624D3100BDCE62 /* FloorsheetViewController.swift in Sources */,
 				1A25B6931F605020004C5451 /* LoginViewController.swift in Sources */,
+				1A2B6AE61F70E34E005AA1CD /* SellViewController.swift in Sources */,
 				1A250E271F62A02400BDCE62 /* SupportViewController.swift in Sources */,
 				1A9DCC9B1F6FB7010005BC94 /* GlobalConstant.swift in Sources */,
 				1A25B6901F605020004C5451 /* DashboardCell.swift in Sources */,

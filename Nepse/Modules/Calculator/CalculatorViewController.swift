@@ -9,23 +9,28 @@
 import UIKit
 
 class CalculatorViewController: UIViewController {
-
     
+    @IBOutlet weak var buyView: UIView!
     @IBOutlet weak var calculateButton: UIButton!
     @IBOutlet weak var buttonView: UIView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var topView: UIView!
-    @IBOutlet weak var sellUnderline: UIView!
     @IBOutlet weak var buyUnderline: UIView!
     @IBOutlet weak var bottomInnerView: UIView!
     @IBOutlet weak var buyBtn: UIButton!
     @IBOutlet weak var sellBtn: UIButton!
     
+    enum calculateType {
+        case buy
+        case sell
+    }
+    
+    var controller = SellViewController()
+    var defaultType: calculateType = .buy
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        
-        // Do any additional setup after loading the view.
     }
 
     func setup() {
@@ -37,7 +42,6 @@ class CalculatorViewController: UIViewController {
         topView.layer.shadowOffset = CGSize(width: 0, height: 0)
         topView.layer.shadowOpacity = 0.70
         topView.layer.borderWidth = 0.25
-        sellUnderline.isHidden = true
         bottomView.layer.borderColor = UIColor.lightGray.cgColor
         bottomView.layer.cornerRadius = 5
         bottomView.layer.shadowColor = UIColor.lightGray.cgColor
@@ -58,20 +62,38 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func buyBtnTapped(_ sender: Any) {
-        sellUnderline.isHidden = true
-        buyUnderline.isHidden = false
+        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
+            if self.defaultType != .buy{
+                self.buyUnderline.center.x = self.buyUnderline.bounds.width - (self.buttonView.bounds.width/4)
+                self.defaultType = .buy
+                self.controller.view.isHidden = true
+            }
+        }) { _ in
+        }
     }
     
     @IBAction func sellBtnTapped(_ sender: Any) {
-        sellUnderline.isHidden = false
-        buyUnderline.isHidden = true
-
+        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
+            if self.defaultType != .sell{
+                self.buyUnderline.center.x += self.buyUnderline.bounds.width
+                self.defaultType = .sell
+                self.viewSell()
+            }
+        }) { _ in
+        }
+    }
+    
+    func viewSell() {
+        controller = self.storyboard?.instantiateViewController(withIdentifier: "SellViewController") as! SellViewController
+        self.addChildViewController(controller)
+        controller.view.frame = self.buyView.frame
+        controller.view.frame.size.width = self.view.frame.size.width
+        self.buyView.addSubview((controller.view)!)
+        controller.didMove(toParentViewController: self)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
 }

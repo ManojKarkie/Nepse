@@ -48,6 +48,8 @@ class DashboardViewController: UIViewController {
         self.tableView.layer.shadowOffset = CGSize(width: 0, height: 0)
         self.tableView.layer.shadowRadius = 3
         self.tableView.layer.shadowOpacity = 0.8
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.shadowImage = UIImage()
     }
 
     override func didReceiveMemoryWarning() {

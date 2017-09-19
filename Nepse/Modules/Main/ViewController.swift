@@ -19,6 +19,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.title = "Main"
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.title = ""
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,6 +66,7 @@ extension ViewController: UICollectionViewDelegate {
         case 2:
             self.navigationController?.pushViewController(Wireframe.shared.getLiveTrading(), animated: true)
         case 3:
+            self.navigationController?.pushViewController(Wireframe.shared.getLogin(), animated: true)
             break
         case 4:
             self.navigationController?.pushViewController(Wireframe.shared.getWatchList(), animated: true)
