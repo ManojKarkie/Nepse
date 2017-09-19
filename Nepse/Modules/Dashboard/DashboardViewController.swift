@@ -13,7 +13,7 @@ import Charts
 class DashboardViewController: UIViewController {
 
     @IBOutlet var header: UIView!
-    @IBOutlet weak var chartView: UIView!
+    @IBOutlet weak var chartView: LineChartView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var chartViewContainer: UIView!
     
@@ -25,7 +25,7 @@ class DashboardViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         fetchData()
-        // Do any additional setup after loading the view.
+        
     }
     
     var status: GlobalConstant.Status = .notLogged
@@ -62,10 +62,25 @@ class DashboardViewController: UIViewController {
             (data) in
             self.data = data
             self.tableView.reloadData()
+            self.drawChart()
         })
     }
     
-
+    func drawChart() {
+        var chartEntries: [ChartDataEntry] = []
+        for i:Int in 0 ..< data.count {
+            let string = data[i].cost!.replacingOccurrences(of: ",", with: "")
+            let chartData = ChartDataEntry(x: Double(i), y: Double(string )!)
+            chartEntries.append(chartData)
+        }
+        let chartDataSet = LineChartDataSet(values: chartEntries, label: "Values")
+        chartDataSet.drawFilledEnabled = true
+        chartDataSet.cubicIntensity = 5
+        chartDataSet.drawCirclesEnabled = false
+        chartDataSet.mode = .horizontalBezier
+        let chartData = LineChartData(dataSet: chartDataSet)
+        chartView.data = chartData
+    }
 }
 
 extension DashboardViewController: UITableViewDelegate {

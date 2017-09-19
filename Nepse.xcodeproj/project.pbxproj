@@ -35,6 +35,11 @@
 		1A25B6971F605020004C5451 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A25B68E1F605020004C5451 /* SideMenuViewController.swift */; };
 		1A29A7291F697DBD00AAF1A4 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A29A7281F697DBD00AAF1A4 /* Dashboard.swift */; };
 		1A2B6AE61F70E34E005AA1CD /* SellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B6AE51F70E34E005AA1CD /* SellViewController.swift */; };
+		1A2B6AEC1F7117AB005AA1CD /* PayPalSansSmall-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A25B6651F5F0EB8004C5451 /* PayPalSansSmall-Bold.ttf */; };
+		1A2B6AED1F7117B2005AA1CD /* PayPalSansBig-Regular_0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A25B6641F5F0EB8004C5451 /* PayPalSansBig-Regular_0.ttf */; };
+		1A2B6AEE1F7117B4005AA1CD /* PayPalSansBig-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A25B6631F5F0EB8004C5451 /* PayPalSansBig-Light.ttf */; };
+		1A2B6AEF1F7117B6005AA1CD /* PayPalSansSmall-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A25B6661F5F0EB8004C5451 /* PayPalSansSmall-Regular.ttf */; };
+		1A2B6AF01F711993005AA1CD /* PayPalSansSmall-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A25B6651F5F0EB8004C5451 /* PayPalSansSmall-Bold.ttf */; };
 		1A6C23D41F68EDFE00F0FCAF /* FloorsheetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23D31F68EDFE00F0FCAF /* FloorsheetService.swift */; };
 		1A6C23D61F68EF4E00F0FCAF /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23D51F68EF4E00F0FCAF /* ApiManager.swift */; };
 		1A6C23D81F68FF0B00F0FCAF /* Flowsheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23D71F68FF0B00F0FCAF /* Flowsheet.swift */; };
@@ -481,18 +486,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A250E1E1F62922D00BDCE62 /* LiveTrading.storyboard in Resources */,
+				1A2B6AEC1F7117AB005AA1CD /* PayPalSansSmall-Bold.ttf in Resources */,
 				1A25B6961F605020004C5451 /* SideMenu.storyboard in Resources */,
 				1A25B6921F605020004C5451 /* Login.storyboard in Resources */,
 				1A250E2E1F62BED300BDCE62 /* Calculator.storyboard in Resources */,
 				AF5AFC951F5C519400414214 /* LaunchScreen.storyboard in Resources */,
+				1A2B6AEE1F7117B4005AA1CD /* PayPalSansBig-Light.ttf in Resources */,
 				241EC8FA1F64510000343316 /* WishList.storyboard in Resources */,
 				1AB44F5A1F643D89002F578A /* Main.storyboard in Resources */,
 				1A25B68F1F605020004C5451 /* Dashboard.storyboard in Resources */,
 				1A250E251F62A01A00BDCE62 /* Support.storyboard in Resources */,
 				AF5AFC921F5C519400414214 /* Assets.xcassets in Resources */,
 				1A25B6691F5F152A004C5451 /* (null) in Resources */,
+				1A2B6AEF1F7117B6005AA1CD /* PayPalSansSmall-Regular.ttf in Resources */,
 				1A25B6941F605020004C5451 /* Register.storyboard in Resources */,
 				1A250E141F624D1B00BDCE62 /* Floorsheet.storyboard in Resources */,
+				1A2B6AED1F7117B2005AA1CD /* PayPalSansBig-Regular_0.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +509,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A2B6AF01F711993005AA1CD /* PayPalSansSmall-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

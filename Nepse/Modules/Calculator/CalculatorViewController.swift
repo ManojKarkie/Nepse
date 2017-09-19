@@ -49,8 +49,8 @@ class CalculatorViewController: UIViewController {
         bottomView.layer.shadowOffset = CGSize(width: 0, height: 0)
         bottomView.layer.shadowOpacity = 0.70
         bottomView.layer.borderWidth = 0.25
-        bottomInnerView.layer.borderColor = UIColor.lightGray.cgColor
-        bottomInnerView.layer.borderWidth = 0.25
+        bottomInnerView.layer.borderWidth = 1
+        bottomInnerView.layer.borderColor = UIColor(hex: "#E3E3E3").cgColor
         buyBtn.frame.size.width = buttonView.frame.size.width/2
         sellBtn.frame.size.width = buttonView.frame.size.width/2
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(sideMenuController?.showLeftViewAnimated))

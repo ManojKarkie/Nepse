@@ -25,10 +25,10 @@
                                 <rect key="frame" x="10" y="10" width="355" height="195"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hAz-ob-kyK" customClass="LineChartView" customModule="Charts">
-                                        <rect key="frame" x="10" y="36" width="335" height="100"/>
+                                        <rect key="frame" x="10" y="36" width="335" height="120"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="jvl-uU-Dsb"/>
+                                            <constraint firstAttribute="height" constant="120" id="jvl-uU-Dsb"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eb-sb-96f" customClass="RoundCornerButton" customModule="Nepse" customModuleProvider="target">
@@ -98,7 +98,7 @@
                                 <constraints>
                                     <constraint firstItem="tE7-4U-cx4" firstAttribute="leading" secondItem="rKC-H3-j9V" secondAttribute="trailing" constant="5" id="08P-pg-fx0"/>
                                     <constraint firstItem="N7W-fV-axK" firstAttribute="centerY" secondItem="7eb-sb-96f" secondAttribute="centerY" id="201-nN-BJj"/>
-                                    <constraint firstItem="7eb-sb-96f" firstAttribute="top" secondItem="hAz-ob-kyK" secondAttribute="bottom" constant="20" id="8Ax-eZ-h1A"/>
+                                    <constraint firstItem="7eb-sb-96f" firstAttribute="top" secondItem="hAz-ob-kyK" secondAttribute="bottom" id="8Ax-eZ-h1A"/>
                                     <constraint firstItem="FdO-Ql-Z0t" firstAttribute="width" secondItem="N7W-fV-axK" secondAttribute="width" id="DOm-EI-TrG"/>
                                     <constraint firstItem="tE7-4U-cx4" firstAttribute="centerY" secondItem="rKC-H3-j9V" secondAttribute="centerY" id="E9Z-pa-hog"/>
                                     <constraint firstAttribute="trailing" secondItem="0RZ-J1-6eV" secondAttribute="trailing" constant="8" id="FQS-bl-VmP"/>

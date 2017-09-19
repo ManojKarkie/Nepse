@@ -11,6 +11,7 @@ import UIKit
 class SellViewController: UIViewController {
 
     
+    @IBOutlet weak var calculateBtn: UIButton!
     @IBOutlet weak var bottomSell: UIView!
     @IBOutlet weak var bottomBuy: UIView!
     @IBOutlet weak var topView: UIView!
@@ -52,6 +53,8 @@ class SellViewController: UIViewController {
         
         sellView.layer.borderColor = UIColor.lightGray.cgColor
         sellView.layer.borderWidth = 0.25
+        
+        calculateBtn.layer.cornerRadius = 4
     }
 
     override func didReceiveMemoryWarning() {
