@@ -10,6 +10,7 @@ target 'Nepse' do
   pod 'Charts'
   pod 'Alamofire'
   pod 'ObjectMapper+Realm'
+  pod 'CollapsibleTableSectionViewController', '~> 1.0.0'
   target 'NepseTests' do
     inherit! :search_paths
     # Pods for testing

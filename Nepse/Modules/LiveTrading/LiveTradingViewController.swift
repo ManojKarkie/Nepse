@@ -40,7 +40,7 @@ class LiveTradingViewController: UIViewController {
         tradingSwitch.onTintColor = UIColor.white
         tradingSwitch.thumbTintColor = UIColor(hex: "#234E66")
         if status != .notLogged {
-            self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(sideMenuController?.showLeftViewAnimated))
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ios7-keypad"), style: .plain, target: self, action: #selector(sideMenuController?.showLeftViewAnimated))
             sideMenuController?.swipeGestureArea = .full
         }
     }

@@ -12,6 +12,8 @@ import Charts
 
 class DashboardViewController: UIViewController {
 
+    @IBOutlet weak var bottomStack: UIStackView!
+    @IBOutlet weak var collapseHeader: UIImageView!
     @IBOutlet var header: UIView!
     @IBOutlet weak var chartView: LineChartView!
     @IBOutlet weak var tableView: UITableView!
@@ -19,22 +21,34 @@ class DashboardViewController: UIViewController {
     
     let service = DashboardService()
     var data = [Dashboard]()
+    
+    var expanding = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         tableView.delegate = self
         tableView.dataSource = self
         fetchData()
-        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(collapseTableView))
+        collapseHeader.addGestureRecognizer(tapGesture)
+        collapseHeader.isUserInteractionEnabled = true
+    }
+    
+    func collapseTableView() {
+        bottomStack.isHidden = expanding
+        expanding = !expanding
+        tableView.reloadData()
     }
     
     var status: GlobalConstant.Status = .notLogged
     
     
     func setup() {
+        bottomStack.isHidden = !expanding
         self.title = "Dashboard"
         if status != .notLogged {
-            self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(sideMenuController?.showLeftViewAnimated))
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ios7-keypad"), style: .plain, target: self, action: #selector(sideMenuController?.showLeftViewAnimated))
         }
         sideMenuController?.swipeGestureArea = .full
         sideMenuController?.leftViewBackgroundBlurEffect = UIBlurEffect(style: .regular)
@@ -90,11 +104,11 @@ extension DashboardViewController: UITableViewDelegate {
 extension DashboardViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.data.count
+        return expanding ? self.data.count : 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -104,8 +118,6 @@ extension DashboardViewController: UITableViewDataSource {
         }
         cell?.data = self.data[indexPath.row]
         cell?.setup()
-        
-        
         return cell!
     }
     
@@ -114,8 +126,8 @@ extension DashboardViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30
-    }
+            return expanding ? 50 : 25
+        }
 }
 
 class RoundCornerButton: UIButton {
