@@ -53,6 +53,8 @@
 		241EC8FA1F64510000343316 /* WishList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241EC8F91F64510000343316 /* WishList.storyboard */; };
 		241EC8FE1F64514900343316 /* WishlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241EC8FD1F64514900343316 /* WishlistViewController.swift */; };
 		241EC9021F6457B100343316 /* WishListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241EC9011F6457B100343316 /* WishListCell.swift */; };
+		244AFBD21F7206420049B2EF /* Portfolio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 244AFBD11F7206420049B2EF /* Portfolio.storyboard */; };
+		244AFBD81F7206B80049B2EF /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244AFBD71F7206B80049B2EF /* PortfolioViewController.swift */; };
 		3AF74A800678150CF32CDF59 /* Pods_NepseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B5502440A17E09AD54100C8 /* Pods_NepseTests.framework */; };
 		AF5AFC881F5C519400414214 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5AFC871F5C519400414214 /* AppDelegate.swift */; };
 		AF5AFC901F5C519400414214 /* Nepse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF5AFC8E1F5C519400414214 /* Nepse.xcdatamodeld */; };
@@ -119,6 +121,8 @@
 		241EC8F91F64510000343316 /* WishList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WishList.storyboard; sourceTree = "<group>"; };
 		241EC8FD1F64514900343316 /* WishlistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishlistViewController.swift; sourceTree = "<group>"; };
 		241EC9011F6457B100343316 /* WishListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishListCell.swift; sourceTree = "<group>"; };
+		244AFBD11F7206420049B2EF /* Portfolio.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Portfolio.storyboard; sourceTree = "<group>"; };
+		244AFBD71F7206B80049B2EF /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
 		8B5502440A17E09AD54100C8 /* Pods_NepseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NepseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF5AFC841F5C519400414214 /* Nepse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nepse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF5AFC871F5C519400414214 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -238,6 +242,7 @@
 		1A25B6811F605020004C5451 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				244AFBD01F7205F50049B2EF /* Portfolio */,
 				241EC8F81F6450AC00343316 /* WishList */,
 				1A250E2C1F62BECA00BDCE62 /* Calculator */,
 				1AB44F541F643D76002F578A /* Main */,
@@ -326,6 +331,15 @@
 				241EC9011F6457B100343316 /* WishListCell.swift */,
 			);
 			name = WishList;
+			sourceTree = "<group>";
+		};
+		244AFBD01F7205F50049B2EF /* Portfolio */ = {
+			isa = PBXGroup;
+			children = (
+				244AFBD11F7206420049B2EF /* Portfolio.storyboard */,
+				244AFBD71F7206B80049B2EF /* PortfolioViewController.swift */,
+			);
+			path = Portfolio;
 			sourceTree = "<group>";
 		};
 		61E323D4035645E6AA37C4A8 /* Frameworks */ = {
@@ -452,6 +466,7 @@
 				TargetAttributes = {
 					AF5AFC831F5C519400414214 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					AF5AFC9A1F5C519400414214 = {
@@ -488,6 +503,7 @@
 				1A250E1E1F62922D00BDCE62 /* LiveTrading.storyboard in Resources */,
 				1A2B6AEC1F7117AB005AA1CD /* PayPalSansSmall-Bold.ttf in Resources */,
 				1A25B6961F605020004C5451 /* SideMenu.storyboard in Resources */,
+				244AFBD21F7206420049B2EF /* Portfolio.storyboard in Resources */,
 				1A25B6921F605020004C5451 /* Login.storyboard in Resources */,
 				1A250E2E1F62BED300BDCE62 /* Calculator.storyboard in Resources */,
 				AF5AFC951F5C519400414214 /* LaunchScreen.storyboard in Resources */,
@@ -644,6 +660,7 @@
 				1A6C23DC1F69286F00F0FCAF /* LiveTrading.swift in Sources */,
 				1A6C23D41F68EDFE00F0FCAF /* FloorsheetService.swift in Sources */,
 				1A1E5E881F6991B6001FDB0E /* DashboardService.swift in Sources */,
+				244AFBD81F7206B80049B2EF /* PortfolioViewController.swift in Sources */,
 				1A250E1B1F628B6700BDCE62 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -778,11 +795,14 @@
 			baseConfigurationReference = 207A2067C6E633BB40528589 /* Pods-Nepse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Nepse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiftech.Nepse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Nepse/Modules/Portfolio/Nepse-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -792,11 +812,13 @@
 			baseConfigurationReference = ED280DCEF0F4C65B2D09CE73 /* Pods-Nepse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Nepse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiftech.Nepse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Nepse/Modules/Portfolio/Nepse-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
