@@ -12,23 +12,27 @@ import Charts
 
 class DashboardViewController: UIViewController {
 
+    @IBOutlet weak var tableView2: UITableView!
     @IBOutlet weak var bottomStack: UIStackView!
     @IBOutlet weak var collapseHeader: UIImageView!
     @IBOutlet var header: UIView!
     @IBOutlet weak var chartView: LineChartView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var chartViewContainer: UIView!
+    @IBOutlet var header2: UIView!
     
     let service = DashboardService()
     var data = [Dashboard]()
-    
-    var expanding = false
+
+    var expanding = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView2.delegate = self
+        tableView2.dataSource = self
         fetchData()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(collapseTableView))
         collapseHeader.addGestureRecognizer(tapGesture)
@@ -38,7 +42,8 @@ class DashboardViewController: UIViewController {
     func collapseTableView() {
         bottomStack.isHidden = expanding
         expanding = !expanding
-        tableView.reloadData()
+        
+        tableView.reloadSections(IndexSet.init(arrayLiteral: 0,0), with: .automatic)
     }
     
     var status: GlobalConstant.Status = .notLogged
@@ -62,6 +67,13 @@ class DashboardViewController: UIViewController {
         self.tableView.layer.shadowOffset = CGSize(width: 0, height: 0)
         self.tableView.layer.shadowRadius = 3
         self.tableView.layer.shadowOpacity = 0.8
+        self.tableView2.layer.borderColor = UIColor.lightGray.cgColor
+        self.tableView2.layer.borderWidth = 0.5
+        self.tableView2.layer.cornerRadius = 5
+        self.tableView2.layer.shadowColor = UIColor.lightGray.cgColor
+        self.tableView2.layer.shadowOffset = CGSize(width: 0, height: 0)
+        self.tableView2.layer.shadowRadius = 3
+        self.tableView2.layer.shadowOpacity = 0.8
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.shadowImage = UIImage()
     }
@@ -104,29 +116,76 @@ extension DashboardViewController: UITableViewDelegate {
 extension DashboardViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return expanding ? self.data.count : 0
+        var count:Int?
+        switch tableView.tag {
+        case 1:
+            count = self.data.count
+            break
+        case 2:
+            count = 5
+            break
+        default:
+            break
+        }
+        return expanding ? count ?? 0 : 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DashboardCell") as? DashboardCell
-        if indexPath.row % 2 == 0{
-            cell?.contentView.backgroundColor = UIColor(red: 240/255.0, green: 240/255.0, blue: 240/255.0, alpha: 1)
+        var cell: UITableViewCell?
+        switch tableView.tag {
+        case 1:
+            let cell1 = tableView.dequeueReusableCell(withIdentifier: "DashboardCell") as! DashboardCell
+            if indexPath.row % 2 == 0{
+                cell?.contentView.backgroundColor = UIColor(red: 240/255.0, green: 240/255.0, blue: 240/255.0, alpha: 1)
+            }
+            cell1.data = self.data[indexPath.row]
+            cell1.setup()
+            cell = cell1
+            break
+        case 2:
+            let cell2 = tableView.dequeueReusableCell(withIdentifier: "TrunOverCell") as? TrunOverCell
+            if indexPath.row % 2 == 0{
+                cell?.contentView.backgroundColor = UIColor(red: 240/255.0, green: 240/255.0, blue: 240/255.0, alpha: 1)
+            }
+            cell = cell2
+            break
+        default:
+            break
         }
-        cell?.data = self.data[indexPath.row]
-        cell?.setup()
         return cell!
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return header
+        var view:UIView?
+        switch tableView.tag {
+        case 1:
+            view = self.header
+        case 2:
+            view = self.header2
+        default:
+            break
+        }
+        return view!
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-            return expanding ? 50 : 25
+        var height: CGFloat?
+        switch tableView.tag {
+        case 1:
+            height = 50
+            break
+        case 2:
+            height = 50
+            break
+        default:
+            break
+        }
+        
+        return expanding ? height! : 25
         }
 }
 
