@@ -40,6 +40,9 @@
 		1A2B6AEE1F7117B4005AA1CD /* PayPalSansBig-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A25B6631F5F0EB8004C5451 /* PayPalSansBig-Light.ttf */; };
 		1A2B6AEF1F7117B6005AA1CD /* PayPalSansSmall-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A25B6661F5F0EB8004C5451 /* PayPalSansSmall-Regular.ttf */; };
 		1A2B6AF01F711993005AA1CD /* PayPalSansSmall-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A25B6651F5F0EB8004C5451 /* PayPalSansSmall-Bold.ttf */; };
+		1A45214B1F921B69006240A9 /* Indices.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A45214A1F921B69006240A9 /* Indices.storyboard */; };
+		1A45214D1F921B71006240A9 /* IndicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A45214C1F921B71006240A9 /* IndicesViewController.swift */; };
+		1A45214F1F922301006240A9 /* IndicesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A45214E1F922301006240A9 /* IndicesService.swift */; };
 		1A6C23D41F68EDFE00F0FCAF /* FloorsheetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23D31F68EDFE00F0FCAF /* FloorsheetService.swift */; };
 		1A6C23D61F68EF4E00F0FCAF /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23D51F68EF4E00F0FCAF /* ApiManager.swift */; };
 		1A6C23D81F68FF0B00F0FCAF /* Flowsheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23D71F68FF0B00F0FCAF /* Flowsheet.swift */; };
@@ -108,6 +111,9 @@
 		1A25B68E1F605020004C5451 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		1A29A7281F697DBD00AAF1A4 /* Dashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		1A2B6AE51F70E34E005AA1CD /* SellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellViewController.swift; sourceTree = "<group>"; };
+		1A45214A1F921B69006240A9 /* Indices.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Indices.storyboard; sourceTree = "<group>"; };
+		1A45214C1F921B71006240A9 /* IndicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicesViewController.swift; sourceTree = "<group>"; };
+		1A45214E1F922301006240A9 /* IndicesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicesService.swift; sourceTree = "<group>"; };
 		1A6C23D31F68EDFE00F0FCAF /* FloorsheetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorsheetService.swift; sourceTree = "<group>"; };
 		1A6C23D51F68EF4E00F0FCAF /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		1A6C23D71F68FF0B00F0FCAF /* Flowsheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flowsheet.swift; sourceTree = "<group>"; };
@@ -244,6 +250,7 @@
 		1A25B6811F605020004C5451 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				1A4521491F921B5F006240A9 /* Indices */,
 				244AFBD01F7205F50049B2EF /* Portfolio */,
 				241EC8F81F6450AC00343316 /* WishList */,
 				1A250E2C1F62BECA00BDCE62 /* Calculator */,
@@ -297,6 +304,15 @@
 			path = SideMenu;
 			sourceTree = "<group>";
 		};
+		1A4521491F921B5F006240A9 /* Indices */ = {
+			isa = PBXGroup;
+			children = (
+				1A45214A1F921B69006240A9 /* Indices.storyboard */,
+				1A45214C1F921B71006240A9 /* IndicesViewController.swift */,
+			);
+			path = Indices;
+			sourceTree = "<group>";
+		};
 		1A6C23D21F68EDEC00F0FCAF /* ApiControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +320,7 @@
 				1A6C23D51F68EF4E00F0FCAF /* ApiManager.swift */,
 				1A6C23D91F69283E00F0FCAF /* LiveTradingService.swift */,
 				1A1E5E871F6991B6001FDB0E /* DashboardService.swift */,
+				1A45214E1F922301006240A9 /* IndicesService.swift */,
 			);
 			path = ApiControllers;
 			sourceTree = "<group>";
@@ -513,6 +530,7 @@
 				1A2B6AEE1F7117B4005AA1CD /* PayPalSansBig-Light.ttf in Resources */,
 				241EC8FA1F64510000343316 /* WishList.storyboard in Resources */,
 				1AB44F5A1F643D89002F578A /* Main.storyboard in Resources */,
+				1A45214B1F921B69006240A9 /* Indices.storyboard in Resources */,
 				1A25B68F1F605020004C5451 /* Dashboard.storyboard in Resources */,
 				1A250E251F62A01A00BDCE62 /* Support.storyboard in Resources */,
 				AF5AFC921F5C519400414214 /* Assets.xcassets in Resources */,
@@ -655,6 +673,8 @@
 				1A250E291F62A03F00BDCE62 /* SendCell.swift in Sources */,
 				1A25B6701F5FBCF5004C5451 /* Wireframe.swift in Sources */,
 				1A250E301F62BEE800BDCE62 /* CalculatorViewController.swift in Sources */,
+				1A45214F1F922301006240A9 /* IndicesService.swift in Sources */,
+				1A45214D1F921B71006240A9 /* IndicesViewController.swift in Sources */,
 				1A250E2B1F62A04A00BDCE62 /* RecieveCell.swift in Sources */,
 				1A25B6971F605020004C5451 /* SideMenuViewController.swift in Sources */,
 				241EC9021F6457B100343316 /* WishListCell.swift in Sources */,

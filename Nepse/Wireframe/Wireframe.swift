@@ -31,6 +31,7 @@ struct StoryboardNames {
     static let main = "Main"
     static let watchList = "WishList"
     static let portfolio = "Portfolio"
+    static let registration = "Register"
 }
 
 class Wireframe {
@@ -71,6 +72,10 @@ class Wireframe {
     
     func getProtfolio() -> PortfolioViewController {
         return UIStoryboard(name: StoryboardNames.portfolio , bundle: nil).instantiateViewController(withIdentifier: "PortfolioViewController") as! PortfolioViewController
+    }
+    
+    func getRegister() -> RegisterViewController {
+        return UIStoryboard(name: StoryboardNames.registration , bundle: nil).instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
     }
 }
 

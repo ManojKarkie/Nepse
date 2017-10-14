@@ -9,9 +9,10 @@
 import Foundation
 import ObjectMapper
 
-class DashboardService {
+class DashboardService : ApiManager{
     
     var DashboardData = [Dashboard]()
+    var TransactionData = [Transactions]()
     var data = [String:Any]()
     
     func fetchDashboard(completion: @escaping ([Dashboard]) -> ()) {
@@ -29,5 +30,23 @@ class DashboardService {
             }
             completion(self.DashboardData)
         })
+    }
+    
+    func fetchNumberOfShareTransaction(completion: @escaping ([Transactions]) -> ()) {
+        let url = URL(string: "http://www.zeronebits.com/nepse/data/performers/Top10ByTxn.php")
+        self.fetchData(url: url!) { (data) in
+            let apiData = data as NSDictionary
+            var dataArray = apiData.allValues as? [[String]]
+            dataArray?.remove(at: 0)
+            for values in dataArray ?? [[String]]() {
+                self.data["sym"] = values[0]
+                self.data["numberOfTransactions"] = values[1]
+                self.data["closingPrice"] = values[2]
+                if let transaction = Mapper<Transactions>().map(JSON: self.data) {
+                    self.TransactionData.append(transaction)
+                }
+            }
+            completion(self.TransactionData)
+        }
     }
 }

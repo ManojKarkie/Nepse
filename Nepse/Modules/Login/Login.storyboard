@@ -70,29 +70,31 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not registerd? Click to Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JzX-ll-iEb">
-                                                <rect key="frame" x="57.5" y="435" width="260" height="21"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2v-z6-dxy">
+                                                <rect key="frame" x="132" y="415" width="110" height="30"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="260" id="BF2-ye-FnQ"/>
-                                                    <constraint firstAttribute="height" constant="21" id="HHi-ND-t4B"/>
+                                                    <constraint firstAttribute="height" constant="30" id="gpK-iy-WVV"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.13929253820000001" green="0.27330046889999998" blue="0.3524836898" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <state key="normal" title="Not Registered?">
+                                                    <color key="titleColor" red="0.12288034707307816" green="0.26536419987678528" blue="0.34868580102920532" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="goToRegistration:" destination="FBl-KA-MbE" eventType="touchUpInside" id="57E-E9-ec1"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="yn8-uW-vku" firstAttribute="top" secondItem="bCX-cy-Les" secondAttribute="bottom" constant="50" id="2nD-vo-WRb"/>
                                             <constraint firstAttribute="trailing" secondItem="bCX-cy-Les" secondAttribute="trailing" constant="28" id="4vN-ay-oIq"/>
                                             <constraint firstItem="OJ5-ti-WM6" firstAttribute="leading" secondItem="mTj-In-dcE" secondAttribute="leading" constant="28" id="6HZ-Lt-dgS"/>
-                                            <constraint firstItem="JzX-ll-iEb" firstAttribute="top" secondItem="XFy-4E-XQ3" secondAttribute="bottom" constant="90" id="7bQ-jv-8Xg"/>
-                                            <constraint firstItem="JzX-ll-iEb" firstAttribute="centerX" secondItem="mTj-In-dcE" secondAttribute="centerX" id="9RO-pa-H3g"/>
+                                            <constraint firstItem="a2v-z6-dxy" firstAttribute="centerX" secondItem="mTj-In-dcE" secondAttribute="centerX" id="By6-HS-sWm"/>
                                             <constraint firstItem="XFy-4E-XQ3" firstAttribute="centerX" secondItem="mTj-In-dcE" secondAttribute="centerX" id="E8B-k7-tvG"/>
                                             <constraint firstItem="mGv-K9-Kma" firstAttribute="leading" secondItem="mTj-In-dcE" secondAttribute="leading" constant="28" id="Gf1-ht-zCK"/>
                                             <constraint firstItem="yn8-uW-vku" firstAttribute="leading" secondItem="mTj-In-dcE" secondAttribute="leading" constant="28" id="KAe-Im-XkB"/>
                                             <constraint firstItem="mGv-K9-Kma" firstAttribute="top" secondItem="yn8-uW-vku" secondAttribute="bottom" constant="10" id="OYu-oE-TMh"/>
                                             <constraint firstAttribute="trailing" secondItem="mGv-K9-Kma" secondAttribute="trailing" constant="28" id="P52-Xx-eSL"/>
+                                            <constraint firstItem="a2v-z6-dxy" firstAttribute="top" secondItem="XFy-4E-XQ3" secondAttribute="bottom" constant="70" id="Ucm-al-e9I"/>
                                             <constraint firstItem="OJ5-ti-WM6" firstAttribute="top" secondItem="mTj-In-dcE" secondAttribute="top" constant="150" id="WAt-oe-UyQ"/>
                                             <constraint firstAttribute="trailing" secondItem="OJ5-ti-WM6" secondAttribute="trailing" constant="28" id="n6i-ZA-3mL"/>
                                             <constraint firstItem="bCX-cy-Les" firstAttribute="leading" secondItem="mTj-In-dcE" secondAttribute="leading" constant="28" id="nke-c0-nmY"/>
@@ -120,14 +122,7 @@
                             <constraint firstItem="GYF-ED-cD7" firstAttribute="top" secondItem="eRT-tO-sgH" secondAttribute="bottom" id="jYD-t4-VEO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="UBz-pU-VuT">
-                        <barButtonItem key="leftBarButtonItem" title="Register" id="4nc-Fj-SCK">
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="User" id="C2O-Fe-6RD">
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="UBz-pU-VuT"/>
                     <connections>
                         <outlet property="email_txt" destination="OJ5-ti-WM6" id="95c-qJ-HrJ"/>
                         <outlet property="loginbnt" destination="XFy-4E-XQ3" id="Uce-C4-yj6"/>

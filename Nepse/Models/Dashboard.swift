@@ -29,3 +29,21 @@ class Dashboard: Mappable {
         profit <- map["profit"]
     }
 }
+
+class Transactions: Mappable {
+    
+    var sym: String?
+    var noOfTrans: String?
+    var closingPrice: String?
+    
+    required init?(map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        sym <- map["sym"]
+        noOfTrans <- map["numberOfTransactions"]
+        closingPrice <- map["closingPrice"]
+    }
+    
+}

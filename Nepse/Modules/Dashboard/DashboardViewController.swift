@@ -23,7 +23,8 @@ class DashboardViewController: UIViewController {
     
     let service = DashboardService()
     var data = [Dashboard]()
-
+    var transactionData = [Transactions]()
+    
     var expanding = true
     
     override func viewDidLoad() {
@@ -90,6 +91,11 @@ class DashboardViewController: UIViewController {
             self.tableView.reloadData()
             self.drawChart()
         })
+        
+        service.fetchNumberOfShareTransaction { (data) in
+            self.transactionData = data
+            self.tableView2.reloadData()
+        }
     }
     
     func drawChart() {
@@ -102,6 +108,9 @@ class DashboardViewController: UIViewController {
         let chartDataSet = LineChartDataSet(values: chartEntries, label: "Values")
         chartDataSet.drawFilledEnabled = true
         chartDataSet.cubicIntensity = 5
+        chartView.drawGridBackgroundEnabled = false
+        
+        chartDataSet.valueTextColor = NSUIColor.white
         chartDataSet.drawCirclesEnabled = false
         chartDataSet.mode = .horizontalBezier
         let chartData = LineChartData(dataSet: chartDataSet)
@@ -126,7 +135,7 @@ extension DashboardViewController: UITableViewDataSource {
             count = self.data.count
             break
         case 2:
-            count = 5
+            count = self.transactionData.count
             break
         default:
             break
@@ -151,6 +160,8 @@ extension DashboardViewController: UITableViewDataSource {
             if indexPath.row % 2 == 0{
                 cell?.contentView.backgroundColor = UIColor(red: 240/255.0, green: 240/255.0, blue: 240/255.0, alpha: 1)
             }
+            cell2?.transaction = self.transactionData[indexPath.row]
+            cell2?.setup()
             cell = cell2
             break
         default:

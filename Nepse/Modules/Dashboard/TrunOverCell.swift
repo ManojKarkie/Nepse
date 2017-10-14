@@ -10,9 +10,21 @@ import UIKit
 
 class TrunOverCell: UITableViewCell {
 
+    @IBOutlet weak var closingPrice: UILabel!
+    @IBOutlet weak var numberOfTransactions: UILabel!
+    @IBOutlet weak var symbolLabel: UILabel!
+    
+    var transaction: Transactions?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func setup() {
+        closingPrice.text = transaction?.closingPrice!
+        numberOfTransactions.text = transaction?.noOfTrans!
+        symbolLabel.text = transaction?.sym!
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

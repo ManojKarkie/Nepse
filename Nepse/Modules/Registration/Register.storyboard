@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lpc-6a-bbu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lpc-6a-bbu">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +13,7 @@
         <!--Register View Controller-->
         <scene sceneID="vHw-3l-wk9">
             <objects>
-                <viewController storyboardIdentifier="registerStory" id="pNI-qM-sfe" customClass="RegisterViewController" customModule="Nepse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pNI-qM-sfe" customClass="RegisterViewController" customModule="Nepse" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SNK-oB-oTI"/>
                         <viewControllerLayoutGuide type="bottom" id="SGD-rQ-9m3"/>
@@ -116,20 +116,22 @@
                                     <action selector="btn_register:" destination="pNI-qM-sfe" eventType="touchUpInside" id="iGq-Nu-Vwp"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already registerd? Click to Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqn-sV-KBK">
-                                <rect key="frame" x="61" y="556" width="253" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5y-B8-KCx">
+                                <rect key="frame" x="76" y="556" width="222" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="253" id="Eok-PJ-uRA"/>
-                                    <constraint firstAttribute="height" constant="21" id="byN-A2-Lca"/>
+                                    <constraint firstAttribute="height" constant="30" id="CpF-mo-adx"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.29851752519607544" green="0.39469543099403381" blue="0.48213762044906616" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="Already registerd? Click to Login">
+                                    <color key="titleColor" red="0.12288034707307816" green="0.26536419987678528" blue="0.34868580102920532" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backToLogin:" destination="pNI-qM-sfe" eventType="touchUpInside" id="ohQ-bR-y99"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="rqn-sV-KBK" firstAttribute="centerX" secondItem="1dW-5X-pbq" secondAttribute="centerX" id="0e4-Wr-y4J"/>
                             <constraint firstItem="9Pv-IU-a2l" firstAttribute="top" secondItem="vXu-i8-TA2" secondAttribute="bottom" constant="65" id="5PO-Ce-e59"/>
                             <constraint firstItem="I96-pp-qLf" firstAttribute="top" secondItem="xyV-dB-oae" secondAttribute="bottom" constant="8" id="8BU-N0-gZ0"/>
                             <constraint firstItem="gaB-L4-WJp" firstAttribute="top" secondItem="Kgd-Md-YZU" secondAttribute="bottom" constant="8" id="9gE-6i-2pQ"/>
@@ -140,14 +142,15 @@
                             <constraint firstItem="70p-Ki-i8g" firstAttribute="leading" secondItem="1dW-5X-pbq" secondAttribute="leadingMargin" constant="12" id="HEs-pj-URj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="y8M-FN-HW1" secondAttribute="trailing" constant="12" id="LfP-sQ-V8m"/>
                             <constraint firstItem="I96-pp-qLf" firstAttribute="leading" secondItem="1dW-5X-pbq" secondAttribute="leadingMargin" constant="12" id="Pzp-JG-lbB"/>
+                            <constraint firstItem="q5y-B8-KCx" firstAttribute="top" secondItem="9Pv-IU-a2l" secondAttribute="bottom" constant="50" id="R4Q-gN-oKn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rSJ-b2-Ohm" secondAttribute="trailing" constant="12" id="Rc7-QE-K1C"/>
                             <constraint firstItem="RsG-Eg-Jyn" firstAttribute="leading" secondItem="1dW-5X-pbq" secondAttribute="leadingMargin" constant="12" id="RgT-51-caP"/>
                             <constraint firstItem="9Pv-IU-a2l" firstAttribute="centerX" secondItem="1dW-5X-pbq" secondAttribute="centerX" id="SqN-nP-Dlp"/>
+                            <constraint firstItem="q5y-B8-KCx" firstAttribute="centerX" secondItem="1dW-5X-pbq" secondAttribute="centerX" id="TiY-Ib-oIN"/>
                             <constraint firstItem="y8M-FN-HW1" firstAttribute="leading" secondItem="1dW-5X-pbq" secondAttribute="leadingMargin" constant="12" id="Ur4-9J-Mjg"/>
                             <constraint firstItem="70p-Ki-i8g" firstAttribute="top" secondItem="SNK-oB-oTI" secondAttribute="bottom" constant="95" id="VKh-Kj-lpV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vXu-i8-TA2" secondAttribute="trailing" constant="12" id="XMU-on-dsf"/>
                             <constraint firstItem="xyV-dB-oae" firstAttribute="leading" secondItem="1dW-5X-pbq" secondAttribute="leadingMargin" constant="12" id="YDI-vI-5aZ"/>
-                            <constraint firstItem="rqn-sV-KBK" firstAttribute="top" secondItem="9Pv-IU-a2l" secondAttribute="bottom" constant="50" id="Ytl-tI-LuR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xyV-dB-oae" secondAttribute="trailing" constant="12" id="Z4s-dJ-Ppt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Kgd-Md-YZU" secondAttribute="trailing" constant="12" id="aEM-rd-Chd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7my-Mr-Kaa" secondAttribute="trailing" constant="12" id="aWl-U9-R8s"/>
@@ -165,14 +168,7 @@
                             <constraint firstItem="vXu-i8-TA2" firstAttribute="leading" secondItem="1dW-5X-pbq" secondAttribute="leadingMargin" constant="12" id="zig-yI-yiv"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="6p3-He-78n">
-                        <barButtonItem key="leftBarButtonItem" title="Register" id="ecq-f9-0k6">
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="Dl0-dg-OL6">
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="6p3-He-78n"/>
                     <connections>
                         <outlet property="emailaddress" destination="Kgd-Md-YZU" id="5cf-bv-QY4"/>
                         <outlet property="firstname" destination="70p-Ki-i8g" id="zIh-wJ-wNX"/>
@@ -192,7 +188,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lpc-6a-bbu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="CuV-zR-aX2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.10917998105287552" green="0.20986774563789368" blue="0.3095804750919342" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
