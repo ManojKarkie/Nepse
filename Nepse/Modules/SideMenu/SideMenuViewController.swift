@@ -32,7 +32,7 @@ class SideMenuViewController: UITableViewController {
         case 2:
             Wireframe.shared.openLiveTrading()
         case 4:
-            Wireframe.shared.openLogin()
+            Wireframe.shared.openPortfolio()
         case 5:
             Wireframe.shared.openWatchList()
         case 8:

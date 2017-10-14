@@ -98,7 +98,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nFr-eB-bqR">
                                                         <rect key="frame" x="15" y="0.0" width="345" height="257"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGh-rp-BZU">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGh-rp-BZU" customClass="shadowView" customModule="Nepse" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="345" height="257"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Su5-YN-egr">
@@ -191,7 +191,7 @@
                                                             <constraint firstAttribute="height" constant="257" id="Pfl-lh-7vy"/>
                                                         </constraints>
                                                     </stackView>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCr-ns-7tj">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCr-ns-7tj" customClass="shadowView" customModule="Nepse" customModuleProvider="target">
                                                         <rect key="frame" x="15" y="297" width="345" height="220"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XxM-Xv-km4">
@@ -437,7 +437,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4ju-pV-WHc">
                                                 <rect key="frame" x="15" y="0.0" width="345" height="280"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gcK-my-Ku1">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gcK-my-Ku1" customClass="shadowView" customModule="Nepse" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="280"/>
                                                         <subviews>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KMn-pA-Tmv">
@@ -555,10 +555,10 @@
                                                     <constraint firstAttribute="height" constant="280" id="nCJ-Ft-QcS"/>
                                                 </constraints>
                                             </stackView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZTA-MB-rd8">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZTA-MB-rd8" customClass="shadowView" customModule="Nepse" customModuleProvider="target">
                                                 <rect key="frame" x="15" y="320" width="345" height="250"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AnD-pt-Beo">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AnD-pt-Beo" customClass="shadowView" customModule="Nepse" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="10" width="325" height="230"/>
                                                         <subviews>
                                                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aq2-rU-yQZ">
@@ -748,7 +748,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8iT-jj-izR">
                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="230"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p36-Qz-V1g">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p36-Qz-V1g" customClass="shadowView" customModule="Nepse" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="345" height="230"/>
                                                                 <subviews>
                                                                     <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ztg-Jn-8Aw">
@@ -979,6 +979,7 @@
                         <outlet property="bottomBuy" destination="ZTA-MB-rd8" id="Aiz-XB-s0I"/>
                         <outlet property="bottomSell" destination="Rzv-he-Yry" id="IYZ-ze-0Y3"/>
                         <outlet property="buyView" destination="AnD-pt-Beo" id="3aP-qw-k6Y"/>
+                        <outlet property="calculateBtn" destination="N0y-39-mk3" id="nGV-gp-kaI"/>
                         <outlet property="sellView" destination="p36-Qz-V1g" id="DCH-V4-M2v"/>
                         <outlet property="topView" destination="gcK-my-Ku1" id="dp3-yc-UKN"/>
                     </connections>

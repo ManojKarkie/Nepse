@@ -13,34 +13,25 @@ class PortfolioViewController: UIViewController {
     @IBOutlet weak var shares: UILabel!
     @IBOutlet weak var shareAddedView: UIView!
     @IBOutlet weak var shrebgView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
-
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     func setUp(){
-        shrebgView.layer.cornerRadius = 50.0
-        shareAddedView.layer.cornerRadius = 50.0
-  
-    
-        
+        self.title = "Portfolio"
+        shrebgView.layer.cornerRadius = shrebgView.frame.size.height/2
+        shareAddedView.layer.cornerRadius = shareAddedView.frame.size.height/2
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ios7-keypad"), style: .plain, target: self, action: #selector(sideMenuController?.showLeftViewAnimated))
     }
     
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+class corneredButton : UIButton {
+    
+    override func awakeFromNib() {
+        layer.cornerRadius = 5
     }
-    */
-
 }

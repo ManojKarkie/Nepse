@@ -40,10 +40,10 @@ class DashboardViewController: UIViewController {
     }
     
     func collapseTableView() {
-        bottomStack.isHidden = expanding
-        expanding = !expanding
-        
-        tableView.reloadSections(IndexSet.init(arrayLiteral: 0,0), with: .automatic)
+//        bottomStack.isHidden = expanding
+//        expanding = !expanding
+//
+//        tableView.reloadSections(IndexSet.init(arrayLiteral: 0,0), with: .automatic)
     }
     
     var status: GlobalConstant.Status = .notLogged

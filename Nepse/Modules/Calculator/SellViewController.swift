@@ -25,29 +25,6 @@ class SellViewController: UIViewController {
     }
     
     func setup() {
-        topView.layer.borderColor = UIColor.lightGray.cgColor
-        topView.layer.cornerRadius = 5
-        topView.layer.shadowColor = UIColor.lightGray.cgColor
-        topView.layer.shadowRadius = 4
-        topView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        topView.layer.shadowOpacity = 0.70
-        topView.layer.borderWidth = 0.25
-        bottomBuy.layer.borderColor = UIColor.lightGray.cgColor
-        bottomBuy.layer.cornerRadius = 5
-        bottomBuy.layer.shadowColor = UIColor.lightGray.cgColor
-        bottomBuy.layer.shadowRadius = 4
-        bottomBuy.layer.shadowOffset = CGSize(width: 0, height: 0)
-        bottomBuy.layer.shadowOpacity = 0.70
-        bottomBuy.layer.borderWidth = 0.25
-        
-        bottomSell.layer.borderColor = UIColor.lightGray.cgColor
-        bottomSell.layer.cornerRadius = 5
-        bottomSell.layer.shadowColor = UIColor.lightGray.cgColor
-        bottomSell.layer.shadowRadius = 4
-        bottomSell.layer.shadowOffset = CGSize(width: 0, height: 0)
-        bottomSell.layer.shadowOpacity = 0.70
-        bottomSell.layer.borderWidth = 0.25
-        
         buyView.layer.borderColor = UIColor.lightGray.cgColor
         buyView.layer.borderWidth = 0.25
         

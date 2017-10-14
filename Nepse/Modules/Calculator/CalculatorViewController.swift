@@ -35,20 +35,7 @@ class CalculatorViewController: UIViewController {
 
     func setup() {
         self.title = "Calculator"
-        topView.layer.borderColor = UIColor.lightGray.cgColor
-        topView.layer.cornerRadius = 5
-        topView.layer.shadowColor = UIColor.lightGray.cgColor
-        topView.layer.shadowRadius = 4
-        topView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        topView.layer.shadowOpacity = 0.70
-        topView.layer.borderWidth = 0.25
-        bottomView.layer.borderColor = UIColor.lightGray.cgColor
-        bottomView.layer.cornerRadius = 5
-        bottomView.layer.shadowColor = UIColor.lightGray.cgColor
-        bottomView.layer.shadowRadius = 4
-        bottomView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        bottomView.layer.shadowOpacity = 0.70
-        bottomView.layer.borderWidth = 0.25
+        
         bottomInnerView.layer.borderWidth = 1
         bottomInnerView.layer.borderColor = UIColor(hex: "#E3E3E3").cgColor
         buyBtn.frame.size.width = buttonView.frame.size.width/2
@@ -96,4 +83,17 @@ class CalculatorViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+}
+
+class shadowView: UIView {
+    
+    override func awakeFromNib() {
+        layer.borderColor = UIColor.lightGray.cgColor
+        layer.cornerRadius = 5
+        layer.shadowColor = UIColor.lightGray.cgColor
+        layer.shadowRadius = 4
+        layer.shadowOffset = CGSize(width: 0, height: 0)
+        layer.shadowOpacity = 0.70
+        layer.borderWidth = 0.25
+    }
 }
