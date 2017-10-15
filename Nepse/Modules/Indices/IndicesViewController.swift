@@ -12,7 +12,9 @@ import Charts
 class IndicesViewController: UIViewController {
 
     @IBOutlet weak var chartViewContainer: UIView!
+    @IBOutlet var header: UIView!
     
+    @IBOutlet var header2: UIView!
     @IBOutlet weak var chartView: LineChartView!
     @IBOutlet weak var tableView2: UITableView!
     @IBOutlet weak var tableView: UITableView!
@@ -26,18 +28,117 @@ class IndicesViewController: UIViewController {
     @IBOutlet weak var totalMarketLabel: UILabel!
     @IBOutlet weak var floatedMarketLabel: UILabel!
     
-    
+    var marketSummary = MarketSummary()
+    var indexData = [IndexSummary]()
     let service = IndicesService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setup()
         // Do any additional setup after loading the view.
     }
     
-    func fetchMarketData() {
-        service.fetchMarketSummary()
+    func setup() {
+        chartViewContainer.layer.cornerRadius = 5
+        chartViewContainer.layer.borderColor = UIColor.lightGray.cgColor
+        chartViewContainer.layer.borderWidth = 0.5
+        fetchMarketData()
+        fetchIndexSummary()
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView2.delegate = self
+        tableView2.dataSource = self
+         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ios7-keypad"), style: .plain, target: self, action: #selector(sideMenuController?.showLeftViewAnimated))
+        self.title = "Indices"
     }
     
+    func fetchMarketData() {
+        service.fetchMarketSummary { (data) in
+            self.marketSummary = data
+            self.setupMarketSummary()
+        }
+    }
+    
+    func fetchIndexSummary() {
+        service.fetchIndexSummary { (data) in
+            self.indexData = data
+            self.tableView.reloadData()
+        }
+    }
+    
+    func setupMarketSummary(){
+        turnOverLabel.text = marketSummary.currentIndex ?? ""
+        tradedSharesLabel.text = marketSummary.percentChange ?? ""
+        transactionLabel.text = marketSummary.totalTransactions ?? ""
+        scriptsTradedLabel.text = marketSummary.totalScripts ?? ""
+        totalMarketLabel.text = marketSummary.pointChange ?? ""
+        floatedMarketLabel.text = marketSummary.totalTraded ?? ""
+    }
 
+}
+
+extension IndicesViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        var count:Int?
+        switch tableView.tag {
+        case 1:
+            count = indexData.count
+        default:
+            break
+        }
+        return count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var mainCell: UITableViewCell?
+        switch tableView.tag {
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "IndexSummaryCell") as? IndexSummaryCell
+            cell?.data = indexData[indexPath.row]
+            cell?.setup()
+            mainCell = cell
+        default:
+            break
+        }
+        
+        return mainCell ?? UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        var view:UIView?
+        switch tableView.tag {
+        case 1:
+            view = self.header
+        case 2:
+            view = self.header2
+        default:
+            break
+        }
+        return view!
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        var height: CGFloat?
+        switch tableView.tag {
+        case 1:
+            height = 50
+            break
+        case 2:
+            height = 50
+            break
+        default:
+            break
+        }
+        
+        return height!
+    }
+}
+
+extension IndicesViewController: UITableViewDelegate {
+    
 }

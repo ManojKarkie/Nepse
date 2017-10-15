@@ -40,6 +40,8 @@
 		1A2B6AEE1F7117B4005AA1CD /* PayPalSansBig-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A25B6631F5F0EB8004C5451 /* PayPalSansBig-Light.ttf */; };
 		1A2B6AEF1F7117B6005AA1CD /* PayPalSansSmall-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A25B6661F5F0EB8004C5451 /* PayPalSansSmall-Regular.ttf */; };
 		1A2B6AF01F711993005AA1CD /* PayPalSansSmall-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A25B6651F5F0EB8004C5451 /* PayPalSansSmall-Bold.ttf */; };
+		1A3458241F93BD0900D26410 /* IndexSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3458231F93BD0900D26410 /* IndexSummaryCell.swift */; };
+		1A3458261F93BDD500D26410 /* IndexSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3458251F93BDD500D26410 /* IndexSummary.swift */; };
 		1A45214B1F921B69006240A9 /* Indices.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A45214A1F921B69006240A9 /* Indices.storyboard */; };
 		1A45214D1F921B71006240A9 /* IndicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A45214C1F921B71006240A9 /* IndicesViewController.swift */; };
 		1A45214F1F922301006240A9 /* IndicesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A45214E1F922301006240A9 /* IndicesService.swift */; };
@@ -48,6 +50,7 @@
 		1A6C23D81F68FF0B00F0FCAF /* Flowsheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23D71F68FF0B00F0FCAF /* Flowsheet.swift */; };
 		1A6C23DA1F69283E00F0FCAF /* LiveTradingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23D91F69283E00F0FCAF /* LiveTradingService.swift */; };
 		1A6C23DC1F69286F00F0FCAF /* LiveTrading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23DB1F69286F00F0FCAF /* LiveTrading.swift */; };
+		1A8404AE1F922B55006F2A81 /* MarketSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8404AD1F922B55006F2A81 /* MarketSummary.swift */; };
 		1A9DCC9B1F6FB7010005BC94 /* GlobalConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DCC9A1F6FB7010005BC94 /* GlobalConstant.swift */; };
 		1AB44F571F643D76002F578A /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB44F551F643D76002F578A /* CustomCell.swift */; };
 		1AB44F581F643D76002F578A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB44F561F643D76002F578A /* ViewController.swift */; };
@@ -111,6 +114,8 @@
 		1A25B68E1F605020004C5451 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		1A29A7281F697DBD00AAF1A4 /* Dashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		1A2B6AE51F70E34E005AA1CD /* SellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellViewController.swift; sourceTree = "<group>"; };
+		1A3458231F93BD0900D26410 /* IndexSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexSummaryCell.swift; sourceTree = "<group>"; };
+		1A3458251F93BDD500D26410 /* IndexSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexSummary.swift; sourceTree = "<group>"; };
 		1A45214A1F921B69006240A9 /* Indices.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Indices.storyboard; sourceTree = "<group>"; };
 		1A45214C1F921B71006240A9 /* IndicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicesViewController.swift; sourceTree = "<group>"; };
 		1A45214E1F922301006240A9 /* IndicesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicesService.swift; sourceTree = "<group>"; };
@@ -119,6 +124,7 @@
 		1A6C23D71F68FF0B00F0FCAF /* Flowsheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flowsheet.swift; sourceTree = "<group>"; };
 		1A6C23D91F69283E00F0FCAF /* LiveTradingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTradingService.swift; sourceTree = "<group>"; };
 		1A6C23DB1F69286F00F0FCAF /* LiveTrading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTrading.swift; sourceTree = "<group>"; };
+		1A8404AD1F922B55006F2A81 /* MarketSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketSummary.swift; sourceTree = "<group>"; };
 		1A9DCC9A1F6FB7010005BC94 /* GlobalConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstant.swift; sourceTree = "<group>"; };
 		1AB44F551F643D76002F578A /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		1AB44F561F643D76002F578A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -243,6 +249,8 @@
 				1A6C23D71F68FF0B00F0FCAF /* Flowsheet.swift */,
 				1A6C23DB1F69286F00F0FCAF /* LiveTrading.swift */,
 				1A29A7281F697DBD00AAF1A4 /* Dashboard.swift */,
+				1A8404AD1F922B55006F2A81 /* MarketSummary.swift */,
+				1A3458251F93BDD500D26410 /* IndexSummary.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -308,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				1A45214A1F921B69006240A9 /* Indices.storyboard */,
+				1A3458231F93BD0900D26410 /* IndexSummaryCell.swift */,
 				1A45214C1F921B71006240A9 /* IndicesViewController.swift */,
 			);
 			path = Indices;
@@ -669,9 +678,12 @@
 				1ABC11C41F8877920050F6DF /* TrunOverCell.swift in Sources */,
 				1A6C23D61F68EF4E00F0FCAF /* ApiManager.swift in Sources */,
 				1AB44F581F643D76002F578A /* ViewController.swift in Sources */,
+				1A3458241F93BD0900D26410 /* IndexSummaryCell.swift in Sources */,
 				1A250E201F62924200BDCE62 /* LiveTradingCell.swift in Sources */,
 				1A250E291F62A03F00BDCE62 /* SendCell.swift in Sources */,
 				1A25B6701F5FBCF5004C5451 /* Wireframe.swift in Sources */,
+				1A8404AE1F922B55006F2A81 /* MarketSummary.swift in Sources */,
+				1A3458261F93BDD500D26410 /* IndexSummary.swift in Sources */,
 				1A250E301F62BEE800BDCE62 /* CalculatorViewController.swift in Sources */,
 				1A45214F1F922301006240A9 /* IndicesService.swift in Sources */,
 				1A45214D1F921B71006240A9 /* IndicesViewController.swift in Sources */,

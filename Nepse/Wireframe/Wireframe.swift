@@ -19,6 +19,7 @@ protocol SideMenu {
     func openWatchList()
     func openLogin()
     func openPortfolio()
+    func openIndices()
 }
 
 struct StoryboardNames {
@@ -32,6 +33,7 @@ struct StoryboardNames {
     static let watchList = "WishList"
     static let portfolio = "Portfolio"
     static let registration = "Register"
+    static let indices = "Indices"
 }
 
 class Wireframe {
@@ -77,6 +79,10 @@ class Wireframe {
     func getRegister() -> RegisterViewController {
         return UIStoryboard(name: StoryboardNames.registration , bundle: nil).instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
     }
+    
+    func getIndices() -> IndicesViewController {
+        return UIStoryboard(name: StoryboardNames.indices , bundle: nil).instantiateViewController(withIdentifier: "IndicesViewController") as! IndicesViewController
+    }
 }
 
 extension Wireframe: SideMenu {
@@ -117,6 +123,11 @@ extension Wireframe: SideMenu {
         let watchList = getWatchList()
         watchList.status = .loggedIn
         sideMenu?.viewControllers = [watchList]
+    }
+    
+    func openIndices() {
+        let sideMenu = UIApplication.shared.keyWindow?.rootViewController?.sideMenuController?.rootViewController as? UINavigationController
+        sideMenu?.viewControllers = [getIndices()]
     }
     
     func openPortfolio() {
