@@ -51,6 +51,8 @@
 		1A6C23DA1F69283E00F0FCAF /* LiveTradingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23D91F69283E00F0FCAF /* LiveTradingService.swift */; };
 		1A6C23DC1F69286F00F0FCAF /* LiveTrading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23DB1F69286F00F0FCAF /* LiveTrading.swift */; };
 		1A8404AE1F922B55006F2A81 /* MarketSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8404AD1F922B55006F2A81 /* MarketSummary.swift */; };
+		1A8927AF1F949158006B07BE /* SubIndexSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8927AE1F949158006B07BE /* SubIndexSummary.swift */; };
+		1A8927B31F949291006B07BE /* SubIndexCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8927B21F949291006B07BE /* SubIndexCell.swift */; };
 		1A9DCC9B1F6FB7010005BC94 /* GlobalConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DCC9A1F6FB7010005BC94 /* GlobalConstant.swift */; };
 		1AB44F571F643D76002F578A /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB44F551F643D76002F578A /* CustomCell.swift */; };
 		1AB44F581F643D76002F578A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB44F561F643D76002F578A /* ViewController.swift */; };
@@ -125,6 +127,8 @@
 		1A6C23D91F69283E00F0FCAF /* LiveTradingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTradingService.swift; sourceTree = "<group>"; };
 		1A6C23DB1F69286F00F0FCAF /* LiveTrading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTrading.swift; sourceTree = "<group>"; };
 		1A8404AD1F922B55006F2A81 /* MarketSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketSummary.swift; sourceTree = "<group>"; };
+		1A8927AE1F949158006B07BE /* SubIndexSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubIndexSummary.swift; sourceTree = "<group>"; };
+		1A8927B21F949291006B07BE /* SubIndexCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubIndexCell.swift; sourceTree = "<group>"; };
 		1A9DCC9A1F6FB7010005BC94 /* GlobalConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstant.swift; sourceTree = "<group>"; };
 		1AB44F551F643D76002F578A /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		1AB44F561F643D76002F578A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -251,6 +255,7 @@
 				1A29A7281F697DBD00AAF1A4 /* Dashboard.swift */,
 				1A8404AD1F922B55006F2A81 /* MarketSummary.swift */,
 				1A3458251F93BDD500D26410 /* IndexSummary.swift */,
+				1A8927AE1F949158006B07BE /* SubIndexSummary.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -318,6 +323,7 @@
 				1A45214A1F921B69006240A9 /* Indices.storyboard */,
 				1A3458231F93BD0900D26410 /* IndexSummaryCell.swift */,
 				1A45214C1F921B71006240A9 /* IndicesViewController.swift */,
+				1A8927B21F949291006B07BE /* SubIndexCell.swift */,
 			);
 			path = Indices;
 			sourceTree = "<group>";
@@ -678,11 +684,13 @@
 				1ABC11C41F8877920050F6DF /* TrunOverCell.swift in Sources */,
 				1A6C23D61F68EF4E00F0FCAF /* ApiManager.swift in Sources */,
 				1AB44F581F643D76002F578A /* ViewController.swift in Sources */,
+				1A8927B31F949291006B07BE /* SubIndexCell.swift in Sources */,
 				1A3458241F93BD0900D26410 /* IndexSummaryCell.swift in Sources */,
 				1A250E201F62924200BDCE62 /* LiveTradingCell.swift in Sources */,
 				1A250E291F62A03F00BDCE62 /* SendCell.swift in Sources */,
 				1A25B6701F5FBCF5004C5451 /* Wireframe.swift in Sources */,
 				1A8404AE1F922B55006F2A81 /* MarketSummary.swift in Sources */,
+				1A8927AF1F949158006B07BE /* SubIndexSummary.swift in Sources */,
 				1A3458261F93BDD500D26410 /* IndexSummary.swift in Sources */,
 				1A250E301F62BEE800BDCE62 /* CalculatorViewController.swift in Sources */,
 				1A45214F1F922301006240A9 /* IndicesService.swift in Sources */,

@@ -30,6 +30,7 @@ class IndicesViewController: UIViewController {
     
     var marketSummary = MarketSummary()
     var indexData = [IndexSummary]()
+    var subIndexData = [SubIndexSummary]()
     let service = IndicesService()
     
     override func viewDidLoad() {
@@ -44,6 +45,7 @@ class IndicesViewController: UIViewController {
         chartViewContainer.layer.borderWidth = 0.5
         fetchMarketData()
         fetchIndexSummary()
+        fetchSubIndexSummary()
         tableView.delegate = self
         tableView.dataSource = self
         tableView2.delegate = self
@@ -52,10 +54,38 @@ class IndicesViewController: UIViewController {
         self.title = "Indices"
     }
     
+    func drawChart() {
+        var chartEntries: [ChartDataEntry] = []
+        for i:Int in 0 ..< subIndexData.count {
+            let string = subIndexData[i].percent?.replacingOccurrences(of: " ", with: "") ?? ""
+            let chartData = ChartDataEntry(x: Double(i), y: Double(string )!)
+            chartEntries.append(chartData)
+        }
+        let chartDataSet = LineChartDataSet(values: chartEntries, label: "Sub Indices change in %")
+        chartDataSet.drawFilledEnabled = true
+        chartDataSet.cubicIntensity = 5
+        chartView.drawGridBackgroundEnabled = false
+        
+        chartDataSet.valueTextColor = NSUIColor.white
+        chartDataSet.drawCirclesEnabled = false
+        chartDataSet.mode = .horizontalBezier
+        let chartData = LineChartData(dataSet: chartDataSet)
+        chartView.data = chartData
+    }
+    
+    
     func fetchMarketData() {
         service.fetchMarketSummary { (data) in
             self.marketSummary = data
             self.setupMarketSummary()
+        }
+    }
+    
+    func fetchSubIndexSummary() {
+        service.fetchSubIndexSummarry { (data) in
+            self.subIndexData = data
+            self.tableView2.reloadData()
+            self.drawChart()
         }
     }
     
@@ -88,6 +118,8 @@ extension IndicesViewController: UITableViewDataSource {
         switch tableView.tag {
         case 1:
             count = indexData.count
+        case 2:
+            count = subIndexData.count
         default:
             break
         }
@@ -100,6 +132,11 @@ extension IndicesViewController: UITableViewDataSource {
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "IndexSummaryCell") as? IndexSummaryCell
             cell?.data = indexData[indexPath.row]
+            cell?.setup()
+            mainCell = cell
+        case 2:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SubIndexCell") as? SubIndexCell
+            cell?.data = subIndexData[indexPath.row]
             cell?.setup()
             mainCell = cell
         default:

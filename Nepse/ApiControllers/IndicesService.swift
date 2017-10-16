@@ -13,7 +13,9 @@ class IndicesService: ApiManager {
     
     var indexSummaryDic = [String: Any]()
     var indexSummaryData = [IndexSummary]()
-    func fetchMarketSummary(completion: @escaping (MarketSummary) -> ()){
+    var subIndexSummaryData = [SubIndexSummary]()
+    
+    func fetchMarketSummary(completion: @escaping (MarketSummary) -> ()) {
         let url = URL(string: "http://www.zeronebits.com/nepse/data/nepseStat/MarketSummary.php")
         self.fetchData(url: url!) { (data) in
             let marketData = Mapper<MarketSummary>().map(JSON: data)
@@ -21,7 +23,7 @@ class IndicesService: ApiManager {
         }
     }
     
-    func fetchIndexSummary(completion: @escaping ([IndexSummary]) -> ()){
+    func fetchIndexSummary(completion: @escaping ([IndexSummary]) -> ()) {
         let url = URL(string: "http://www.zeronebits.com/nepse/data/nepseStat/IndexSummary.php")
         self.fetchData(url: url!) { (data) in
             let apiData = data as NSDictionary
@@ -41,5 +43,24 @@ class IndicesService: ApiManager {
         }
     }
     
+    func fetchSubIndexSummarry(completion: @escaping ([SubIndexSummary]) -> ()) {
+        let url = URL(string: "http://www.zeronebits.com/nepse/data/nepseStat/SubIndexSummary.php")
+        self.fetchData(url: url!) { (data) in
+            let apiData = data as NSDictionary
+            var values = apiData.allValues as? [[String]]
+            values?.remove(at: 1)
+            for value in values ?? [[String]](){
+                self.indexSummaryDic["index"] = value[0]
+                self.indexSummaryDic["turnover"] = value[1]
+                self.indexSummaryDic["current"] = value[2]
+                self.indexSummaryDic["pointChange"] = value[3]
+                self.indexSummaryDic["percent"] = value[4]
+                self.indexSummaryDic["trend"] = value[5]
+                let index = Mapper<SubIndexSummary>().map(JSON: self.indexSummaryDic)
+                self.subIndexSummaryData.append(index ?? SubIndexSummary())
+            }
+            completion(self.subIndexSummaryData)
+        }
+    }
     
 }
