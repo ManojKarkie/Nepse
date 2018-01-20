@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A019F7F1FF9F3E000958803 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A019F7E1FF9F3E000958803 /* Auth.swift */; };
+		1A019F811FF9F4E900958803 /* ApiSerivceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A019F801FF9F4E900958803 /* ApiSerivceInfo.swift */; };
 		1A1E5E881F6991B6001FDB0E /* DashboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E5E871F6991B6001FDB0E /* DashboardService.swift */; };
 		1A250E141F624D1B00BDCE62 /* Floorsheet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A250E131F624D1B00BDCE62 /* Floorsheet.storyboard */; };
 		1A250E161F624D3100BDCE62 /* FloorsheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A250E151F624D3100BDCE62 /* FloorsheetViewController.swift */; };
@@ -21,9 +23,8 @@
 		1A250E2B1F62A04A00BDCE62 /* RecieveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A250E2A1F62A04A00BDCE62 /* RecieveCell.swift */; };
 		1A250E2E1F62BED300BDCE62 /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A250E2D1F62BED300BDCE62 /* Calculator.storyboard */; };
 		1A250E301F62BEE800BDCE62 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A250E2F1F62BEE800BDCE62 /* CalculatorViewController.swift */; };
-		1A25B6691F5F152A004C5451 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		1A25B6691F5F152A004C5451 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		1A25B6701F5FBCF5004C5451 /* Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A25B66F1F5FBCF5004C5451 /* Wireframe.swift */; };
-		1A25B6721F5FC098004C5451 /* LGSideMenuWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A25B6711F5FC098004C5451 /* LGSideMenuWireframe.swift */; };
 		1A25B68F1F605020004C5451 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A25B6831F605020004C5451 /* Dashboard.storyboard */; };
 		1A25B6901F605020004C5451 /* DashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A25B6841F605020004C5451 /* DashboardCell.swift */; };
 		1A25B6911F605020004C5451 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A25B6851F605020004C5451 /* DashboardViewController.swift */; };
@@ -40,13 +41,14 @@
 		1A2B6AEE1F7117B4005AA1CD /* PayPalSansBig-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A25B6631F5F0EB8004C5451 /* PayPalSansBig-Light.ttf */; };
 		1A2B6AEF1F7117B6005AA1CD /* PayPalSansSmall-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A25B6661F5F0EB8004C5451 /* PayPalSansSmall-Regular.ttf */; };
 		1A2B6AF01F711993005AA1CD /* PayPalSansSmall-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A25B6651F5F0EB8004C5451 /* PayPalSansSmall-Bold.ttf */; };
+		1A2FA8E520120D6500F9FC46 /* ActivateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2FA8E420120D6500F9FC46 /* ActivateUserViewController.swift */; };
+		1A2FA8E72012FD1300F9FC46 /* PersistenceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2FA8E62012FD1300F9FC46 /* PersistenceType.swift */; };
 		1A3458241F93BD0900D26410 /* IndexSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3458231F93BD0900D26410 /* IndexSummaryCell.swift */; };
 		1A3458261F93BDD500D26410 /* IndexSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3458251F93BDD500D26410 /* IndexSummary.swift */; };
 		1A45214B1F921B69006240A9 /* Indices.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A45214A1F921B69006240A9 /* Indices.storyboard */; };
 		1A45214D1F921B71006240A9 /* IndicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A45214C1F921B71006240A9 /* IndicesViewController.swift */; };
 		1A45214F1F922301006240A9 /* IndicesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A45214E1F922301006240A9 /* IndicesService.swift */; };
 		1A6C23D41F68EDFE00F0FCAF /* FloorsheetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23D31F68EDFE00F0FCAF /* FloorsheetService.swift */; };
-		1A6C23D61F68EF4E00F0FCAF /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23D51F68EF4E00F0FCAF /* ApiManager.swift */; };
 		1A6C23D81F68FF0B00F0FCAF /* Flowsheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23D71F68FF0B00F0FCAF /* Flowsheet.swift */; };
 		1A6C23DA1F69283E00F0FCAF /* LiveTradingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23D91F69283E00F0FCAF /* LiveTradingService.swift */; };
 		1A6C23DC1F69286F00F0FCAF /* LiveTrading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23DB1F69286F00F0FCAF /* LiveTrading.swift */; };
@@ -57,8 +59,10 @@
 		1AB44F571F643D76002F578A /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB44F551F643D76002F578A /* CustomCell.swift */; };
 		1AB44F581F643D76002F578A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB44F561F643D76002F578A /* ViewController.swift */; };
 		1AB44F5A1F643D89002F578A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB44F591F643D89002F578A /* Main.storyboard */; };
-		1AB44F5C1F645063002F578A /* WireframeInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB44F5B1F645063002F578A /* WireframeInput.swift */; };
 		1ABC11C41F8877920050F6DF /* TrunOverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABC11C31F8877920050F6DF /* TrunOverCell.swift */; };
+		1AE3DFB22011EC9700926111 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE3DFB12011EC9700926111 /* AuthModel.swift */; };
+		1AE3DFB42011ECAE00926111 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE3DFB32011ECAE00926111 /* User.swift */; };
+		1AE3DFB62011F67F00926111 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE3DFB52011F67F00926111 /* RegisterModel.swift */; };
 		241EC8FA1F64510000343316 /* WishList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241EC8F91F64510000343316 /* WishList.storyboard */; };
 		241EC8FE1F64514900343316 /* WishlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241EC8FD1F64514900343316 /* WishlistViewController.swift */; };
 		241EC9021F6457B100343316 /* WishListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241EC9011F6457B100343316 /* WishListCell.swift */; };
@@ -85,6 +89,8 @@
 
 /* Begin PBXFileReference section */
 		19D157630A8724BE066F4C88 /* Pods-NepseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NepseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NepseTests/Pods-NepseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1A019F7E1FF9F3E000958803 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		1A019F801FF9F4E900958803 /* ApiSerivceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiSerivceInfo.swift; sourceTree = "<group>"; };
 		1A1E5E871F6991B6001FDB0E /* DashboardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardService.swift; sourceTree = "<group>"; };
 		1A250E131F624D1B00BDCE62 /* Floorsheet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Floorsheet.storyboard; sourceTree = "<group>"; };
 		1A250E151F624D3100BDCE62 /* FloorsheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorsheetViewController.swift; sourceTree = "<group>"; };
@@ -104,7 +110,6 @@
 		1A25B6651F5F0EB8004C5451 /* PayPalSansSmall-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PayPalSansSmall-Bold.ttf"; sourceTree = "<group>"; };
 		1A25B6661F5F0EB8004C5451 /* PayPalSansSmall-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PayPalSansSmall-Regular.ttf"; sourceTree = "<group>"; };
 		1A25B66F1F5FBCF5004C5451 /* Wireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wireframe.swift; sourceTree = "<group>"; };
-		1A25B6711F5FC098004C5451 /* LGSideMenuWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LGSideMenuWireframe.swift; sourceTree = "<group>"; };
 		1A25B6831F605020004C5451 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		1A25B6841F605020004C5451 /* DashboardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardCell.swift; sourceTree = "<group>"; };
 		1A25B6851F605020004C5451 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -116,13 +121,14 @@
 		1A25B68E1F605020004C5451 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		1A29A7281F697DBD00AAF1A4 /* Dashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		1A2B6AE51F70E34E005AA1CD /* SellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellViewController.swift; sourceTree = "<group>"; };
+		1A2FA8E420120D6500F9FC46 /* ActivateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateUserViewController.swift; sourceTree = "<group>"; };
+		1A2FA8E62012FD1300F9FC46 /* PersistenceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceType.swift; sourceTree = "<group>"; };
 		1A3458231F93BD0900D26410 /* IndexSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexSummaryCell.swift; sourceTree = "<group>"; };
 		1A3458251F93BDD500D26410 /* IndexSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexSummary.swift; sourceTree = "<group>"; };
 		1A45214A1F921B69006240A9 /* Indices.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Indices.storyboard; sourceTree = "<group>"; };
 		1A45214C1F921B71006240A9 /* IndicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicesViewController.swift; sourceTree = "<group>"; };
 		1A45214E1F922301006240A9 /* IndicesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicesService.swift; sourceTree = "<group>"; };
 		1A6C23D31F68EDFE00F0FCAF /* FloorsheetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorsheetService.swift; sourceTree = "<group>"; };
-		1A6C23D51F68EF4E00F0FCAF /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		1A6C23D71F68FF0B00F0FCAF /* Flowsheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flowsheet.swift; sourceTree = "<group>"; };
 		1A6C23D91F69283E00F0FCAF /* LiveTradingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTradingService.swift; sourceTree = "<group>"; };
 		1A6C23DB1F69286F00F0FCAF /* LiveTrading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTrading.swift; sourceTree = "<group>"; };
@@ -133,8 +139,10 @@
 		1AB44F551F643D76002F578A /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		1AB44F561F643D76002F578A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1AB44F591F643D89002F578A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		1AB44F5B1F645063002F578A /* WireframeInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WireframeInput.swift; sourceTree = "<group>"; };
 		1ABC11C31F8877920050F6DF /* TrunOverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrunOverCell.swift; sourceTree = "<group>"; };
+		1AE3DFB12011EC9700926111 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
+		1AE3DFB32011ECAE00926111 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1AE3DFB52011F67F00926111 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		207A2067C6E633BB40528589 /* Pods-Nepse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nepse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nepse/Pods-Nepse.debug.xcconfig"; sourceTree = "<group>"; };
 		241EC8F91F64510000343316 /* WishList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WishList.storyboard; sourceTree = "<group>"; };
 		241EC8FD1F64514900343316 /* WishlistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishlistViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +184,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A019F7D1FF9F3D200958803 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				1A2FA8E62012FD1300F9FC46 /* PersistenceType.swift */,
+				1A019F7E1FF9F3E000958803 /* Auth.swift */,
+				1A019F801FF9F4E900958803 /* ApiSerivceInfo.swift */,
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
 		1A250E121F624D1300BDCE62 /* Floorsheet */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,9 +258,7 @@
 		1A25B66E1F5FBCEB004C5451 /* Wireframe */ = {
 			isa = PBXGroup;
 			children = (
-				1AB44F5B1F645063002F578A /* WireframeInput.swift */,
 				1A25B66F1F5FBCF5004C5451 /* Wireframe.swift */,
-				1A25B6711F5FC098004C5451 /* LGSideMenuWireframe.swift */,
 			);
 			path = Wireframe;
 			sourceTree = "<group>";
@@ -251,11 +267,14 @@
 			isa = PBXGroup;
 			children = (
 				1A6C23D71F68FF0B00F0FCAF /* Flowsheet.swift */,
+				1AE3DFB52011F67F00926111 /* RegisterModel.swift */,
 				1A6C23DB1F69286F00F0FCAF /* LiveTrading.swift */,
 				1A29A7281F697DBD00AAF1A4 /* Dashboard.swift */,
 				1A8404AD1F922B55006F2A81 /* MarketSummary.swift */,
 				1A3458251F93BDD500D26410 /* IndexSummary.swift */,
 				1A8927AE1F949158006B07BE /* SubIndexSummary.swift */,
+				1AE3DFB12011EC9700926111 /* AuthModel.swift */,
+				1AE3DFB32011ECAE00926111 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -304,6 +323,7 @@
 			children = (
 				1A25B68A1F605020004C5451 /* Register.storyboard */,
 				1A25B68B1F605020004C5451 /* RegisterViewController.swift */,
+				1A2FA8E420120D6500F9FC46 /* ActivateUserViewController.swift */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -328,16 +348,15 @@
 			path = Indices;
 			sourceTree = "<group>";
 		};
-		1A6C23D21F68EDEC00F0FCAF /* ApiControllers */ = {
+		1A6C23D21F68EDEC00F0FCAF /* ApiServices */ = {
 			isa = PBXGroup;
 			children = (
 				1A6C23D31F68EDFE00F0FCAF /* FloorsheetService.swift */,
-				1A6C23D51F68EF4E00F0FCAF /* ApiManager.swift */,
 				1A6C23D91F69283E00F0FCAF /* LiveTradingService.swift */,
 				1A1E5E871F6991B6001FDB0E /* DashboardService.swift */,
 				1A45214E1F922301006240A9 /* IndicesService.swift */,
 			);
-			path = ApiControllers;
+			path = ApiServices;
 			sourceTree = "<group>";
 		};
 		1A9DCC991F6FB6EC0005BC94 /* Constants */ = {
@@ -409,8 +428,9 @@
 		AF5AFC861F5C519400414214 /* Nepse */ = {
 			isa = PBXGroup;
 			children = (
+				1A019F7D1FF9F3D200958803 /* BaseClasses */,
 				1A9DCC991F6FB6EC0005BC94 /* Constants */,
-				1A6C23D21F68EDEC00F0FCAF /* ApiControllers */,
+				1A6C23D21F68EDEC00F0FCAF /* ApiServices */,
 				1A250E191F628B5700BDCE62 /* Extensions */,
 				1A25B6811F605020004C5451 /* Modules */,
 				1A25B6731F5FD96A004C5451 /* Models */,
@@ -549,7 +569,7 @@
 				1A25B68F1F605020004C5451 /* Dashboard.storyboard in Resources */,
 				1A250E251F62A01A00BDCE62 /* Support.storyboard in Resources */,
 				AF5AFC921F5C519400414214 /* Assets.xcassets in Resources */,
-				1A25B6691F5F152A004C5451 /* (null) in Resources */,
+				1A25B6691F5F152A004C5451 /* BuildFile in Resources */,
 				1A2B6AEF1F7117B6005AA1CD /* PayPalSansSmall-Regular.ttf in Resources */,
 				1A25B6941F605020004C5451 /* Register.storyboard in Resources */,
 				1A250E141F624D1B00BDCE62 /* Floorsheet.storyboard in Resources */,
@@ -604,13 +624,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nepse-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C5FDDA4A051CB2037B8F0C8F /* [CP] Embed Pods Frameworks */ = {
@@ -619,9 +642,28 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Nepse/Pods-Nepse-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/CollapsibleTableSectionViewController/CollapsibleTableSectionViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/LGSideMenuController/LGSideMenuController.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper+Realm/ObjectMapper_Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CollapsibleTableSectionViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGSideMenuController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper_Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -649,13 +691,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NepseTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -667,41 +712,45 @@
 			files = (
 				1A250E161F624D3100BDCE62 /* FloorsheetViewController.swift in Sources */,
 				1A25B6931F605020004C5451 /* LoginViewController.swift in Sources */,
+				1A2FA8E520120D6500F9FC46 /* ActivateUserViewController.swift in Sources */,
 				1A2B6AE61F70E34E005AA1CD /* SellViewController.swift in Sources */,
 				1A250E271F62A02400BDCE62 /* SupportViewController.swift in Sources */,
 				1A9DCC9B1F6FB7010005BC94 /* GlobalConstant.swift in Sources */,
 				1A25B6901F605020004C5451 /* DashboardCell.swift in Sources */,
-				1AB44F5C1F645063002F578A /* WireframeInput.swift in Sources */,
 				1A25B6911F605020004C5451 /* DashboardViewController.swift in Sources */,
 				1A25B6951F605020004C5451 /* RegisterViewController.swift in Sources */,
 				1A29A7291F697DBD00AAF1A4 /* Dashboard.swift in Sources */,
 				1A250E181F624D4300BDCE62 /* FloorsheetCell.swift in Sources */,
-				1A25B6721F5FC098004C5451 /* LGSideMenuWireframe.swift in Sources */,
+				1A019F7F1FF9F3E000958803 /* Auth.swift in Sources */,
 				1A6C23DA1F69283E00F0FCAF /* LiveTradingService.swift in Sources */,
 				1AB44F571F643D76002F578A /* CustomCell.swift in Sources */,
 				AF5AFC901F5C519400414214 /* Nepse.xcdatamodeld in Sources */,
 				241EC8FE1F64514900343316 /* WishlistViewController.swift in Sources */,
 				1ABC11C41F8877920050F6DF /* TrunOverCell.swift in Sources */,
-				1A6C23D61F68EF4E00F0FCAF /* ApiManager.swift in Sources */,
 				1AB44F581F643D76002F578A /* ViewController.swift in Sources */,
 				1A8927B31F949291006B07BE /* SubIndexCell.swift in Sources */,
 				1A3458241F93BD0900D26410 /* IndexSummaryCell.swift in Sources */,
 				1A250E201F62924200BDCE62 /* LiveTradingCell.swift in Sources */,
 				1A250E291F62A03F00BDCE62 /* SendCell.swift in Sources */,
+				1A2FA8E72012FD1300F9FC46 /* PersistenceType.swift in Sources */,
 				1A25B6701F5FBCF5004C5451 /* Wireframe.swift in Sources */,
 				1A8404AE1F922B55006F2A81 /* MarketSummary.swift in Sources */,
 				1A8927AF1F949158006B07BE /* SubIndexSummary.swift in Sources */,
+				1AE3DFB62011F67F00926111 /* RegisterModel.swift in Sources */,
 				1A3458261F93BDD500D26410 /* IndexSummary.swift in Sources */,
 				1A250E301F62BEE800BDCE62 /* CalculatorViewController.swift in Sources */,
 				1A45214F1F922301006240A9 /* IndicesService.swift in Sources */,
 				1A45214D1F921B71006240A9 /* IndicesViewController.swift in Sources */,
 				1A250E2B1F62A04A00BDCE62 /* RecieveCell.swift in Sources */,
+				1AE3DFB22011EC9700926111 /* AuthModel.swift in Sources */,
+				1AE3DFB42011ECAE00926111 /* User.swift in Sources */,
 				1A25B6971F605020004C5451 /* SideMenuViewController.swift in Sources */,
 				241EC9021F6457B100343316 /* WishListCell.swift in Sources */,
 				1A250E221F62925700BDCE62 /* LiveTradingViewController.swift in Sources */,
 				AF5AFC881F5C519400414214 /* AppDelegate.swift in Sources */,
 				1A6C23D81F68FF0B00F0FCAF /* Flowsheet.swift in Sources */,
 				1A6C23DC1F69286F00F0FCAF /* LiveTrading.swift in Sources */,
+				1A019F811FF9F4E900958803 /* ApiSerivceInfo.swift in Sources */,
 				1A6C23D41F68EDFE00F0FCAF /* FloorsheetService.swift in Sources */,
 				1A1E5E881F6991B6001FDB0E /* DashboardService.swift in Sources */,
 				244AFBD81F7206B80049B2EF /* PortfolioViewController.swift in Sources */,

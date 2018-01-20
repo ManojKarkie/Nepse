@@ -34,5 +34,15 @@ class RegisterViewController: UIViewController {
 
     
     @IBAction func btn_register(_ sender: Any) {
+        let model = Register()
+        model.name = "\(firstname.text ?? "") \(lastname.text ?? "")"
+        model.username = emailaddress.text ?? ""
+        model.code = phoneno.text ?? ""
+        model.password = password.text ?? ""
+        Auth.shared.register(data: model) { (response) in
+            let vc = Wireframe.shared.getActivateUser()
+            vc.number = self.phoneno.text
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }

@@ -61,22 +61,9 @@ class DashboardViewController: UIViewController {
         chartViewContainer.layer.cornerRadius = 5
         chartViewContainer.layer.borderColor = UIColor.lightGray.cgColor
         chartViewContainer.layer.borderWidth = 0.5
-        self.tableView.layer.borderColor = UIColor.lightGray.cgColor
-        self.tableView.layer.borderWidth = 0.5
-        self.tableView.layer.cornerRadius = 5
-        self.tableView.layer.shadowColor = UIColor.lightGray.cgColor
-        self.tableView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        self.tableView.layer.shadowRadius = 3
-        self.tableView.layer.shadowOpacity = 0.8
-        self.tableView2.layer.borderColor = UIColor.lightGray.cgColor
-        self.tableView2.layer.borderWidth = 0.5
-        self.tableView2.layer.cornerRadius = 5
-        self.tableView2.layer.shadowColor = UIColor.lightGray.cgColor
-        self.tableView2.layer.shadowOffset = CGSize(width: 0, height: 0)
-        self.tableView2.layer.shadowRadius = 3
-        self.tableView2.layer.shadowOpacity = 0.8
+        self.tableView.setStandardShadow()
+        self.tableView2.setStandardShadow()
         self.navigationController?.navigationBar.isTranslucent = false
-        self.navigationController?.navigationBar.shadowImage = UIImage()
     }
 
     override func didReceiveMemoryWarning() {
@@ -144,30 +131,34 @@ extension DashboardViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell: UITableViewCell?
         switch tableView.tag {
         case 1:
-            let cell1 = tableView.dequeueReusableCell(withIdentifier: "DashboardCell") as! DashboardCell
+            let cell1 = getDashBoardCell()
             if indexPath.row % 2 == 0{
-                cell?.contentView.backgroundColor = UIColor(red: 240/255.0, green: 240/255.0, blue: 240/255.0, alpha: 1)
+                cell1.contentView.backgroundColor = UIColor(red: 240/255.0, green: 240/255.0, blue: 240/255.0, alpha: 1)
             }
             cell1.data = self.data[indexPath.row]
             cell1.setup()
-            cell = cell1
-            break
+            return cell1
         case 2:
-            let cell2 = tableView.dequeueReusableCell(withIdentifier: "TrunOverCell") as? TrunOverCell
+            let cell2 = getTurnOverCell()
             if indexPath.row % 2 == 0{
-                cell?.contentView.backgroundColor = UIColor(red: 240/255.0, green: 240/255.0, blue: 240/255.0, alpha: 1)
+                cell2.contentView.backgroundColor = UIColor(red: 240/255.0, green: 240/255.0, blue: 240/255.0, alpha: 1)
             }
-            cell2?.transaction = self.transactionData[indexPath.row]
-            cell2?.setup()
-            cell = cell2
-            break
+            cell2.transaction = self.transactionData[indexPath.row]
+            cell2.setup()
+            return cell2
         default:
-            break
+            return UITableViewCell()
         }
-        return cell!
+    }
+    
+    func getDashBoardCell() -> DashboardCell {
+        return self.tableView.dequeueReusableCell(withIdentifier: "DashboardCell") as! DashboardCell
+    }
+    
+    func getTurnOverCell() -> TrunOverCell {
+        return self.tableView2.dequeueReusableCell(withIdentifier: "TrunOverCell") as! TrunOverCell
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -206,5 +197,18 @@ class RoundCornerButton: UIButton {
         self.layer.cornerRadius = self.frame.size.height/8
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.lightGray.cgColor
+    }
+}
+
+extension UITableView {
+    
+    func setStandardShadow() {
+        self.layer.borderColor = UIColor.lightGray.cgColor
+        self.layer.borderWidth = 0.5
+        self.layer.cornerRadius = 5
+        self.layer.shadowColor = UIColor.lightGray.cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 0)
+        self.layer.shadowRadius = 3
+        self.layer.shadowOpacity = 0.8
     }
 }

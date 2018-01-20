@@ -83,6 +83,10 @@ class Wireframe {
     func getIndices() -> IndicesViewController {
         return UIStoryboard(name: StoryboardNames.indices , bundle: nil).instantiateViewController(withIdentifier: "IndicesViewController") as! IndicesViewController
     }
+    
+    func getActivateUser() -> ActivateUserViewController {
+        return UIStoryboard(name: StoryboardNames.registration , bundle: nil).instantiateViewController(withIdentifier: "ActivateUserViewController") as! ActivateUserViewController
+    }
 }
 
 extension Wireframe: SideMenu {

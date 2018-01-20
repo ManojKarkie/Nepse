@@ -35,7 +35,6 @@ class CalculatorViewController: UIViewController {
 
     func setup() {
         self.title = "Calculator"
-        
         bottomInnerView.layer.borderWidth = 1
         bottomInnerView.layer.borderColor = UIColor(hex: "#E3E3E3").cgColor
         buyBtn.frame.size.width = buttonView.frame.size.width/2

@@ -11,6 +11,7 @@ target 'Nepse' do
   pod 'Alamofire'
   pod 'ObjectMapper+Realm'
   pod 'CollapsibleTableSectionViewController', '~> 1.0.0'
+  pod 'MBProgressHUD'
   target 'NepseTests' do
     inherit! :search_paths
     # Pods for testing
