@@ -25,11 +25,10 @@ class Auth {
 
 extension Auth : RealmPersistenceType{
     
-    func request(url: URL,headers:[String:String]?, method: HTTPMethod ,success: @escaping ([String:Any]) -> ()) {
+    func request(url: String, parameters: [String:Any]?, headers:[String:String]?, method: HTTPMethod ,success: @escaping ([String:Any]) -> ()) {
         
-        Alamofire.request(url, method: method, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
-            let data = response.result.value as? [String:Any]
-            success(data ?? [String:Any]())
+        Alamofire.request(url, method: method, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
+            success(response.value as! [String:Any])
         }
     }
     
@@ -45,7 +44,9 @@ extension Auth : RealmPersistenceType{
             if let data = response.value as? [String:Any] {
                 if let auth = Mapper<AuthModel>().map(JSON: data) {
                     self.save(models: [auth])
+                    AuthNormalModel.shared = auth.normalModel()
                     if let userModel = auth.user {
+                        UserModel.shared = userModel.normalModel()
                         self.save(models: [userModel])
                         success("Logged-in")
                     }
@@ -55,7 +56,7 @@ extension Auth : RealmPersistenceType{
         }
     }
     
-    func register(data: Register, success: @escaping (String) -> ()) {
+    func register(data: Register, success: @escaping (String) -> (), failure: @escaping (String) -> ()) {
         
         let params = [
             "username": data.username ?? "" ,
@@ -66,7 +67,20 @@ extension Auth : RealmPersistenceType{
         ]
         
         Alamofire.request(Constants().baseURL + "api/v1/register", method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil).responseJSON { (response) in
-            success("success")
+            if response.response?.statusCode == 422 {
+                if let data = response.value as? [String:Any] {
+                    let error = Mapper<ResponseError>().map(JSON: data)
+                    if let errorMsg = error?.email {
+                        failure(errorMsg.first ?? "")
+                    }else if let errorMsg = error?.code {
+                        failure(errorMsg.first ?? "")
+                    }else{
+                        failure("The phone number has already been taken.")
+                    }
+                }
+            }else{
+                success("Successfully created user!, Activate Code is send to your mobile")
+            }
         }
         
     }
@@ -90,7 +104,12 @@ extension Auth : RealmPersistenceType{
         }
     }
     
-    
-    
-    
+    @objc func logout() {
+        if let authModel = realm.objects(AuthModel.self).first {
+            try? realm.write {
+                realm.delete(authModel)
+            }
+            appdelegate?.window?.rootViewController = UINavigationController(rootViewController: Wireframe.shared.getMain())
+        }
+    }
 }

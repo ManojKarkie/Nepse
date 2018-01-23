@@ -16,20 +16,8 @@ class DashboardService : ApiServiceType{
     var data = [String:Any]()
     
     func fetchDashboard(completion: @escaping ([Dashboard]) -> ()) {
-        let url = URL(string: "http://www.zeronebits.com/zerone_bits/topStocksBySharesTraded.php")
-//        ApiManager.shared.fetchData(url: url!, completion: {
-//            (data) in
-//            let dataValues = data["data"] as? [[String]]
-//            for values in dataValues ?? [[String]]() {
-//                self.data["sym"] = values[0]
-//                self.data["volume"] = values[1]
-//                self.data["cost"] = values[2]
-//                if let dashboard = Mapper<Dashboard>().map(JSON: self.data) {
-//                    self.DashboardData.append(dashboard)
-//                }
-//            }
-//            completion(self.DashboardData)
-//        })
+        let url = self.baseUrl + "api/v1/portfolio-by-company-profile"
+//
     }
     
     func fetchNumberOfShareTransaction(completion: @escaping ([Transactions]) -> ()) {

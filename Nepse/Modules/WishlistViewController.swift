@@ -13,8 +13,6 @@ class WishlistViewController: UIViewController {
     @IBOutlet weak var AddBtn: UIButton!
     @IBOutlet weak var searchField: UITextField!
     
-    var status: GlobalConstant.Status = .notLogged
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.AddBtn.layer.cornerRadius = 5.0
@@ -29,7 +27,7 @@ class WishlistViewController: UIViewController {
     
     func setup() {
         if status != .notLogged {
-            self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ios7-keypad"), style: .plain, target: self, action: #selector(sideMenuController?.showLeftViewAnimated))
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ios7-keypad"), style: .plain, target: self, action: #selector(self.showSideMenu))
         }
     }
 

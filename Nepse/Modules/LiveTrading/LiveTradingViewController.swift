@@ -21,7 +21,6 @@ class LiveTradingViewController: UIViewController {
     
     var data = [LiveTrading]()
     let service = LiveTradingService()
-    var status: GlobalConstant.Status = .notLogged
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +39,7 @@ class LiveTradingViewController: UIViewController {
         tradingSwitch.onTintColor = UIColor.white
         tradingSwitch.thumbTintColor = UIColor(hex: "#234E66")
         if status != .notLogged {
-            self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ios7-keypad"), style: .plain, target: self, action: #selector(sideMenuController?.showLeftViewAnimated))
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ios7-keypad"), style: .plain, target: self, action: #selector(self.showSideMenu))
             sideMenuController?.swipeGestureArea = .full
         }
     }

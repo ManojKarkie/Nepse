@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class LoginViewController: UIViewController{
     
@@ -29,13 +30,20 @@ class LoginViewController: UIViewController{
     
     @IBAction func btn_login(_ sender: Any) {
         Auth.shared.loginIn(username: email_txt.text ?? "", password: password_txt.text ?? "", success: { (success) in
-            let vc = Wireframe.shared.getDashboard()
-            vc.status = .loggedIn
             appdelegate?.setupSideMenu()
         }) { (error) in
-            
+            self.showError(error: error, completion: nil)
         }
        
+    }
+}
+
+// MARK: SideMenu
+
+extension UIViewController {
+    
+    @objc func showSideMenu() {
+        self.sideMenuController?.toggleLeftViewAnimated()
     }
 }
 
@@ -121,37 +129,37 @@ struct Associate {
 
 // MARK: HUD
 extension UIViewController {
-//
-//    private func setProgressHud() -> MBProgressHUD {
-//        let progressHud:  MBProgressHUD = MBProgressHUD.showAdded(to: self.view, animated: true)
-//        progressHud.tintColor = UIColor.darkGray
-//        progressHud.removeFromSuperViewOnHide = true
-//        objc_setAssociatedObject(self, &Associate.hud, progressHud, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-//        return progressHud
-//    }
-//
-//    var progressHud: MBProgressHUD {
-//        if let progressHud = objc_getAssociatedObject(self, &Associate.hud) as? MBProgressHUD {
-//            progressHud.isUserInteractionEnabled = true
-//            return progressHud
-//        }
-//        return setProgressHud()
-//    }
-//
-//    var progressHudIsShowing: Bool {
-//        return self.progressHud.isHidden
-//    }
-//
-//    func showProgressHud() {
-//        self.progressHud.show(animated: false)
-//    }
-//
-//    func hideProgressHud() {
-//        self.progressHud.label.text = ""
-//        self.progressHud.completionBlock = {
-//            objc_setAssociatedObject(self, &Associate.hud, nil, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-//        }
-//        self.progressHud.hide(animated: false)
-//    }
+
+    private func setProgressHud() -> MBProgressHUD {
+        let progressHud:  MBProgressHUD = MBProgressHUD.showAdded(to: self.view, animated: true)
+        progressHud.tintColor = UIColor.darkGray
+        progressHud.removeFromSuperViewOnHide = true
+        objc_setAssociatedObject(self, &Associate.hud, progressHud, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        return progressHud
+    }
+
+    var progressHud: MBProgressHUD {
+        if let progressHud = objc_getAssociatedObject(self, &Associate.hud) as? MBProgressHUD {
+            progressHud.isUserInteractionEnabled = true
+            return progressHud
+        }
+        return setProgressHud()
+    }
+
+    var progressHudIsShowing: Bool {
+        return self.progressHud.isHidden
+    }
+
+    func showProgressHud() {
+        self.progressHud.show(animated: false)
+    }
+
+    func hideProgressHud() {
+        self.progressHud.label.text = ""
+        self.progressHud.completionBlock = {
+            objc_setAssociatedObject(self, &Associate.hud, nil, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+        self.progressHud.hide(animated: false)
+    }
 }
 

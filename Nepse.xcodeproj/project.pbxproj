@@ -23,7 +23,7 @@
 		1A250E2B1F62A04A00BDCE62 /* RecieveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A250E2A1F62A04A00BDCE62 /* RecieveCell.swift */; };
 		1A250E2E1F62BED300BDCE62 /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A250E2D1F62BED300BDCE62 /* Calculator.storyboard */; };
 		1A250E301F62BEE800BDCE62 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A250E2F1F62BEE800BDCE62 /* CalculatorViewController.swift */; };
-		1A25B6691F5F152A004C5451 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		1A25B6691F5F152A004C5451 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		1A25B6701F5FBCF5004C5451 /* Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A25B66F1F5FBCF5004C5451 /* Wireframe.swift */; };
 		1A25B68F1F605020004C5451 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A25B6831F605020004C5451 /* Dashboard.storyboard */; };
 		1A25B6901F605020004C5451 /* DashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A25B6841F605020004C5451 /* DashboardCell.swift */; };
@@ -41,8 +41,11 @@
 		1A2B6AEE1F7117B4005AA1CD /* PayPalSansBig-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A25B6631F5F0EB8004C5451 /* PayPalSansBig-Light.ttf */; };
 		1A2B6AEF1F7117B6005AA1CD /* PayPalSansSmall-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A25B6661F5F0EB8004C5451 /* PayPalSansSmall-Regular.ttf */; };
 		1A2B6AF01F711993005AA1CD /* PayPalSansSmall-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A25B6651F5F0EB8004C5451 /* PayPalSansSmall-Bold.ttf */; };
+		1A2D8AAE2015B994008E0356 /* PortfolioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2D8AAD2015B994008E0356 /* PortfolioService.swift */; };
+		1A2D8AB02015B9CA008E0356 /* Portfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2D8AAF2015B9CA008E0356 /* Portfolio.swift */; };
 		1A2FA8E520120D6500F9FC46 /* ActivateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2FA8E420120D6500F9FC46 /* ActivateUserViewController.swift */; };
 		1A2FA8E72012FD1300F9FC46 /* PersistenceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2FA8E62012FD1300F9FC46 /* PersistenceType.swift */; };
+		1A2FA8EB201330B300F9FC46 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2FA8EA201330B300F9FC46 /* Error.swift */; };
 		1A3458241F93BD0900D26410 /* IndexSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3458231F93BD0900D26410 /* IndexSummaryCell.swift */; };
 		1A3458261F93BDD500D26410 /* IndexSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3458251F93BDD500D26410 /* IndexSummary.swift */; };
 		1A45214B1F921B69006240A9 /* Indices.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A45214A1F921B69006240A9 /* Indices.storyboard */; };
@@ -121,8 +124,11 @@
 		1A25B68E1F605020004C5451 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		1A29A7281F697DBD00AAF1A4 /* Dashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		1A2B6AE51F70E34E005AA1CD /* SellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellViewController.swift; sourceTree = "<group>"; };
+		1A2D8AAD2015B994008E0356 /* PortfolioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioService.swift; sourceTree = "<group>"; };
+		1A2D8AAF2015B9CA008E0356 /* Portfolio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Portfolio.swift; sourceTree = "<group>"; };
 		1A2FA8E420120D6500F9FC46 /* ActivateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateUserViewController.swift; sourceTree = "<group>"; };
 		1A2FA8E62012FD1300F9FC46 /* PersistenceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceType.swift; sourceTree = "<group>"; };
+		1A2FA8EA201330B300F9FC46 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		1A3458231F93BD0900D26410 /* IndexSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexSummaryCell.swift; sourceTree = "<group>"; };
 		1A3458251F93BDD500D26410 /* IndexSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexSummary.swift; sourceTree = "<group>"; };
 		1A45214A1F921B69006240A9 /* Indices.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Indices.storyboard; sourceTree = "<group>"; };
@@ -275,6 +281,8 @@
 				1A8927AE1F949158006B07BE /* SubIndexSummary.swift */,
 				1AE3DFB12011EC9700926111 /* AuthModel.swift */,
 				1AE3DFB32011ECAE00926111 /* User.swift */,
+				1A2FA8EA201330B300F9FC46 /* Error.swift */,
+				1A2D8AAF2015B9CA008E0356 /* Portfolio.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -355,6 +363,7 @@
 				1A6C23D91F69283E00F0FCAF /* LiveTradingService.swift */,
 				1A1E5E871F6991B6001FDB0E /* DashboardService.swift */,
 				1A45214E1F922301006240A9 /* IndicesService.swift */,
+				1A2D8AAD2015B994008E0356 /* PortfolioService.swift */,
 			);
 			path = ApiServices;
 			sourceTree = "<group>";
@@ -569,7 +578,7 @@
 				1A25B68F1F605020004C5451 /* Dashboard.storyboard in Resources */,
 				1A250E251F62A01A00BDCE62 /* Support.storyboard in Resources */,
 				AF5AFC921F5C519400414214 /* Assets.xcassets in Resources */,
-				1A25B6691F5F152A004C5451 /* BuildFile in Resources */,
+				1A25B6691F5F152A004C5451 /* (null) in Resources */,
 				1A2B6AEF1F7117B6005AA1CD /* PayPalSansSmall-Regular.ttf in Resources */,
 				1A25B6941F605020004C5451 /* Register.storyboard in Resources */,
 				1A250E141F624D1B00BDCE62 /* Floorsheet.storyboard in Resources */,
@@ -645,7 +654,6 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Nepse/Pods-Nepse-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
-				"${BUILT_PRODUCTS_DIR}/CollapsibleTableSectionViewController/CollapsibleTableSectionViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/LGSideMenuController/LGSideMenuController.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
@@ -657,7 +665,6 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CollapsibleTableSectionViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGSideMenuController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
@@ -710,8 +717,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A2D8AAE2015B994008E0356 /* PortfolioService.swift in Sources */,
 				1A250E161F624D3100BDCE62 /* FloorsheetViewController.swift in Sources */,
 				1A25B6931F605020004C5451 /* LoginViewController.swift in Sources */,
+				1A2FA8EB201330B300F9FC46 /* Error.swift in Sources */,
 				1A2FA8E520120D6500F9FC46 /* ActivateUserViewController.swift in Sources */,
 				1A2B6AE61F70E34E005AA1CD /* SellViewController.swift in Sources */,
 				1A250E271F62A02400BDCE62 /* SupportViewController.swift in Sources */,
@@ -732,6 +741,7 @@
 				1A3458241F93BD0900D26410 /* IndexSummaryCell.swift in Sources */,
 				1A250E201F62924200BDCE62 /* LiveTradingCell.swift in Sources */,
 				1A250E291F62A03F00BDCE62 /* SendCell.swift in Sources */,
+				1A2D8AB02015B9CA008E0356 /* Portfolio.swift in Sources */,
 				1A2FA8E72012FD1300F9FC46 /* PersistenceType.swift in Sources */,
 				1A25B6701F5FBCF5004C5451 /* Wireframe.swift in Sources */,
 				1A8404AE1F922B55006F2A81 /* MarketSummary.swift in Sources */,
@@ -896,7 +906,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Nepse/Modules/Portfolio/Nepse-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -912,7 +922,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiftech.Nepse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Nepse/Modules/Portfolio/Nepse-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

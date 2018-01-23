@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import LGSideMenuController
 class PortfolioViewController: UIViewController {
 
     @IBOutlet weak var shares: UILabel!
@@ -23,9 +23,9 @@ class PortfolioViewController: UIViewController {
         self.title = "Portfolio"
         shrebgView.layer.cornerRadius = shrebgView.frame.size.height/2
         shareAddedView.layer.cornerRadius = shareAddedView.frame.size.height/2
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ios7-keypad"), style: .plain, target: self, action: #selector(sideMenuController?.showLeftViewAnimated))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ios7-keypad"), style: .plain, target: self, action: #selector(self.showSideMenu))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(Auth.shared.logout))
     }
-    
 
 }
 

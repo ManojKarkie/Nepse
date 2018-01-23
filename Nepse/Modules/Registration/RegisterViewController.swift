@@ -39,10 +39,14 @@ class RegisterViewController: UIViewController {
         model.username = emailaddress.text ?? ""
         model.code = phoneno.text ?? ""
         model.password = password.text ?? ""
-        Auth.shared.register(data: model) { (response) in
-            let vc = Wireframe.shared.getActivateUser()
-            vc.number = self.phoneno.text
-            self.navigationController?.pushViewController(vc, animated: true)
+        Auth.shared.register(data: model, success: { (response) in
+            self.alert(message: response, title: "Success", okAction: {
+                let vc = Wireframe.shared.getActivateUser()
+                vc.number = self.phoneno.text
+                self.navigationController?.pushViewController(vc, animated: true)
+            })
+        }) { (error) in
+            self.alert(message: error)
         }
     }
 }

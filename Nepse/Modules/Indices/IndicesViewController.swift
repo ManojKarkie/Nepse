@@ -50,7 +50,7 @@ class IndicesViewController: UIViewController {
         tableView.dataSource = self
         tableView2.delegate = self
         tableView2.dataSource = self
-         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ios7-keypad"), style: .plain, target: self, action: #selector(sideMenuController?.showLeftViewAnimated))
+         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ios7-keypad"), style: .plain, target: self, action: #selector(self.showSideMenu))
         self.title = "Indices"
     }
     

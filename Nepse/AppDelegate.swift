@@ -10,6 +10,7 @@ import UIKit
 import LGSideMenuController
 
 let appdelegate = UIApplication.shared.delegate as? AppDelegate
+var status: GlobalConstant.Status = .notLogged
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -30,11 +31,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func setupNavBar() {
         let navBarAppearance = UINavigationBar.appearance()
         navBarAppearance.titleTextAttributes = [
-            NSForegroundColorAttributeName: UIColor.white]
+            NSAttributedStringKey.foregroundColor: UIColor.white]
         navBarAppearance.barTintColor = UIColor(hex: "#234E66")
         navBarAppearance.tintColor = UIColor.white
         navBarAppearance.shadowImage = UIImage()
         navBarAppearance.isTranslucent = false
+        
+    }
+    
+    @objc func showLeftView(vc: UIViewController) {
+        vc.sideMenuController?.showLeftViewAnimated()
     }
     
     private func entryPoint() {
@@ -61,7 +67,9 @@ extension AppDelegate {
     
     func isAuthenticated() -> Bool {
         if let auth = realm.objects(AuthModel.self).first, auth.token != "" {
+            AuthNormalModel.shared = auth.normalModel()
             UserModel.shared = auth.user?.normalModel() ?? UserModel()
+            status = .loggedIn
             return true
         }else{
             return false

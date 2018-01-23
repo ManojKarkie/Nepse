@@ -40,21 +40,19 @@ class DashboardViewController: UIViewController {
         collapseHeader.isUserInteractionEnabled = true
     }
     
-    func collapseTableView() {
+    @objc func collapseTableView() {
 //        bottomStack.isHidden = expanding
 //        expanding = !expanding
 //
 //        tableView.reloadSections(IndexSet.init(arrayLiteral: 0,0), with: .automatic)
     }
     
-    var status: GlobalConstant.Status = .notLogged
-    
     
     func setup() {
         bottomStack.isHidden = !expanding
         self.title = "Dashboard"
         if status != .notLogged {
-            self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ios7-keypad"), style: .plain, target: self, action: #selector(sideMenuController?.showLeftViewAnimated))
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ios7-keypad"), style: .plain, target: self, action: #selector(self.showSideMenu))
         }
         sideMenuController?.swipeGestureArea = .full
         sideMenuController?.leftViewBackgroundBlurEffect = UIBlurEffect(style: .regular)

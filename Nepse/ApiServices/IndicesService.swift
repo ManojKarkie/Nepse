@@ -17,10 +17,7 @@ class IndicesService: ApiServiceType {
     
     func fetchMarketSummary(completion: @escaping (MarketSummary) -> ()) {
         if  let url = URL(string: "http://www.zeronebits.com/nepse/data/nepseStat/MarketSummary.php") {
-        self.apiManager.request(url: url, headers: nil, method: .get) { (data) in
-            let marketData = Mapper<MarketSummary>().map(JSON: data)
-            completion(marketData ?? MarketSummary())
-        }
+        
         }
     }
     

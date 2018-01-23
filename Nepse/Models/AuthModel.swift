@@ -31,4 +31,23 @@ class AuthModel: Object, Mappable {
         user <- map["user"]
         token <- map["token"]
     }
+    
+    func normalModel() -> AuthNormalModel {
+        return AuthNormalModel(id: self.id, token: self.token)
+    }
+}
+
+class AuthNormalModel {
+    
+    var id: String?
+    var token: String?
+    
+    static var shared = AuthNormalModel()
+    
+    init() {}
+    
+    init(id: String, token: String) {
+        self.id = id
+        self.token = token
+    }
 }

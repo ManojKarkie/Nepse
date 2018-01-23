@@ -94,21 +94,18 @@ extension Wireframe: SideMenu {
     func openDashboard() {
         let sideMenu = UIApplication.shared.keyWindow?.rootViewController?.sideMenuController?.rootViewController as? UINavigationController
         let dashboard = getDashboard()
-        dashboard.status = .loggedIn
         sideMenu?.viewControllers = [dashboard]
     }
     
     func openFloorsheet() {
         let sideMenu = UIApplication.shared.keyWindow?.rootViewController?.sideMenuController?.rootViewController as? UINavigationController
         let floorsheet = getFloorsheet()
-        floorsheet.status = .loggedIn
         sideMenu?.viewControllers = [floorsheet]
     }
     
     func openLiveTrading() {
         let sideMenu = UIApplication.shared.keyWindow?.rootViewController?.sideMenuController?.rootViewController as? UINavigationController
         let liveTrading = getLiveTrading()
-        liveTrading.status = .loggedIn
         sideMenu?.viewControllers = [liveTrading]
     }
     
@@ -125,7 +122,6 @@ extension Wireframe: SideMenu {
     func openWatchList() {
         let sideMenu = UIApplication.shared.keyWindow?.rootViewController?.sideMenuController?.rootViewController as? UINavigationController
         let watchList = getWatchList()
-        watchList.status = .loggedIn
         sideMenu?.viewControllers = [watchList]
     }
     

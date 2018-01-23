@@ -10,11 +10,13 @@ import Foundation
 
 class GlobalConstant {
     
-    static let shared = GlobalConstant()
+    static var shared = GlobalConstant()
+    
     
     enum Status {
         case loggedIn
         case notLogged
     }
     
+    var status: Status = .notLogged
 }
