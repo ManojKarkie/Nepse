@@ -69,8 +69,13 @@
 		1A947590201FB26E002072F0 /* CompanyFloorsheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A94758F201FB26E002072F0 /* CompanyFloorsheetCell.swift */; };
 		1A9DCC9B1F6FB7010005BC94 /* GlobalConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DCC9A1F6FB7010005BC94 /* GlobalConstant.swift */; };
 		1AAA78F520206D9100B24E1E /* CompanyDividend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AAA78F420206D9100B24E1E /* CompanyDividend.storyboard */; };
-		1AAA78F720206DA100B24E1E /* CompanyDividendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAA78F620206DA100B24E1E /* CompanyDividendCell.swift */; };
 		1AAA78F920206DB000B24E1E /* CompanyDividendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAA78F820206DB000B24E1E /* CompanyDividendViewController.swift */; };
+		1AAA78FB20220F5500B24E1E /* CompanyDividendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAA78FA20220F5500B24E1E /* CompanyDividendService.swift */; };
+		1AAA78FD2022219D00B24E1E /* CompanyDividendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAA78FC2022219D00B24E1E /* CompanyDividendCell.swift */; };
+		1AAA78FF2022223E00B24E1E /* CompanyDividend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAA78FE2022223E00B24E1E /* CompanyDividend.swift */; };
+		1AAA790120223CDB00B24E1E /* CollectionLayout4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAA790020223CDB00B24E1E /* CollectionLayout4.swift */; };
+		1AAA79042022406D00B24E1E /* CompanyNews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AAA79032022406D00B24E1E /* CompanyNews.storyboard */; };
+		1AAA79062022407F00B24E1E /* CompanyNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAA79052022407F00B24E1E /* CompanyNewsViewController.swift */; };
 		1AB44F571F643D76002F578A /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB44F551F643D76002F578A /* CustomCell.swift */; };
 		1AB44F581F643D76002F578A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB44F561F643D76002F578A /* ViewController.swift */; };
 		1AB44F5A1F643D89002F578A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB44F591F643D89002F578A /* Main.storyboard */; };
@@ -194,8 +199,13 @@
 		1A94758F201FB26E002072F0 /* CompanyFloorsheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyFloorsheetCell.swift; sourceTree = "<group>"; };
 		1A9DCC9A1F6FB7010005BC94 /* GlobalConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstant.swift; sourceTree = "<group>"; };
 		1AAA78F420206D9100B24E1E /* CompanyDividend.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompanyDividend.storyboard; sourceTree = "<group>"; };
-		1AAA78F620206DA100B24E1E /* CompanyDividendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDividendCell.swift; sourceTree = "<group>"; };
 		1AAA78F820206DB000B24E1E /* CompanyDividendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDividendViewController.swift; sourceTree = "<group>"; };
+		1AAA78FA20220F5500B24E1E /* CompanyDividendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDividendService.swift; sourceTree = "<group>"; };
+		1AAA78FC2022219D00B24E1E /* CompanyDividendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDividendCell.swift; sourceTree = "<group>"; };
+		1AAA78FE2022223E00B24E1E /* CompanyDividend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDividend.swift; sourceTree = "<group>"; };
+		1AAA790020223CDB00B24E1E /* CollectionLayout4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionLayout4.swift; sourceTree = "<group>"; };
+		1AAA79032022406D00B24E1E /* CompanyNews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompanyNews.storyboard; sourceTree = "<group>"; };
+		1AAA79052022407F00B24E1E /* CompanyNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyNewsViewController.swift; sourceTree = "<group>"; };
 		1AB44F551F643D76002F578A /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		1AB44F561F643D76002F578A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1AB44F591F643D89002F578A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -267,6 +277,7 @@
 				1A019F7E1FF9F3E000958803 /* Auth.swift */,
 				1A019F801FF9F4E900958803 /* ApiSerivceInfo.swift */,
 				1A5BDE57201D0D1B004A2C33 /* CollectionViewLayout.swift */,
+				1AAA790020223CDB00B24E1E /* CollectionLayout4.swift */,
 			);
 			path = BaseClasses;
 			sourceTree = "<group>";
@@ -360,6 +371,7 @@
 				1AE1D2ED201AF682004D1F38 /* IndexList.swift */,
 				1AF43499201B4677007A9147 /* Floorsheet.swift */,
 				1A947580201F12F8002072F0 /* CompanyProfile.swift */,
+				1AAA78FE2022223E00B24E1E /* CompanyDividend.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -448,6 +460,7 @@
 				1A45214E1F922301006240A9 /* IndicesService.swift */,
 				1A2D8AAD2015B994008E0356 /* PortfolioService.swift */,
 				1A94757E201F0F37002072F0 /* CompanyService.swift */,
+				1AAA78FA20220F5500B24E1E /* CompanyDividendService.swift */,
 			);
 			path = ApiServices;
 			sourceTree = "<group>";
@@ -493,10 +506,19 @@
 			isa = PBXGroup;
 			children = (
 				1AAA78F420206D9100B24E1E /* CompanyDividend.storyboard */,
-				1AAA78F620206DA100B24E1E /* CompanyDividendCell.swift */,
 				1AAA78F820206DB000B24E1E /* CompanyDividendViewController.swift */,
+				1AAA78FC2022219D00B24E1E /* CompanyDividendCell.swift */,
 			);
 			path = CompanyDividend;
+			sourceTree = "<group>";
+		};
+		1AAA79022022405B00B24E1E /* CompanyNews */ = {
+			isa = PBXGroup;
+			children = (
+				1AAA79032022406D00B24E1E /* CompanyNews.storyboard */,
+				1AAA79052022407F00B24E1E /* CompanyNewsViewController.swift */,
+			);
+			path = CompanyNews;
 			sourceTree = "<group>";
 		};
 		1AB44F541F643D76002F578A /* Main */ = {
@@ -528,6 +550,7 @@
 		1AEF808D201EED7200D93B30 /* CompanyProfile */ = {
 			isa = PBXGroup;
 			children = (
+				1AAA79022022405B00B24E1E /* CompanyNews */,
 				1AAA78F320206D7400B24E1E /* CompanyDividend */,
 				1A947587201FAF9B002072F0 /* CompanyHistory */,
 				1A947584201FAF73002072F0 /* BriefInfo */,
@@ -740,6 +763,7 @@
 				1A250E1E1F62922D00BDCE62 /* LiveTrading.storyboard in Resources */,
 				1A2B6AEC1F7117AB005AA1CD /* PayPalSansSmall-Bold.ttf in Resources */,
 				1A25B6961F605020004C5451 /* SideMenu.storyboard in Resources */,
+				1AAA79042022406D00B24E1E /* CompanyNews.storyboard in Resources */,
 				244AFBD21F7206420049B2EF /* Portfolio.storyboard in Resources */,
 				1A25B6921F605020004C5451 /* Login.storyboard in Resources */,
 				1A250E2E1F62BED300BDCE62 /* Calculator.storyboard in Resources */,
@@ -919,6 +943,7 @@
 				1A29A7291F697DBD00AAF1A4 /* Dashboard.swift in Sources */,
 				1A250E181F624D4300BDCE62 /* FloorsheetCell.swift in Sources */,
 				1AE1D2E2201997AD004D1F38 /* Indices.swift in Sources */,
+				1AAA78FF2022223E00B24E1E /* CompanyDividend.swift in Sources */,
 				1A019F7F1FF9F3E000958803 /* Auth.swift in Sources */,
 				1AF43491201B1DBE007A9147 /* TurnOverCell.swift in Sources */,
 				1A6C23DA1F69283E00F0FCAF /* LiveTradingService.swift in Sources */,
@@ -928,7 +953,6 @@
 				241EC8FE1F64514900343316 /* WishlistViewController.swift in Sources */,
 				1A5BDE58201D0D1B004A2C33 /* CollectionViewLayout.swift in Sources */,
 				1ABC11C41F8877920050F6DF /* TrunOverCell.swift in Sources */,
-				1AAA78F720206DA100B24E1E /* CompanyDividendCell.swift in Sources */,
 				1AB44F581F643D76002F578A /* ViewController.swift in Sources */,
 				1AEF8091201EED9F00D93B30 /* CompanyProfileViewController.swift in Sources */,
 				1A8927B31F949291006B07BE /* SubIndexCell.swift in Sources */,
@@ -936,6 +960,7 @@
 				1A3458241F93BD0900D26410 /* IndexSummaryCell.swift in Sources */,
 				1A250E201F62924200BDCE62 /* LiveTradingCell.swift in Sources */,
 				1AE1D2EA2019E843004D1F38 /* SubIndexViewController.swift in Sources */,
+				1AAA78FD2022219D00B24E1E /* CompanyDividendCell.swift in Sources */,
 				1AE1D2E020199657004D1F38 /* SubIndices.swift in Sources */,
 				1A250E291F62A03F00BDCE62 /* SendCell.swift in Sources */,
 				1A2D8AB02015B9CA008E0356 /* Portfolio.swift in Sources */,
@@ -955,11 +980,13 @@
 				1A250E301F62BEE800BDCE62 /* CalculatorViewController.swift in Sources */,
 				1A45214F1F922301006240A9 /* IndicesService.swift in Sources */,
 				1AE1D2EC2019F1FA004D1F38 /* ChartViewControllerViewController.swift in Sources */,
+				1AAA78FB20220F5500B24E1E /* CompanyDividendService.swift in Sources */,
 				1A45214D1F921B71006240A9 /* IndicesViewController.swift in Sources */,
 				1AF43498201B263A007A9147 /* CompanyViewController.swift in Sources */,
 				1A250E2B1F62A04A00BDCE62 /* RecieveCell.swift in Sources */,
 				1AE3DFB22011EC9700926111 /* AuthModel.swift in Sources */,
 				1AE3DFB42011ECAE00926111 /* User.swift in Sources */,
+				1AAA79062022407F00B24E1E /* CompanyNewsViewController.swift in Sources */,
 				1A25B6971F605020004C5451 /* SideMenuViewController.swift in Sources */,
 				241EC9021F6457B100343316 /* WishListCell.swift in Sources */,
 				1A250E221F62925700BDCE62 /* LiveTradingViewController.swift in Sources */,
@@ -971,6 +998,7 @@
 				244AFBD81F7206B80049B2EF /* PortfolioViewController.swift in Sources */,
 				1A947590201FB26E002072F0 /* CompanyFloorsheetCell.swift in Sources */,
 				1A250E1B1F628B6700BDCE62 /* ColorExtension.swift in Sources */,
+				1AAA790120223CDB00B24E1E /* CollectionLayout4.swift in Sources */,
 				1AF4348F201B1DB4007A9147 /* ShareTradedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -42,6 +42,7 @@ class LiveTradingViewController: UIViewController {
         self.title = "Live Trading"
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
+        self.collectionView.isDirectionalLockEnabled = true
         tradingSwitch.onTintColor = UIColor.white
         tradingSwitch.thumbTintColor = UIColor(hex: "#2D6687")
         if status != .notLogged {
@@ -70,6 +71,8 @@ class LiveTradingViewController: UIViewController {
     }
 
 }
+
+
 
 extension LiveTradingViewController: UICollectionViewDataSource {
     

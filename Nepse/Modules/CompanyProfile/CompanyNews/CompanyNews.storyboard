@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Company News View Controller-->
+        <scene sceneID="rCU-h9-B6W">
+            <objects>
+                <viewController storyboardIdentifier="CompanyNewsViewController" id="uRk-gi-H03" customClass="CompanyNewsViewController" customModule="Nepse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QZP-c5-QVu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNO-2u-ZQL">
+                                <rect key="frame" x="174" y="310" width="27" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" red="0.1764705882" green="0.40000000000000002" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebx-cR-vf4">
+                                <rect key="frame" x="151.5" y="368" width="73.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.1764705882" green="0.40000000000000002" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.70645171399999995" green="0.80156391859999998" blue="0.94294041399999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QNO-2u-ZQL" firstAttribute="centerY" secondItem="QZP-c5-QVu" secondAttribute="centerY" id="g7E-63-VOC"/>
+                            <constraint firstItem="ebx-cR-vf4" firstAttribute="centerX" secondItem="QNO-2u-ZQL" secondAttribute="centerX" id="n0d-Q7-hK4"/>
+                            <constraint firstItem="QNO-2u-ZQL" firstAttribute="centerX" secondItem="QZP-c5-QVu" secondAttribute="centerX" id="sEo-0P-tNZ"/>
+                            <constraint firstItem="ebx-cR-vf4" firstAttribute="top" secondItem="QNO-2u-ZQL" secondAttribute="bottom" constant="10" id="xPj-TI-xo1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gvo-4l-a5X"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jZp-az-bWQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="314" y="-125"/>
+        </scene>
+    </scenes>
+</document>

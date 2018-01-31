@@ -18,131 +18,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="40" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XlE-Ie-zwP">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YJi-2K-rnT">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CompanyDividendCell" id="flx-e6-dH9" customClass="CompanyDividendCell" customModule="Nepse" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="40"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="flx-e6-dH9" id="1LH-ie-CMu">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewLayout key="collectionViewLayout" id="g3p-jp-8Hf" customClass="CollectionLayout4" customModule="Nepse" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CompanyDividendCell" id="LkO-O1-jF6" customClass="CompanyDividendCell" customModule="Nepse" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="tR0-vU-FXn">
-                                                    <rect key="frame" x="22" y="12" width="331" height="16"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MNBBL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yln-mn-IYp">
-                                                            <rect key="frame" x="0.0" y="0.0" width="44.5" height="16"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
-                                                            <color key="textColor" red="0.1059949806" green="0.1059949806" blue="0.1059949806" alpha="0.50429137319999995" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MNBBL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMl-Ll-sj1">
-                                                            <rect key="frame" x="96.5" y="0.0" width="41.5" height="16"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
-                                                            <color key="textColor" red="0.1059949806" green="0.1059949806" blue="0.1059949806" alpha="0.50429137319999995" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MNBBL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FgE-9z-pjw">
-                                                            <rect key="frame" x="190" y="0.0" width="44.5" height="16"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
-                                                            <color key="textColor" red="0.1059949806" green="0.1059949806" blue="0.1059949806" alpha="0.50429137319999995" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MNBBL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NM6-jA-hde">
-                                                            <rect key="frame" x="286.5" y="0.0" width="44.5" height="16"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
-                                                            <color key="textColor" red="0.1059949806" green="0.1059949806" blue="0.1059949806" alpha="0.50429137319999995" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ijb-f0-yfS">
+                                                    <rect key="frame" x="4" y="14.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="tR0-vU-FXn" firstAttribute="centerX" secondItem="1LH-ie-CMu" secondAttribute="centerX" id="NaJ-WK-Gdb"/>
-                                                <constraint firstItem="tR0-vU-FXn" firstAttribute="centerY" secondItem="1LH-ie-CMu" secondAttribute="centerY" id="saQ-ll-DH9"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Ijb-f0-yfS" firstAttribute="centerX" secondItem="LkO-O1-jF6" secondAttribute="centerX" id="4aN-QL-vag"/>
+                                            <constraint firstItem="Ijb-f0-yfS" firstAttribute="centerY" secondItem="LkO-O1-jF6" secondAttribute="centerY" id="6Zh-4o-ncN"/>
+                                        </constraints>
                                         <connections>
-                                            <outlet property="bonusShareLabel" destination="DMl-Ll-sj1" id="nRw-zd-SRe"/>
-                                            <outlet property="cashDividendLabel" destination="FgE-9z-pjw" id="eqE-jd-1b8"/>
-                                            <outlet property="fiscalYearLabel" destination="yln-mn-IYp" id="x8A-i0-H1h"/>
-                                            <outlet property="totalDividendLabel" destination="NM6-jA-hde" id="Trs-lf-pTu"/>
+                                            <outlet property="contentLabel" destination="Ijb-f0-yfS" id="x8m-GP-r56"/>
                                         </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.70645171399999995" green="0.80156391859999998" blue="0.94294041399999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="XlE-Ie-zwP" secondAttribute="trailing" id="59B-pM-7iS"/>
-                            <constraint firstAttribute="bottom" secondItem="XlE-Ie-zwP" secondAttribute="bottom" id="O3r-qL-q1h"/>
-                            <constraint firstItem="XlE-Ie-zwP" firstAttribute="leading" secondItem="qjJ-de-Jh8" secondAttribute="leading" id="Ofl-Qh-3at"/>
-                            <constraint firstItem="XlE-Ie-zwP" firstAttribute="top" secondItem="F3y-Gc-4V3" secondAttribute="top" id="ZrW-Gx-dKr"/>
+                            <constraint firstItem="YJi-2K-rnT" firstAttribute="top" secondItem="F3y-Gc-4V3" secondAttribute="top" id="A7e-Of-IOa"/>
+                            <constraint firstItem="F3y-Gc-4V3" firstAttribute="trailing" secondItem="YJi-2K-rnT" secondAttribute="trailing" id="Gvy-3p-tRY"/>
+                            <constraint firstItem="YJi-2K-rnT" firstAttribute="leading" secondItem="F3y-Gc-4V3" secondAttribute="leading" id="Ikw-jJ-7WS"/>
+                            <constraint firstItem="F3y-Gc-4V3" firstAttribute="bottom" secondItem="YJi-2K-rnT" secondAttribute="bottom" id="vED-uH-6Ee"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="F3y-Gc-4V3"/>
                     </view>
                     <connections>
-                        <outlet property="headerView" destination="S72-Hb-8N5" id="kvZ-HF-NLs"/>
-                        <outlet property="tableView" destination="XlE-Ie-zwP" id="FxC-Bd-Y8k"/>
+                        <outlet property="collectionView" destination="YJi-2K-rnT" id="JLU-yQ-XNn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mIe-jb-5vX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="S72-Hb-8N5">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O9l-8k-YWT">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
-                            <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="LuC-Eb-2m0">
-                                    <rect key="frame" x="13.5" y="13.5" width="349.5" height="14.5"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fiscal Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIn-RB-Fyt">
-                                            <rect key="frame" x="0.0" y="0.0" width="63.5" height="14.5"/>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                                            <color key="textColor" red="0.1764705882" green="0.40000000000000002" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bonus Share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1T-Xe-7vT">
-                                            <rect key="frame" x="77.5" y="0.0" width="74.5" height="14.5"/>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                                            <color key="textColor" red="0.1764705882" green="0.40000000000000002" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cash Dividend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O85-rN-GrE">
-                                            <rect key="frame" x="166" y="0.0" width="85" height="14.5"/>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                                            <color key="textColor" red="0.1764705882" green="0.40000000000000002" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Dividend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxC-Ej-KNY">
-                                            <rect key="frame" x="265" y="0.0" width="84.5" height="14.5"/>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                                            <color key="textColor" red="0.1764705882" green="0.40000000000000002" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </stackView>
-                            </subviews>
-                            <color key="backgroundColor" red="0.97103029819999997" green="0.97103029819999997" blue="0.97103029819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstItem="LuC-Eb-2m0" firstAttribute="centerY" secondItem="O9l-8k-YWT" secondAttribute="centerY" id="9tH-Uf-iyN"/>
-                                <constraint firstItem="LuC-Eb-2m0" firstAttribute="centerX" secondItem="O9l-8k-YWT" secondAttribute="centerX" id="XK4-bZ-0NB"/>
-                            </constraints>
-                        </view>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstItem="4qc-AZ-w6P" firstAttribute="trailing" secondItem="O9l-8k-YWT" secondAttribute="trailing" id="22e-lO-cLd"/>
-                        <constraint firstItem="O9l-8k-YWT" firstAttribute="leading" secondItem="S72-Hb-8N5" secondAttribute="leading" id="Akc-qU-mn6"/>
-                        <constraint firstItem="O9l-8k-YWT" firstAttribute="top" secondItem="4qc-AZ-w6P" secondAttribute="top" id="GoJ-MQ-I7J"/>
-                        <constraint firstAttribute="bottom" secondItem="O9l-8k-YWT" secondAttribute="bottom" id="sAf-ez-JA4"/>
-                    </constraints>
-                    <viewLayoutGuide key="safeArea" id="4qc-AZ-w6P"/>
-                </view>
             </objects>
             <point key="canvasLocation" x="2498" y="323"/>
         </scene>

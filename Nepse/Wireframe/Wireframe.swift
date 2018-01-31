@@ -39,6 +39,7 @@ struct StoryboardNames {
     static let companyFloorsheet = "CompanyFloorSheet"
     static let companyHistory = "CompanyHistory"
     static let companyDividend = "CompanyDividend"
+    static let companyNews = "CompanyNews"
 }
 
 class Wireframe {
@@ -123,6 +124,10 @@ class Wireframe {
     
     func getCompanyDividend() -> CompanyDividendViewController {
         return UIStoryboard(name: StoryboardNames.companyDividend , bundle: nil).instantiateViewController(withIdentifier: "CompanyDividendViewController") as! CompanyDividendViewController
+    }
+    
+    func getCompanyNews() -> CompanyNewsViewController {
+        return UIStoryboard(name: StoryboardNames.companyNews , bundle: nil).instantiateViewController(withIdentifier: "CompanyNewsViewController") as! CompanyNewsViewController
     }
 }
 

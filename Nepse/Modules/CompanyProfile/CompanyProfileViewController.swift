@@ -33,7 +33,9 @@ class CompanyProfileViewController: ButtonBarPagerTabStripViewController {
         basicInfo.companyCode = self.companyCode
         let floorsheet = Wireframe.shared.getCompanyFloorsheet()
         floorsheet.companyCode = self.companyCode
-        return [basicInfo, Wireframe.shared.getCompanyHistory(), floorsheet , Wireframe.shared.getCompanyDividend()]
+        let dividend = Wireframe.shared.getCompanyDividend()
+        dividend.prflCode = self.companyCode
+        return [basicInfo, Wireframe.shared.getCompanyHistory(), floorsheet , dividend , Wireframe.shared.getCompanyNews()]
     }
     
     private func setupBar() {
