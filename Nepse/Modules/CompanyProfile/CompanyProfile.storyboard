@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Company Profile View Controller-->
+        <scene sceneID="hdR-ka-XqC">
+            <objects>
+                <viewController storyboardIdentifier="CompanyProfileViewController" id="2oh-W3-lbh" customClass="CompanyProfileViewController" customModule="Nepse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ONd-87-ujD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DLj-SB-sVT">
+                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                            </scrollView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3dI-Cw-AeD" customClass="ButtonBarView" customModule="XLPagerTabStrip">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="dGp-Ib-ODV"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zWh-8p-uVl">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3dI-Cw-AeD" firstAttribute="trailing" secondItem="gLg-qf-Kcd" secondAttribute="trailing" id="0cg-I2-LHR"/>
+                            <constraint firstItem="gLg-qf-Kcd" firstAttribute="bottom" secondItem="DLj-SB-sVT" secondAttribute="bottom" id="CcN-ap-Me6"/>
+                            <constraint firstItem="DLj-SB-sVT" firstAttribute="leading" secondItem="gLg-qf-Kcd" secondAttribute="leading" id="Qw3-UM-Lkf"/>
+                            <constraint firstItem="3dI-Cw-AeD" firstAttribute="top" secondItem="ONd-87-ujD" secondAttribute="top" id="TXj-At-gYs"/>
+                            <constraint firstItem="3dI-Cw-AeD" firstAttribute="leading" secondItem="gLg-qf-Kcd" secondAttribute="leading" id="YT0-LR-Omn"/>
+                            <constraint firstItem="gLg-qf-Kcd" firstAttribute="trailing" secondItem="DLj-SB-sVT" secondAttribute="trailing" id="oBr-uZ-SI9"/>
+                            <constraint firstItem="DLj-SB-sVT" firstAttribute="top" secondItem="3dI-Cw-AeD" secondAttribute="bottom" id="u87-Jf-Zck"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gLg-qf-Kcd"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonBarView" destination="3dI-Cw-AeD" id="NUU-Fh-o7Z"/>
+                        <outlet property="containerView" destination="DLj-SB-sVT" id="EbZ-fZ-6bP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ew-wJ-lJE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36" y="324"/>
+        </scene>
+    </scenes>
+</document>

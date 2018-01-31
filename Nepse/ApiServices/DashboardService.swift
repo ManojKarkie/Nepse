@@ -8,33 +8,42 @@
 
 import Foundation
 import ObjectMapper
-
+import SwiftyJSON
+import Alamofire
 class DashboardService : ApiServiceType{
     
-    var DashboardData = [Dashboard]()
-    var TransactionData = [Transactions]()
-    var data = [String:Any]()
     
-    func fetchDashboard(completion: @escaping ([Dashboard]) -> ()) {
-        let url = self.baseUrl + "api/v1/portfolio-by-company-profile"
-//
+    func fetchDashboard(completion: @escaping (Dashboard) -> ()) {
+        let url = self.baseUrl + "api/v1/dashboard"
+        self.apiManager.request(url: url, parameters: nil, headers: nil, method: .get, encoding: JSONEncoding.default) { (data) in
+            if let model = Mapper<Dashboard>().map(JSON: data) {
+                completion(model)
+            }
+        }
     }
     
-    func fetchNumberOfShareTransaction(completion: @escaping ([Transactions]) -> ()) {
-        let url = URL(string: "http://www.zeronebits.com/nepse/data/performers/Top10ByTxn.php")
-//        self.fetchData(url: url!) { (data) in
-//            let apiData = data as NSDictionary
-//            var dataArray = apiData.allValues as? [[String]]
-//            dataArray?.remove(at: 0)
-//            for values in dataArray ?? [[String]]() {
-//                self.data["sym"] = values[0]
-//                self.data["numberOfTransactions"] = values[1]
-//                self.data["closingPrice"] = values[2]
-//                if let transaction = Mapper<Transactions>().map(JSON: self.data) {
-//                    self.TransactionData.append(transaction)
-//                }
-//            }
-//            completion(self.TransactionData)
-//        }
+    func fetchIndexGraph(date: String, code: String,completion: @escaping (IndexArray) -> () ) {
+        let url = self.baseUrl + "api/v1/d-index"
+        let parameters = ["MONTH" : date , "INDEX_CODE": code] as [String: Any]
+        self.apiManager.requestArray(url: url, parameters: parameters, headers: nil, method: .get, encoding: URLEncoding.default) { (data) in
+            let data = ["data": data]
+            if let array = Mapper<IndexArray>().map(JSON: data) {
+                completion(array)
+            }
+        }
     }
+    
+    func fetchIndexList(completion: @escaping (IndexList) -> ()) {
+        let url = self.baseUrl + "api/v1/list-index"
+        self.apiManager.request(url: url, parameters: nil, headers: nil, method: .get, encoding: JSONEncoding.default) { (data) in
+            if let model = Mapper<IndexList>().map(JSON: data) {
+                completion(model)
+            }
+            
+            
+        }
+    }
+    
+    
+
 }

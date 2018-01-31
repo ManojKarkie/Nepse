@@ -97,12 +97,12 @@ class IndicesViewController: UIViewController {
     }
     
     func setupMarketSummary(){
-        turnOverLabel.text = marketSummary.currentIndex ?? ""
-        tradedSharesLabel.text = marketSummary.percentChange ?? ""
-        transactionLabel.text = marketSummary.totalTransactions ?? ""
-        scriptsTradedLabel.text = marketSummary.totalScripts ?? ""
-        totalMarketLabel.text = marketSummary.pointChange ?? ""
-        floatedMarketLabel.text = marketSummary.totalTraded ?? ""
+//        turnOverLabel.text = marketSummary.currentIndex ?? ""
+//        tradedSharesLabel.text = marketSummary.percentChange ?? ""
+//        transactionLabel.text = marketSummary.totalTransactions ?? ""
+//        scriptsTradedLabel.text = marketSummary.totalScripts ?? ""
+//        totalMarketLabel.text = marketSummary.pointChange ?? ""
+//        floatedMarketLabel.text = marketSummary.totalTraded ?? ""
     }
 
 }

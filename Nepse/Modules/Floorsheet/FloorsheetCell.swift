@@ -10,35 +10,46 @@ import UIKit
 
 class FloorsheetCell: UITableViewCell {
 
-    @IBOutlet weak var qty: UILabel!
+    @IBOutlet weak var unit: UILabel!
     @IBOutlet weak var seller: UILabel!
     @IBOutlet weak var buyer: UILabel!
     @IBOutlet weak var sym: UILabel!
-    @IBOutlet weak var contact: UILabel!
-    @IBOutlet weak var sn: UILabel!
-    
-    var data: Flowsheet?
+    @IBOutlet weak var rate: UILabel!
+
+    var getSymbolName:((String) -> ())?
+    var data: FloorsheetData?
     
     override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+        self.sym.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapSymbol)))
+        self.sym.isUserInteractionEnabled = true
     }
     
-    
-
     func setup() {
-        qty.text = data?.quantity
-        seller.text = data?.seller
-        buyer.text = data?.buyer
-        sym.text = data?.sym
-        contact.text = data?.contactNum
-        sn.text = data?.sn
+        self.unit.text = data?.units
+        self.seller.text = data?.seller
+        self.buyer.text = data?.buyer
+        self.sym.underline(text: data?.prflCode ?? "")
+        self.rate.text = data?.rate
+        
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    @objc private func didTapSymbol() {
+        getSymbolName?(self.sym.text ?? "")
+    }
+    
+}
 
-        // Configure the view for the selected state
+extension UILabel {
+    
+    func underline(text: String) {
+        self.attributedText = NSAttributedString(string: text, attributes:
+            [.underlineStyle: NSUnderlineStyle.styleSingle.rawValue])
+    }
+    
+    func underlineWithTapGesture(text: String, action: Selector?) {
+        self.attributedText = NSAttributedString(string: text, attributes:
+            [.underlineStyle: NSUnderlineStyle.styleSingle.rawValue])
+        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: action))
     }
 
 }

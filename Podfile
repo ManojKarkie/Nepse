@@ -8,9 +8,12 @@ target 'Nepse' do
   # Pods for Nepse
   pod 'LGSideMenuController'
   pod 'Charts'
-  pod 'Alamofire'
+  pod 'Alamofire' 
   pod 'ObjectMapper+Realm'
   pod 'MBProgressHUD'
+  pod 'SwiftyJSON'
+  pod 'XLPagerTabStrip', '~> 8.0'
+  pod 'IQKeyboardManagerSwift'
   target 'NepseTests' do
     inherit! :search_paths
     # Pods for testing

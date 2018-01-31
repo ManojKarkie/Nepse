@@ -24,9 +24,9 @@ class DashboardCell: UITableViewCell {
     }
     
     func setup() {
-        symDataLabel.text = data?.sym
-        volumeLabel.text = data?.volume
-        costLabel.text = data?.cost
+//        symDataLabel.text = data?.sym
+//        volumeLabel.text = data?.volume
+//        costLabel.text = data?.cost
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

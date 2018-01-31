@@ -8,6 +8,7 @@
 
 import UIKit
 import LGSideMenuController
+import IQKeyboardManagerSwift
 
 let appdelegate = UIApplication.shared.delegate as? AppDelegate
 var status: GlobalConstant.Status = .notLogged
@@ -25,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.shared.statusBarStyle = .lightContent
         setupNavBar()
         entryPoint()
+        IQKeyboardManager.sharedManager().enable = true
         return true
     }
 
@@ -32,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navBarAppearance = UINavigationBar.appearance()
         navBarAppearance.titleTextAttributes = [
             NSAttributedStringKey.foregroundColor: UIColor.white]
-        navBarAppearance.barTintColor = UIColor(hex: "#234E66")
+        navBarAppearance.barTintColor = UIColor(hex: "#2D6687")
         navBarAppearance.tintColor = UIColor.white
         navBarAppearance.shadowImage = UIImage()
         navBarAppearance.isTranslucent = false
@@ -47,6 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if isAuthenticated() {
             self.setupSideMenu()
         }else{
+            status = .notLogged
             self.window?.rootViewController = UINavigationController.init(rootViewController: Wireframe.shared.getMain())
         }
     }

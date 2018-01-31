@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Company History View Controller-->
+        <scene sceneID="NBn-bJ-hRJ">
+            <objects>
+                <viewController storyboardIdentifier="CompanyHistoryViewController" id="VYa-u7-RIw" customClass="CompanyHistoryViewController" customModule="Nepse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qyP-2S-HQH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8y-tG-qLs">
+                                <rect key="frame" x="5" y="25" width="365" height="298"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8zV-mA-dpB">
+                                        <rect key="frame" x="20" y="10" width="325" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="zBC-oz-DpZ"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQ9-hW-7RS" customClass="LineChartView" customModule="Charts">
+                                        <rect key="frame" x="8" y="58" width="349" height="200"/>
+                                        <color key="backgroundColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="5MF-Mw-7IZ"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ng-Ws-2Ne">
+                                        <rect key="frame" x="8" y="266" width="76" height="24"/>
+                                        <color key="backgroundColor" red="0.17558658830000001" green="0.3990079117" blue="0.52827477329999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                        <state key="normal" title="1 MONTH">
+                                            <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="monthBtnAction:" destination="VYa-u7-RIw" eventType="touchUpInside" id="qRB-yN-fGT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h31-sR-KCN">
+                                        <rect key="frame" x="99" y="266" width="76" height="24"/>
+                                        <color key="backgroundColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                        <state key="normal" title="3 MONTH">
+                                            <color key="titleColor" red="0.1770810783" green="0.40184986589999999" blue="0.53094953300000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="monthBtnAction:" destination="VYa-u7-RIw" eventType="touchUpInside" id="Ets-ir-SYh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbe-a5-1Bg">
+                                        <rect key="frame" x="281" y="266" width="76" height="24"/>
+                                        <color key="backgroundColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                        <state key="normal" title="12 MONTH">
+                                            <color key="titleColor" red="0.1770810783" green="0.40184986589999999" blue="0.53094953300000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="monthBtnAction:" destination="VYa-u7-RIw" eventType="touchUpInside" id="hau-dV-wb2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZE-dA-5cJ">
+                                        <rect key="frame" x="190" y="266" width="76" height="24"/>
+                                        <color key="backgroundColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                        <state key="normal" title="6 MONTH">
+                                            <color key="titleColor" red="0.1770810783" green="0.40184986589999999" blue="0.53094953300000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="monthBtnAction:" destination="VYa-u7-RIw" eventType="touchUpInside" id="Xgm-0b-msd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.70645171399999995" green="0.80156391859999998" blue="0.94294041399999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="8zV-mA-dpB" secondAttribute="trailing" constant="20" id="0d8-UR-TI7"/>
+                                    <constraint firstItem="2Ng-Ws-2Ne" firstAttribute="leading" secondItem="i8y-tG-qLs" secondAttribute="leading" constant="8" id="3p0-mM-gMw"/>
+                                    <constraint firstItem="2Ng-Ws-2Ne" firstAttribute="height" secondItem="h31-sR-KCN" secondAttribute="height" id="3rU-I2-C01"/>
+                                    <constraint firstItem="kQ9-hW-7RS" firstAttribute="top" secondItem="8zV-mA-dpB" secondAttribute="bottom" constant="8" id="82B-hL-jf7"/>
+                                    <constraint firstItem="h31-sR-KCN" firstAttribute="centerY" secondItem="2Ng-Ws-2Ne" secondAttribute="centerY" id="C6C-3x-r3j"/>
+                                    <constraint firstAttribute="trailing" secondItem="kQ9-hW-7RS" secondAttribute="trailing" constant="8" id="IVG-F1-scw"/>
+                                    <constraint firstItem="zbe-a5-1Bg" firstAttribute="leading" secondItem="yZE-dA-5cJ" secondAttribute="trailing" constant="15" id="ShD-s8-LnT"/>
+                                    <constraint firstItem="8zV-mA-dpB" firstAttribute="leading" secondItem="i8y-tG-qLs" secondAttribute="leading" constant="20" id="T9E-2B-Pn6"/>
+                                    <constraint firstItem="zbe-a5-1Bg" firstAttribute="centerY" secondItem="yZE-dA-5cJ" secondAttribute="centerY" id="VW8-hZ-ZOA"/>
+                                    <constraint firstItem="h31-sR-KCN" firstAttribute="leading" secondItem="2Ng-Ws-2Ne" secondAttribute="trailing" constant="15" id="YQH-En-eSa"/>
+                                    <constraint firstItem="yZE-dA-5cJ" firstAttribute="centerY" secondItem="h31-sR-KCN" secondAttribute="centerY" id="baQ-JN-7oo"/>
+                                    <constraint firstItem="yZE-dA-5cJ" firstAttribute="height" secondItem="zbe-a5-1Bg" secondAttribute="height" id="cxl-L6-zcQ"/>
+                                    <constraint firstItem="kQ9-hW-7RS" firstAttribute="leading" secondItem="i8y-tG-qLs" secondAttribute="leading" constant="8" id="esv-6w-LLU"/>
+                                    <constraint firstItem="yZE-dA-5cJ" firstAttribute="leading" secondItem="h31-sR-KCN" secondAttribute="trailing" constant="15" id="fGu-ZV-Edc"/>
+                                    <constraint firstAttribute="trailing" secondItem="zbe-a5-1Bg" secondAttribute="trailing" constant="8" id="fRo-St-eAp"/>
+                                    <constraint firstItem="yZE-dA-5cJ" firstAttribute="width" secondItem="zbe-a5-1Bg" secondAttribute="width" id="keG-yJ-v84"/>
+                                    <constraint firstItem="8zV-mA-dpB" firstAttribute="top" secondItem="i8y-tG-qLs" secondAttribute="top" constant="10" id="mw3-HK-0ga"/>
+                                    <constraint firstItem="h31-sR-KCN" firstAttribute="height" secondItem="yZE-dA-5cJ" secondAttribute="height" id="pKS-XA-efF"/>
+                                    <constraint firstItem="2Ng-Ws-2Ne" firstAttribute="width" secondItem="h31-sR-KCN" secondAttribute="width" id="qnZ-o3-K7q"/>
+                                    <constraint firstItem="2Ng-Ws-2Ne" firstAttribute="top" secondItem="kQ9-hW-7RS" secondAttribute="bottom" constant="8" id="sRy-f2-Usk"/>
+                                    <constraint firstItem="h31-sR-KCN" firstAttribute="width" secondItem="yZE-dA-5cJ" secondAttribute="width" id="tQE-Oh-Lmj"/>
+                                    <constraint firstAttribute="bottom" secondItem="2Ng-Ws-2Ne" secondAttribute="bottom" constant="8" id="vbA-eG-9Fz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.70645171399999995" green="0.80156391859999998" blue="0.94294041399999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jKR-z5-36n" firstAttribute="trailing" secondItem="i8y-tG-qLs" secondAttribute="trailing" constant="5" id="1EF-cA-qBv"/>
+                            <constraint firstItem="i8y-tG-qLs" firstAttribute="leading" secondItem="jKR-z5-36n" secondAttribute="leading" constant="5" id="hXO-7J-mZt"/>
+                            <constraint firstItem="i8y-tG-qLs" firstAttribute="top" secondItem="jKR-z5-36n" secondAttribute="top" constant="5" id="nWm-hx-Shi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jKR-z5-36n"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="i8y-tG-qLs" id="ZaJ-xW-VPS"/>
+                        <outlet property="month12Btn" destination="zbe-a5-1Bg" id="J3i-Df-Gqy"/>
+                        <outlet property="month3Btn" destination="h31-sR-KCN" id="U8s-Lh-20k"/>
+                        <outlet property="month6Btn" destination="yZE-dA-5cJ" id="0Lq-uK-VJ9"/>
+                        <outlet property="monthBtn" destination="2Ng-Ws-2Ne" id="gMR-lE-FgZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OHU-if-6Rs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1763" y="337"/>
+        </scene>
+    </scenes>
+</document>

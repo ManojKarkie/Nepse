@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import ObjectMapper
+import SwiftyJSON
 
 struct Constants {
     
@@ -25,10 +26,21 @@ class Auth {
 
 extension Auth : RealmPersistenceType{
     
-    func request(url: String, parameters: [String:Any]?, headers:[String:String]?, method: HTTPMethod ,success: @escaping ([String:Any]) -> ()) {
+    func request(url: String, parameters: [String:Any]?, headers:[String:String]?, method: HTTPMethod, encoding: ParameterEncoding ,success: @escaping ([String:Any]) -> ()) {
         
-        Alamofire.request(url, method: method, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
-            success(response.value as! [String:Any])
+        Alamofire.request(url, method: method, parameters: parameters, encoding: encoding, headers: headers).responseJSON { (response) in
+            if let value = response.value as? [String:Any] {
+                success(value)
+            }
+        }
+    }
+    
+    func requestArray(url: String, parameters: [String:Any]?, headers:[String:String]?, method: HTTPMethod, encoding: ParameterEncoding ,success: @escaping ([[String:Any]]) -> ()) {
+        
+        Alamofire.request(url, method: method, parameters: parameters, encoding: encoding, headers: headers).responseJSON { (response) in
+            if let value = response.value as? [[String:Any]] {
+                success(value)
+            }
         }
     }
     

@@ -8,33 +8,21 @@
 
 import Foundation
 import ObjectMapper
+import Alamofire
+import SwiftyJSON
 
-class FloorsheetService {
+class FloorsheetService: ApiServiceType {
     
-    var floorsheetData = [Flowsheet]()
     var data = [String:Any]()
     
-    func fetchFloorsheet(completion: @escaping ([Flowsheet]) -> ()){
-        let url = URL(string: "http://www.zeronebits.com/nepse/floorSheet.php")
-//        ApiManager.shared.fetchData(url: url!, completion: {
-//            (data) in
-//            let dictionaryValue = data as NSDictionary
-//            let keys = dictionaryValue.allKeys as? [String]
-//            for key in keys ?? [String]() {
-//                if let array = dictionaryValue[key] as? [String]{
-//                    self.data["sn"] = array[0]
-//                    self.data["contact"] = array[1]
-//                    self.data["sym"] = array[2]
-//                    self.data["buyer"] = array[3]
-//                    self.data["seller"] = array[4]
-//                    self.data["qty"] = array[5]
-//                    if let flowsheet = Mapper<Flowsheet>().map(JSON: self.data) {
-//                        self.floorsheetData.append(flowsheet)
-//                    }
-//                }
-//            }
-//            completion(self.floorsheetData)
-//        })
+    func fetchFloorsheet(pageUrl: String ,completion: @escaping (FloorsheetList) -> ()){
+        let url = self.baseUrl + pageUrl
+        self.apiManager.request(url: url, parameters: nil, headers: nil, method: .get, encoding: URLEncoding.default) { (data) in
+            if let model = Mapper<FloorsheetList>().map(JSON: data){
+                completion(model)
+            }
+            
+        }
     }
     
 }

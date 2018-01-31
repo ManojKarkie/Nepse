@@ -11,25 +11,49 @@ import ObjectMapper
 
 class LiveTrading: Mappable {
     
-    var sn: String?
-    var contactNum: String?
-    var sym: String?
-    var buyer: String?
-    var seller: String?
-    var quantity: String?
+    var header: [String]?
+    var data: [LiveTradingData]?
     
+    init() {}
     
     required init?(map: Map) {
         
     }
     
     func mapping(map: Map) {
-        sn <- map["sn"]
-        contactNum <- map["contact"]
-        sym <- map["sym"]
-        buyer <- map["buyer"]
-        seller <- map["seller"]
-        quantity <- map["qty"]
+        header <- map["header"]
+        data <- map["data"]
     }
     
+}
+
+class LiveTradingData: Mappable {
+    
+    var volume: Int?
+    var turnover: String?
+    var open: String?
+    var high: String?
+    var diffP: String?
+    var low: String?
+    var close: String?
+    var diffVal: String?
+    var prflCode: String?
+    
+    init() {}
+    
+    required init?(map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        volume <- map["VOLUME"]
+        turnover <- map["TURNOVER"]
+        open <- map["OPEN"]
+        high <- map["HIGH"]
+        diffP <- map["DIFFP"]
+        low <- map["LOW"]
+        close <- map["CLOSE"]
+        diffVal <- map["DIFF"]
+        prflCode <- map["PRFL_CODE"]
+    }
 }

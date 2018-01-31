@@ -8,103 +8,112 @@
 
 import UIKit
 import LGSideMenuController
-import Charts
+
 
 class DashboardViewController: UIViewController {
 
-    @IBOutlet weak var tableView2: UITableView!
-    @IBOutlet weak var bottomStack: UIStackView!
-    @IBOutlet weak var collapseHeader: UIImageView!
+    struct Constants {
+        let tableViewActualHeight: CGFloat = 470.0
+        let tableViewHeaderHeight: CGFloat = 70.0
+    }
+
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet var lossHeader: UIView!
+    @IBOutlet var gainHeader: UIView!
+    @IBOutlet weak var lossTableView: UITableView!
+    @IBOutlet weak var gainTableView: UITableView!
+    @IBOutlet weak var turnOverTableView: UITableView!
+    @IBOutlet weak var shareTradeTableView: UITableView!
+    @IBOutlet weak var turnOverHeight: NSLayoutConstraint!
+    @IBOutlet weak var shareTradeHeight: NSLayoutConstraint!
     @IBOutlet var header: UIView!
-    @IBOutlet weak var chartView: LineChartView!
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var chartViewContainer: UIView!
+    @IBOutlet weak var byGainHeight: NSLayoutConstraint!
     @IBOutlet var header2: UIView!
+    @IBOutlet weak var lossHeight: NSLayoutConstraint!
     
-    let service = DashboardService()
-    var data = [Dashboard]()
-    var transactionData = [Transactions]()
-    
-    var expanding = true
+    private let service = DashboardService()
+    fileprivate var data = Dashboard()
+    fileprivate var shareTradedData = [[String]]()
+    fileprivate var turnOverData = [[String]]()
+    fileprivate var gainData = [[String]]()
+    fileprivate var lossData = [[String]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView2.delegate = self
-        tableView2.dataSource = self
-        fetchData()
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(collapseTableView))
-        collapseHeader.addGestureRecognizer(tapGesture)
-        collapseHeader.isUserInteractionEnabled = true
+        
+        self.setup()
     }
     
-    @objc func collapseTableView() {
-//        bottomStack.isHidden = expanding
-//        expanding = !expanding
-//
-//        tableView.reloadSections(IndexSet.init(arrayLiteral: 0,0), with: .automatic)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.fetchData()
+
     }
     
-    
-    func setup() {
-        bottomStack.isHidden = !expanding
+    private func setup() {
         self.title = "Dashboard"
+        let tableViews = [shareTradeTableView, turnOverTableView, gainTableView, lossTableView]
+        tableViews.forEach({ (table) in
+            self.setDataSource(tableView: table ?? UITableView())
+        })
         if status != .notLogged {
             self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ios7-keypad"), style: .plain, target: self, action: #selector(self.showSideMenu))
-        }
-        sideMenuController?.swipeGestureArea = .full
-        sideMenuController?.leftViewBackgroundBlurEffect = UIBlurEffect(style: .regular)
-        chartViewContainer.layer.cornerRadius = 5
-        chartViewContainer.layer.borderColor = UIColor.lightGray.cgColor
-        chartViewContainer.layer.borderWidth = 0.5
-        self.tableView.setStandardShadow()
-        self.tableView2.setStandardShadow()
-        self.navigationController?.navigationBar.isTranslucent = false
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-       
-    }
-    
-    func fetchData() {
-        service.fetchDashboard(completion: { 
-            (data) in
-            self.data = data
-            self.tableView.reloadData()
-            self.drawChart()
-        })
-        
-        service.fetchNumberOfShareTransaction { (data) in
-            self.transactionData = data
-            self.tableView2.reloadData()
+            sideMenuController?.swipeGestureArea = .full
         }
     }
     
-    func drawChart() {
-        var chartEntries: [ChartDataEntry] = []
-        for i:Int in 0 ..< data.count {
-            let string = data[i].cost!.replacingOccurrences(of: ",", with: "")
-            let chartData = ChartDataEntry(x: Double(i), y: Double(string )!)
-            chartEntries.append(chartData)
+    private func fetchData() {
+        service.fetchDashboard { (model) in
+            self.data = model
+            self.setupTableView()
         }
-        let chartDataSet = LineChartDataSet(values: chartEntries, label: "Values")
-        chartDataSet.drawFilledEnabled = true
-        chartDataSet.cubicIntensity = 5
-        chartView.drawGridBackgroundEnabled = false
-        
-        chartDataSet.valueTextColor = NSUIColor.white
-        chartDataSet.drawCirclesEnabled = false
-        chartDataSet.mode = .horizontalBezier
-        let chartData = LineChartData(dataSet: chartDataSet)
-        chartView.data = chartData
     }
-}
-
-extension DashboardViewController: UITableViewDelegate {
     
+    private func setupTableView() {
+        if let shareData = data.top10ByShareVolume, shareData.count != 0 {
+            self.shareTradedData = Array(shareData.prefix(10))
+            self.shareTradeHeight.constant = Constants.init().tableViewActualHeight
+            self.shareTradeTableView.reloadData()
+        }else{
+            self.shareTradeHeight.constant = Constants.init().tableViewHeaderHeight
+            self.shareTradeTableView.reloadData()
+        }
+        if let turnOverData = data.top10ByTurnOver , turnOverData.count != 0{
+            self.turnOverData = Array(turnOverData.prefix(10))
+            self.turnOverHeight.constant = Constants.init().tableViewActualHeight
+            self.turnOverTableView.reloadData()
+        }else{
+            self.turnOverHeight.constant = Constants.init().tableViewHeaderHeight
+            self.turnOverTableView.reloadData()
+        }
+        if let gainData = data.top10ByGain , gainData.count != 0 {
+            self.gainData = Array(gainData.prefix(10))
+            self.byGainHeight.constant = Constants.init().tableViewActualHeight
+            self.gainTableView.reloadData()
+        }else{
+            self.byGainHeight.constant = Constants.init().tableViewHeaderHeight
+            self.gainTableView.reloadData()
+        }
+        if let lossData = data.top10ByLoss , lossData.count != 0{
+            self.lossData = Array(lossData.prefix(10))
+            self.lossHeight.constant = Constants.init().tableViewActualHeight
+            self.lossTableView.reloadData()
+        }else{
+            self.lossHeight.constant = Constants.init().tableViewHeaderHeight
+            self.lossTableView.reloadData()
+        }
+    }
+    
+    @IBAction func logoutAction(_ sender: Any) {
+        self.alertWithOkCancel(message: "Do you wish to logout?", title: "Log Out", okTitle: "Cancel", cancelTitle: "Ok", cancelStyle: .destructive, okAction: nil) {
+            Auth.shared.logout()
+        }
+    }
+    
+    private func setDataSource(tableView: UITableView) {
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
 }
 
 extension DashboardViewController: UITableViewDataSource {
@@ -114,79 +123,90 @@ extension DashboardViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var count:Int?
-        switch tableView.tag {
-        case 1:
-            count = self.data.count
-            break
-        case 2:
-            count = self.transactionData.count
-            break
+        switch tableView {
+        case shareTradeTableView:
+            return shareTradedData.count
+        case turnOverTableView:
+            return turnOverData.count
+        case gainTableView:
+            return gainData.count
+        case lossTableView:
+            return lossData.count
         default:
-            break
+            return 0
         }
-        return expanding ? count ?? 0 : 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch tableView.tag {
-        case 1:
-            let cell1 = getDashBoardCell()
-            if indexPath.row % 2 == 0{
-                cell1.contentView.backgroundColor = UIColor(red: 240/255.0, green: 240/255.0, blue: 240/255.0, alpha: 1)
-            }
-            cell1.data = self.data[indexPath.row]
-            cell1.setup()
-            return cell1
-        case 2:
-            let cell2 = getTurnOverCell()
-            if indexPath.row % 2 == 0{
-                cell2.contentView.backgroundColor = UIColor(red: 240/255.0, green: 240/255.0, blue: 240/255.0, alpha: 1)
-            }
-            cell2.transaction = self.transactionData[indexPath.row]
-            cell2.setup()
-            return cell2
+        switch tableView {
+        case shareTradeTableView:
+            let cell = getShareCell()
+            cell.data = self.shareTradedData[indexPath.row]
+            cell.setup()
+            return cell
+        case turnOverTableView:
+            let cell = getTurnOverCell()
+            cell.data = self.turnOverData[indexPath.row]
+            cell.setup()
+            return cell
+        case gainTableView:
+            let cell = getGainCell()
+            cell.data = self.gainData[indexPath.row]
+            cell.setup()
+            return cell
+        case lossTableView:
+            let cell = getLossCell()
+            cell.data = self.lossData[indexPath.row]
+            cell.setup()
+            return cell
         default:
             return UITableViewCell()
         }
     }
     
-    func getDashBoardCell() -> DashboardCell {
-        return self.tableView.dequeueReusableCell(withIdentifier: "DashboardCell") as! DashboardCell
-    }
-    
-    func getTurnOverCell() -> TrunOverCell {
-        return self.tableView2.dequeueReusableCell(withIdentifier: "TrunOverCell") as! TrunOverCell
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 70.0
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        var view:UIView?
-        switch tableView.tag {
-        case 1:
-            view = self.header
-        case 2:
-            view = self.header2
+        switch tableView {
+        case shareTradeTableView:
+            return header
+            
+        case turnOverTableView:
+            return header2
+            
+        case gainTableView:
+            return gainHeader
+            
+        case lossTableView:
+            return lossHeader
+            
         default:
-            break
+            return UIView()
+            
         }
-        return view!
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        var height: CGFloat?
-        switch tableView.tag {
-        case 1:
-            height = 50
-            break
-        case 2:
-            height = 50
-            break
-        default:
-            break
-        }
-        
-        return expanding ? height! : 25
-        }
+    func getShareCell() -> ShareTradedCell {
+        return self.shareTradeTableView.dequeueReusableCell(withIdentifier: "ShareTradedCell") as! ShareTradedCell
+    }
+    
+    func getTurnOverCell() -> TurnOverCell {
+        return self.turnOverTableView.dequeueReusableCell(withIdentifier: "TurnOverCell") as! TurnOverCell
+    }
+    
+    func getGainCell() -> GainCell {
+        return self.gainTableView.dequeueReusableCell(withIdentifier: "GainCell") as! GainCell
+    }
+    
+    func getLossCell() -> LossCell {
+        return self.lossTableView.dequeueReusableCell(withIdentifier: "LossCell") as! LossCell
+    }
+}
+
+extension DashboardViewController: UITableViewDelegate {
+    
 }
 
 class RoundCornerButton: UIButton {

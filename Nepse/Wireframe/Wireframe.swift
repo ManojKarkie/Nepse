@@ -34,6 +34,11 @@ struct StoryboardNames {
     static let portfolio = "Portfolio"
     static let registration = "Register"
     static let indices = "Indices"
+    static let companyProfile = "CompanyProfile"
+    static let briefInfo = "BriefInfo"
+    static let companyFloorsheet = "CompanyFloorSheet"
+    static let companyHistory = "CompanyHistory"
+    static let companyDividend = "CompanyDividend"
 }
 
 class Wireframe {
@@ -86,6 +91,38 @@ class Wireframe {
     
     func getActivateUser() -> ActivateUserViewController {
         return UIStoryboard(name: StoryboardNames.registration , bundle: nil).instantiateViewController(withIdentifier: "ActivateUserViewController") as! ActivateUserViewController
+    }
+    
+    func getIndexView() -> IndexViewController {
+        return UIStoryboard(name: StoryboardNames.dashboard , bundle: nil).instantiateViewController(withIdentifier: "IndexViewController") as! IndexViewController
+    }
+    
+    func getSubIndexView() -> SubIndexViewController {
+        return UIStoryboard(name: StoryboardNames.dashboard , bundle: nil).instantiateViewController(withIdentifier: "SubIndexViewController") as! SubIndexViewController
+    }
+    
+    func getCompanyView() -> CompanyViewController {
+        return UIStoryboard(name: StoryboardNames.dashboard , bundle: nil).instantiateViewController(withIdentifier: "CompanyViewController") as! CompanyViewController
+    }
+    
+    func getCompanyProfile() -> CompanyProfileViewController {
+        return UIStoryboard(name: StoryboardNames.companyProfile , bundle: nil).instantiateViewController(withIdentifier: "CompanyProfileViewController") as! CompanyProfileViewController
+    }
+    
+    func getBasicInfo() -> BasicInfoViewController {
+        return UIStoryboard(name: StoryboardNames.briefInfo , bundle: nil).instantiateViewController(withIdentifier: "BasicInfoViewController") as! BasicInfoViewController
+    }
+    
+    func getCompanyHistory() -> CompanyHistoryViewController {
+        return UIStoryboard(name: StoryboardNames.companyHistory , bundle: nil).instantiateViewController(withIdentifier: "CompanyHistoryViewController") as! CompanyHistoryViewController
+    }
+    
+    func getCompanyFloorsheet() -> CompanyFloorsheetViewController {
+        return UIStoryboard(name: StoryboardNames.companyFloorsheet , bundle: nil).instantiateViewController(withIdentifier: "CompanyFloorsheetViewController") as! CompanyFloorsheetViewController
+    }
+    
+    func getCompanyDividend() -> CompanyDividendViewController {
+        return UIStoryboard(name: StoryboardNames.companyDividend , bundle: nil).instantiateViewController(withIdentifier: "CompanyDividendViewController") as! CompanyDividendViewController
     }
 }
 

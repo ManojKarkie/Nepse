@@ -11,39 +11,53 @@ import ObjectMapper
 
 class Dashboard: Mappable {
     
-    var sym: String?
-    var volume: String?
-    var value: String?
-    var cost: String?
-    var profit: String?
+    var _top10ByLoss: [String: [String]]? {
+        didSet {
+            self.top10ByLoss = (_top10ByLoss?.values).map({Array($0)})
+        }
+    }
+    var top10ByLoss: [[String]]?
+    
+    var _top10ByShareVolume: [String: [String]]? {
+        didSet {
+            self.top10ByShareVolume = _top10ByShareVolume?.values.map{Array($0)}
+        }
+    }
+    var top10ByShareVolume: [[String]]?
+    
+    var _top10ByTurnOver: [String: [String]]? {
+        didSet {
+            self.top10ByTurnOver = _top10ByTurnOver?.values.map{Array($0)}
+        }
+    }
+    var top10ByTurnOver: [[String]]?
+    
+    var _top10ByGain : [String: [String]]? {
+        didSet {
+            self.top10ByGain = _top10ByGain?.values.map{Array($0)}
+        }
+    }
+    var top10ByGain: [[String]]?
+    
+    var indices: IndicesArray?
+    var subIndices: SubIndicesArray?
+    var marketSummary: MarketSummary?
+    
+    init() {}
     
     required init?(map: Map) {
         
     }
     
     func mapping(map: Map) {
-        sym <- map["sym"]
-        volume <- map["volume"]
-        value <- map["value"]
-        cost <- map["cost"]
-        profit <- map["profit"]
+        _top10ByLoss <- map["top10ByLoss"]
+        _top10ByShareVolume <- map["top10ByShareVolume"]
+        _top10ByTurnOver <- map["top10ByTurnOver"]
+        _top10ByGain <- map["top10ByGain"]
+        indices <- map["indices"]
+        subIndices <- map["subIndices"]
+        marketSummary <- map["marketSummary"]
     }
 }
 
-class Transactions: Mappable {
-    
-    var sym: String?
-    var noOfTrans: String?
-    var closingPrice: String?
-    
-    required init?(map: Map) {
-        
-    }
-    
-    func mapping(map: Map) {
-        sym <- map["sym"]
-        noOfTrans <- map["numberOfTransactions"]
-        closingPrice <- map["closingPrice"]
-    }
-    
-}
+

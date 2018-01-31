@@ -11,12 +11,15 @@ import ObjectMapper
 
 class MarketSummary: Mappable {
     
-    var totalScripts: String?
-    var currentIndex: String?
-    var percentChange: String?
-    var totalTransactions: String?
+    var floatedMarketCapital: String?
+    var manualTurnover: String?
     var pointChange: String?
-    var totalTraded: String?
+    var totalTransactions: String?
+    var totalTradedShares: String?
+    var totalScriptsTraded: String?
+    var percentChange: String?
+    var totalMarketCapital: String?
+    var currentIndex: String?
     
     init() {
         
@@ -27,11 +30,14 @@ class MarketSummary: Mappable {
     
     func mapping(map: Map) {
     
-        totalScripts <- map["Total Scrips Traded"]
-        currentIndex <- map["Current Index"]
-        percentChange <- map["Percent Change"]
-        totalTransactions <- map["Total Transactions"]
+        floatedMarketCapital <- map["Floated Market Capitalization Rs."]
+        manualTurnover <- map["Manual Turnover Rs:"]
         pointChange <- map["Point Change"]
-        totalTraded <- map["Total Traded Shares"]
+        totalTransactions <- map["Total Transactions"]
+        totalTradedShares <- map["Total Traded Shares"]
+        totalScriptsTraded <- map["Total Scrips Traded"]
+        percentChange <- map["Percent Change"]
+        totalMarketCapital <- map["Total Market Capitalization Rs."]
+        currentIndex <- map["Current Index"]
     }
 }

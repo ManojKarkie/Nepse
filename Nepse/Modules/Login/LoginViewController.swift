@@ -30,6 +30,7 @@ class LoginViewController: UIViewController{
     
     @IBAction func btn_login(_ sender: Any) {
         Auth.shared.loginIn(username: email_txt.text ?? "", password: password_txt.text ?? "", success: { (success) in
+            status = .loggedIn
             appdelegate?.setupSideMenu()
         }) { (error) in
             self.showError(error: error, completion: nil)
