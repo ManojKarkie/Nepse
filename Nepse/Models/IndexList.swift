@@ -33,6 +33,8 @@ class Company: Mappable {
     var name: String?
     var permalinkOverride: String?
     
+    init() {}
+    
     required init?(map: Map) {
         
     }

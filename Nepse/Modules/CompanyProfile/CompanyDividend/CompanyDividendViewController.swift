@@ -70,9 +70,11 @@ extension CompanyDividendViewController: UICollectionViewDataSource {
         } else {
             cell.backgroundColor = UIColor.white
         }
+        cell.column.isHidden = indexPath.row == 0 ? false : false
+        cell.headerBar.isHidden = indexPath.section == 0 ? false : true
         
         if indexPath.section == 0 {
-            cell.contentLabel.font = UIFont.boldSystemFont(ofSize: 12)
+            cell.contentLabel.font = UIFont.boldSystemFont(ofSize: 16)
             switch indexPath.row {
             case 0:
                 cell.contentLabel.text = headers[indexPath.row]
@@ -87,7 +89,7 @@ extension CompanyDividendViewController: UICollectionViewDataSource {
                 break
             }
         } else {
-            cell.contentLabel.font = UIFont.systemFont(ofSize: 11, weight: .light)
+            cell.contentLabel.font = UIFont.systemFont(ofSize: 14, weight: .light)
             cell.contentLabel.textColor = UIColor.gray
             switch indexPath.row {
             case 0:

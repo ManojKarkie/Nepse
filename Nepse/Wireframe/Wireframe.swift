@@ -20,6 +20,7 @@ protocol SideMenu {
     func openLogin()
     func openPortfolio()
     func openIndices()
+    func openProfile()
 }
 
 struct StoryboardNames {
@@ -40,6 +41,7 @@ struct StoryboardNames {
     static let companyHistory = "CompanyHistory"
     static let companyDividend = "CompanyDividend"
     static let companyNews = "CompanyNews"
+    static let profile = "Profile"
 }
 
 class Wireframe {
@@ -129,6 +131,10 @@ class Wireframe {
     func getCompanyNews() -> CompanyNewsViewController {
         return UIStoryboard(name: StoryboardNames.companyNews , bundle: nil).instantiateViewController(withIdentifier: "CompanyNewsViewController") as! CompanyNewsViewController
     }
+    
+    func getProfileView() -> ProfileViewController {
+        return UIStoryboard(name: StoryboardNames.profile , bundle: nil).instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+    }
 }
 
 extension Wireframe: SideMenu {
@@ -149,6 +155,11 @@ extension Wireframe: SideMenu {
         let sideMenu = UIApplication.shared.keyWindow?.rootViewController?.sideMenuController?.rootViewController as? UINavigationController
         let liveTrading = getLiveTrading()
         sideMenu?.viewControllers = [liveTrading]
+    }
+    
+    func openProfile() {
+        let sideMenu = UIApplication.shared.keyWindow?.rootViewController?.sideMenuController?.rootViewController as? UINavigationController
+        sideMenu?.viewControllers = [getProfileView()]
     }
     
     func openCalculator() {

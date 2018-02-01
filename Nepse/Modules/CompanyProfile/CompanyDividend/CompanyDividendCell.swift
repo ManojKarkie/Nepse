@@ -9,6 +9,8 @@
 import UIKit
 
 class CompanyDividendCell: UICollectionViewCell {
+    @IBOutlet weak var headerBar: UIView!
+    @IBOutlet weak var column: UIView!
     @IBOutlet weak var contentLabel: UILabel!
     
 }

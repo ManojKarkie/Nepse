@@ -23,7 +23,7 @@
 		1A250E2B1F62A04A00BDCE62 /* RecieveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A250E2A1F62A04A00BDCE62 /* RecieveCell.swift */; };
 		1A250E2E1F62BED300BDCE62 /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A250E2D1F62BED300BDCE62 /* Calculator.storyboard */; };
 		1A250E301F62BEE800BDCE62 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A250E2F1F62BEE800BDCE62 /* CalculatorViewController.swift */; };
-		1A25B6691F5F152A004C5451 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		1A25B6691F5F152A004C5451 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		1A25B6701F5FBCF5004C5451 /* Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A25B66F1F5FBCF5004C5451 /* Wireframe.swift */; };
 		1A25B68F1F605020004C5451 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A25B6831F605020004C5451 /* Dashboard.storyboard */; };
 		1A25B6901F605020004C5451 /* DashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A25B6841F605020004C5451 /* DashboardCell.swift */; };
@@ -76,6 +76,8 @@
 		1AAA790120223CDB00B24E1E /* CollectionLayout4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAA790020223CDB00B24E1E /* CollectionLayout4.swift */; };
 		1AAA79042022406D00B24E1E /* CompanyNews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AAA79032022406D00B24E1E /* CompanyNews.storyboard */; };
 		1AAA79062022407F00B24E1E /* CompanyNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAA79052022407F00B24E1E /* CompanyNewsViewController.swift */; };
+		1AAA79092022DD7600B24E1E /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AAA79082022DD7600B24E1E /* Profile.storyboard */; };
+		1AAA790B2022DD8F00B24E1E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAA790A2022DD8F00B24E1E /* ProfileViewController.swift */; };
 		1AB44F571F643D76002F578A /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB44F551F643D76002F578A /* CustomCell.swift */; };
 		1AB44F581F643D76002F578A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB44F561F643D76002F578A /* ViewController.swift */; };
 		1AB44F5A1F643D89002F578A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB44F591F643D89002F578A /* Main.storyboard */; };
@@ -206,6 +208,8 @@
 		1AAA790020223CDB00B24E1E /* CollectionLayout4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionLayout4.swift; sourceTree = "<group>"; };
 		1AAA79032022406D00B24E1E /* CompanyNews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompanyNews.storyboard; sourceTree = "<group>"; };
 		1AAA79052022407F00B24E1E /* CompanyNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyNewsViewController.swift; sourceTree = "<group>"; };
+		1AAA79082022DD7600B24E1E /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		1AAA790A2022DD8F00B24E1E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1AB44F551F643D76002F578A /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		1AB44F561F643D76002F578A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1AB44F591F643D89002F578A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -379,6 +383,7 @@
 		1A25B6811F605020004C5451 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				1AAA79072022DD6800B24E1E /* Profile */,
 				1AEF808D201EED7200D93B30 /* CompanyProfile */,
 				1A4521491F921B5F006240A9 /* Indices */,
 				244AFBD01F7205F50049B2EF /* Portfolio */,
@@ -519,6 +524,15 @@
 				1AAA79052022407F00B24E1E /* CompanyNewsViewController.swift */,
 			);
 			path = CompanyNews;
+			sourceTree = "<group>";
+		};
+		1AAA79072022DD6800B24E1E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				1AAA79082022DD7600B24E1E /* Profile.storyboard */,
+				1AAA790A2022DD8F00B24E1E /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		1AB44F541F643D76002F578A /* Main */ = {
@@ -778,7 +792,8 @@
 				1A250E251F62A01A00BDCE62 /* Support.storyboard in Resources */,
 				AF5AFC921F5C519400414214 /* Assets.xcassets in Resources */,
 				1A947589201FAFAD002072F0 /* CompanyHistory.storyboard in Resources */,
-				1A25B6691F5F152A004C5451 /* (null) in Resources */,
+				1AAA79092022DD7600B24E1E /* Profile.storyboard in Resources */,
+				1A25B6691F5F152A004C5451 /* BuildFile in Resources */,
 				1A2B6AEF1F7117B6005AA1CD /* PayPalSansSmall-Regular.ttf in Resources */,
 				1A25B6941F605020004C5451 /* Register.storyboard in Resources */,
 				1A947586201FAF86002072F0 /* BriefInfo.storyboard in Resources */,
@@ -856,6 +871,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Nepse/Pods-Nepse-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/LGSideMenuController/LGSideMenuController.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
@@ -870,6 +886,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGSideMenuController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
@@ -991,6 +1008,7 @@
 				241EC9021F6457B100343316 /* WishListCell.swift in Sources */,
 				1A250E221F62925700BDCE62 /* LiveTradingViewController.swift in Sources */,
 				AF5AFC881F5C519400414214 /* AppDelegate.swift in Sources */,
+				1AAA790B2022DD8F00B24E1E /* ProfileViewController.swift in Sources */,
 				1A6C23DC1F69286F00F0FCAF /* LiveTrading.swift in Sources */,
 				1A019F811FF9F4E900958803 /* ApiSerivceInfo.swift in Sources */,
 				1A6C23D41F68EDFE00F0FCAF /* FloorsheetService.swift in Sources */,

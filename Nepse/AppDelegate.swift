@@ -9,6 +9,7 @@
 import UIKit
 import LGSideMenuController
 import IQKeyboardManagerSwift
+import DropDown
 
 let appdelegate = UIApplication.shared.delegate as? AppDelegate
 var status: GlobalConstant.Status = .notLogged
@@ -27,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupNavBar()
         entryPoint()
         IQKeyboardManager.sharedManager().enable = true
+        DropDown.startListeningToKeyboard()
         return true
     }
 
@@ -62,8 +64,8 @@ extension AppDelegate {
         let homeVc = UINavigationController(rootViewController: Wireframe.shared.getDashboard())
         let leftVc = Wireframe.shared.getSideMenu()
         let sideMenuController = LGSideMenuController(rootViewController: homeVc, leftViewController: leftVc, rightViewController: nil)
-        sideMenuController.leftViewPresentationStyle = .scaleFromLittle
-        sideMenuController.leftViewWidth = UIScreen.main.bounds.width - 70.0
+        sideMenuController.leftViewPresentationStyle = .slideAbove
+        sideMenuController.leftViewWidth = UIScreen.main.bounds.width
         appdelegate?.window?.rootViewController = sideMenuController
         
     }

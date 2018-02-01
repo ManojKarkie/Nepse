@@ -36,14 +36,36 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nyZ-f3-lgk">
+                                                    <rect key="frame" x="49" y="0.0" width="1" height="50"/>
+                                                    <color key="backgroundColor" red="0.84237370466321249" green="0.84237370466321249" blue="0.84237370466321249" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="1" id="MEv-Id-GMa"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CAb-EU-Y76">
+                                                    <rect key="frame" x="0.0" y="49" width="50" height="1"/>
+                                                    <color key="backgroundColor" red="0.85465916450777202" green="0.85465916450777202" blue="0.85465916450777202" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="Tpi-C2-8aw"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                         </view>
                                         <constraints>
                                             <constraint firstItem="Ijb-f0-yfS" firstAttribute="centerX" secondItem="LkO-O1-jF6" secondAttribute="centerX" id="4aN-QL-vag"/>
                                             <constraint firstItem="Ijb-f0-yfS" firstAttribute="centerY" secondItem="LkO-O1-jF6" secondAttribute="centerY" id="6Zh-4o-ncN"/>
+                                            <constraint firstAttribute="trailing" secondItem="CAb-EU-Y76" secondAttribute="trailing" id="GQG-De-got"/>
+                                            <constraint firstAttribute="trailing" secondItem="nyZ-f3-lgk" secondAttribute="trailing" id="UDZ-8G-2f6"/>
+                                            <constraint firstItem="CAb-EU-Y76" firstAttribute="leading" secondItem="LkO-O1-jF6" secondAttribute="leading" id="hqi-T6-Aqt"/>
+                                            <constraint firstItem="nyZ-f3-lgk" firstAttribute="top" secondItem="LkO-O1-jF6" secondAttribute="top" id="kjS-0s-BM3"/>
+                                            <constraint firstAttribute="bottom" secondItem="CAb-EU-Y76" secondAttribute="bottom" id="wMm-aS-TN5"/>
+                                            <constraint firstAttribute="bottom" secondItem="nyZ-f3-lgk" secondAttribute="bottom" id="zt4-fQ-Cum"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="column" destination="nyZ-f3-lgk" id="KwH-Gs-1K5"/>
                                             <outlet property="contentLabel" destination="Ijb-f0-yfS" id="x8m-GP-r56"/>
+                                            <outlet property="headerBar" destination="CAb-EU-Y76" id="2Mb-9c-QhJ"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

@@ -72,7 +72,6 @@
                                     <constraint firstItem="gvs-4r-NYr" firstAttribute="leading" secondItem="TBB-ae-VUB" secondAttribute="leading" constant="10" id="aVC-uT-pzh"/>
                                     <constraint firstItem="gvs-4r-NYr" firstAttribute="centerY" secondItem="TBB-ae-VUB" secondAttribute="centerY" id="bUQ-Lj-KZK"/>
                                     <constraint firstAttribute="trailing" secondItem="iGM-Cv-3Px" secondAttribute="trailing" constant="10" id="jwE-tz-t2D"/>
-                                    <constraint firstAttribute="width" constant="375" id="lKD-Vg-FsQ"/>
                                     <constraint firstItem="iGM-Cv-3Px" firstAttribute="centerY" secondItem="TBB-ae-VUB" secondAttribute="centerY" id="odq-pH-6Il"/>
                                     <constraint firstItem="MBd-Vi-17q" firstAttribute="leading" secondItem="gvs-4r-NYr" secondAttribute="trailing" constant="10" id="py6-DC-Uzl"/>
                                 </constraints>
@@ -134,6 +133,7 @@
                         <constraints>
                             <constraint firstItem="ohe-1G-kjr" firstAttribute="top" secondItem="TBB-ae-VUB" secondAttribute="bottom" id="0YS-u9-ERF"/>
                             <constraint firstItem="TBB-ae-VUB" firstAttribute="leading" secondItem="QaV-vJ-pBe" secondAttribute="leading" id="Jfr-f9-rmH"/>
+                            <constraint firstAttribute="trailing" secondItem="TBB-ae-VUB" secondAttribute="trailing" id="Qmk-gS-4Gu"/>
                             <constraint firstItem="MWm-YD-FeR" firstAttribute="top" secondItem="ohe-1G-kjr" secondAttribute="bottom" id="WVh-y5-sX5"/>
                             <constraint firstItem="TBB-ae-VUB" firstAttribute="top" secondItem="4Ha-4o-HNL" secondAttribute="bottom" id="e3r-if-WE2"/>
                             <constraint firstAttribute="trailing" secondItem="ohe-1G-kjr" secondAttribute="trailing" id="l8V-nS-u3h"/>
@@ -145,7 +145,6 @@
                         <outlet property="searchBuyerTextfield" destination="gvs-4r-NYr" id="SNe-Zd-tND"/>
                         <outlet property="searchSellerTextField" destination="MBd-Vi-17q" id="WLf-tH-HCU"/>
                         <outlet property="searchSymbolTextField" destination="Kym-45-tHu" id="le6-Kf-NRn"/>
-                        <outlet property="searchWiidth" destination="lKD-Vg-FsQ" id="QNI-Wk-hBl"/>
                         <outlet property="tradingSwitch" destination="iGM-Cv-3Px" id="oOk-sO-jR5"/>
                     </connections>
                 </viewController>

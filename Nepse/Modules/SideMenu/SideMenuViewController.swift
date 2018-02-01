@@ -31,6 +31,8 @@ class SideMenuViewController: UITableViewController {
             Wireframe.shared.openFloorsheet()
         case 2:
             Wireframe.shared.openLiveTrading()
+        case 3:
+            Wireframe.shared.openProfile()
         case 4:
             Wireframe.shared.openPortfolio()
         case 5:

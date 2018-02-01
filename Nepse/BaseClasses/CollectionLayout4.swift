@@ -162,10 +162,10 @@ extension CollectionLayout4 {
         
         switch columnIndex {
         case 0:
-            text = "ContentData"
+            text = "ContentDatasss"
             
         default:
-            text = "ContentDat"
+            text = "ContentDatasss"
         }
         
         let size: CGSize = text.size(withAttributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14.0)])
