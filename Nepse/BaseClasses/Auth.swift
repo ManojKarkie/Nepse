@@ -26,11 +26,14 @@ class Auth {
 
 extension Auth : RealmPersistenceType{
     
-    func request(url: String, parameters: [String:Any]?, headers:[String:String]?, method: HTTPMethod, encoding: ParameterEncoding ,success: @escaping ([String:Any]) -> ()) {
+    func request(url: String, parameters: [String:Any]?, headers:[String:String]?, method: HTTPMethod, encoding: ParameterEncoding ,success: @escaping ([String:Any]) -> (), failure: @escaping (Error) -> ()) {
         
         Alamofire.request(url, method: method, parameters: parameters, encoding: encoding, headers: headers).responseJSON { (response) in
             if let value = response.value as? [String:Any] {
                 success(value)
+            }else if response.response?.statusCode ?? 0 >= 500 {
+                let error = NSError(domain: "INTERNAL_SERVER_ERROR", code: 500, userInfo: [NSLocalizedDescriptionKey: "Compnay not found."])
+                failure(error)
             }
         }
     }

@@ -15,10 +15,12 @@ class DashboardService : ApiServiceType{
     
     func fetchDashboard(completion: @escaping (Dashboard) -> ()) {
         let url = self.baseUrl + "api/v1/dashboard"
-        self.apiManager.request(url: url, parameters: nil, headers: nil, method: .get, encoding: JSONEncoding.default) { (data) in
+        self.apiManager.request(url: url, parameters: nil, headers: nil, method: .get, encoding: JSONEncoding.default, success:  { (data) in
             if let model = Mapper<Dashboard>().map(JSON: data) {
                 completion(model)
             }
+        }) { _ in
+            
         }
     }
     
@@ -35,11 +37,11 @@ class DashboardService : ApiServiceType{
     
     func fetchIndexList(completion: @escaping (IndexList) -> ()) {
         let url = self.baseUrl + "api/v1/list-index"
-        self.apiManager.request(url: url, parameters: nil, headers: nil, method: .get, encoding: JSONEncoding.default) { (data) in
+        self.apiManager.request(url: url, parameters: nil, headers: nil, method: .get, encoding: JSONEncoding.default, success: { (data) in
             if let model = Mapper<IndexList>().map(JSON: data) {
                 completion(model)
             }
-            
+        }) { _ in
             
         }
     }

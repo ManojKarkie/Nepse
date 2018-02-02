@@ -26,16 +26,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1136"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4DP-Yy-0CS">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1085"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="765"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="kci-JA-ucc">
-                                                <rect key="frame" x="5" y="395" width="365" height="690"/>
+                                                <rect key="frame" x="5" y="395" width="365" height="370"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7ww-xT-oMU">
-                                                        <rect key="frame" x="0.0" y="0.0" width="365" height="150"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="365" height="70"/>
                                                         <subviews>
                                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="40" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2ko-7N-IJq">
-                                                                <rect key="frame" x="0.0" y="0.0" width="365" height="150"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="365" height="70"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <prototypes>
                                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ShareTradedCell" id="BxC-LS-gX6" customClass="ShareTradedCell" customModule="Nepse" customModuleProvider="target">
@@ -93,14 +93,14 @@
                                                             </tableView>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="150" id="3ly-JX-UVf"/>
+                                                            <constraint firstAttribute="height" constant="70" id="3ly-JX-UVf"/>
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LO4-v4-Vcg">
-                                                        <rect key="frame" x="0.0" y="180" width="365" height="150"/>
+                                                        <rect key="frame" x="0.0" y="100" width="365" height="70"/>
                                                         <subviews>
                                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xhs-JE-R1o">
-                                                                <rect key="frame" x="0.0" y="0.0" width="365" height="150"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="365" height="70"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <prototypes>
                                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TurnOverCell" id="cTB-N7-KJ8" customClass="TurnOverCell" customModule="Nepse" customModuleProvider="target">
@@ -158,14 +158,14 @@
                                                             </tableView>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="150" id="JSa-as-zKs"/>
+                                                            <constraint firstAttribute="height" constant="70" id="JSa-as-zKs"/>
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Kge-gz-yfE">
-                                                        <rect key="frame" x="0.0" y="360" width="365" height="150"/>
+                                                        <rect key="frame" x="0.0" y="200" width="365" height="70"/>
                                                         <subviews>
                                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0PB-sB-2rb">
-                                                                <rect key="frame" x="0.0" y="0.0" width="365" height="150"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="365" height="70"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <prototypes>
                                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GainCell" id="O2I-Mu-Pb1" customClass="GainCell" customModule="Nepse" customModuleProvider="target">
@@ -223,14 +223,14 @@
                                                             </tableView>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="150" id="X5u-TO-YDo"/>
+                                                            <constraint firstAttribute="height" constant="70" id="X5u-TO-YDo"/>
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fcW-GV-M9K">
-                                                        <rect key="frame" x="0.0" y="540" width="365" height="150"/>
+                                                        <rect key="frame" x="0.0" y="300" width="365" height="70"/>
                                                         <subviews>
                                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="x5f-ho-UKY">
-                                                                <rect key="frame" x="0.0" y="0.0" width="365" height="150"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="365" height="70"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <prototypes>
                                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LossCell" id="Woi-hv-0Zf" customClass="LossCell" customModule="Nepse" customModuleProvider="target">
@@ -288,7 +288,7 @@
                                                             </tableView>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="150" id="5WB-EN-Brb"/>
+                                                            <constraint firstAttribute="height" constant="70" id="5WB-EN-Brb"/>
                                                         </constraints>
                                                     </stackView>
                                                 </subviews>

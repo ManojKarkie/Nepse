@@ -15,10 +15,12 @@ class CompanyDividendService: ApiServiceType {
     
     func fetchCompanyDividend(code: String, success: @escaping (CompanyDividendData) -> (), failure: @escaping () -> ()) {
         let url = self.baseUrl + "api/v1/f-dividend"
-        self.apiManager.request(url: url, parameters: ["PRFL_CODE": code], headers: nil, method: .get, encoding: URLEncoding.default) { (response) in
+        self.apiManager.request(url: url, parameters: ["PRFL_CODE": code], headers: nil, method: .get, encoding: URLEncoding.default, success: { (response) in
             if let data = Mapper<CompanyDividendData>().map(JSON: response) {
                 success(data)
             }
+        }) { _ in
+            
         }
     }
 }

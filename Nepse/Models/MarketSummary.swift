@@ -12,7 +12,6 @@ import ObjectMapper
 class MarketSummary: Mappable {
     
     var floatedMarketCapital: String?
-    var manualTurnover: String?
     var pointChange: String?
     var totalTransactions: String?
     var totalTradedShares: String?
@@ -31,7 +30,6 @@ class MarketSummary: Mappable {
     func mapping(map: Map) {
     
         floatedMarketCapital <- map["Floated Market Capitalization Rs."]
-        manualTurnover <- map["Manual Turnover Rs:"]
         pointChange <- map["Point Change"]
         totalTransactions <- map["Total Transactions"]
         totalTradedShares <- map["Total Traded Shares"]

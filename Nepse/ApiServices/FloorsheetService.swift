@@ -17,11 +17,12 @@ class FloorsheetService: ApiServiceType {
     
     func fetchFloorsheet(pageUrl: String ,completion: @escaping (FloorsheetList) -> ()){
         let url = self.baseUrl + pageUrl
-        self.apiManager.request(url: url, parameters: nil, headers: nil, method: .get, encoding: URLEncoding.default) { (data) in
+        self.apiManager.request(url: url, parameters: nil, headers: nil, method: .get, encoding: URLEncoding.default, success: { (data) in
             if let model = Mapper<FloorsheetList>().map(JSON: data){
                 completion(model)
             }
-            
+            }) { error in
+            print(error.localizedDescription)
         }
     }
     

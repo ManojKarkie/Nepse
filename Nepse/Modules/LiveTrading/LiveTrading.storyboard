@@ -32,48 +32,24 @@
                                             <constraint firstAttribute="width" constant="49" id="Lv1-Vg-j7S"/>
                                         </constraints>
                                     </switch>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Buyer" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gvs-4r-NYr">
-                                        <rect key="frame" x="10" y="12.5" width="90" height="25"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search By Symbol/Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gvs-4r-NYr">
+                                        <rect key="frame" x="10" y="10" width="296" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="25" id="Rdb-TM-0em"/>
-                                            <constraint firstAttribute="width" constant="90" id="pj7-x2-Igo"/>
+                                            <constraint firstAttribute="height" constant="30" id="Rdb-TM-0em"/>
                                         </constraints>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Symbol" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kym-45-tHu">
-                                        <rect key="frame" x="215" y="12.5" width="86" height="25"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="25" id="3Rg-WT-GbA"/>
-                                        </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Seller" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MBd-Vi-17q">
-                                        <rect key="frame" x="110" y="12.5" width="95" height="25"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="95" id="7eD-R5-C0e"/>
-                                            <constraint firstAttribute="height" constant="25" id="hbN-qF-x86"/>
-                                        </constraints>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1764705882352941" green="0.40000000000000002" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="Kym-45-tHu" firstAttribute="leading" secondItem="MBd-Vi-17q" secondAttribute="trailing" constant="10" id="DqD-Cx-6V2"/>
-                                    <constraint firstItem="Kym-45-tHu" firstAttribute="centerY" secondItem="TBB-ae-VUB" secondAttribute="centerY" id="EsD-jx-oU2"/>
-                                    <constraint firstItem="iGM-Cv-3Px" firstAttribute="leading" secondItem="Kym-45-tHu" secondAttribute="trailing" constant="15" id="Tmz-PA-43r"/>
                                     <constraint firstAttribute="height" constant="50" id="VDG-ly-tnK"/>
-                                    <constraint firstItem="MBd-Vi-17q" firstAttribute="centerY" secondItem="TBB-ae-VUB" secondAttribute="centerY" id="Yog-IY-tqW"/>
+                                    <constraint firstItem="iGM-Cv-3Px" firstAttribute="leading" secondItem="gvs-4r-NYr" secondAttribute="trailing" constant="10" id="VXK-Eg-gQ2"/>
                                     <constraint firstItem="gvs-4r-NYr" firstAttribute="leading" secondItem="TBB-ae-VUB" secondAttribute="leading" constant="10" id="aVC-uT-pzh"/>
                                     <constraint firstItem="gvs-4r-NYr" firstAttribute="centerY" secondItem="TBB-ae-VUB" secondAttribute="centerY" id="bUQ-Lj-KZK"/>
                                     <constraint firstAttribute="trailing" secondItem="iGM-Cv-3Px" secondAttribute="trailing" constant="10" id="jwE-tz-t2D"/>
                                     <constraint firstItem="iGM-Cv-3Px" firstAttribute="centerY" secondItem="TBB-ae-VUB" secondAttribute="centerY" id="odq-pH-6Il"/>
-                                    <constraint firstItem="MBd-Vi-17q" firstAttribute="leading" secondItem="gvs-4r-NYr" secondAttribute="trailing" constant="10" id="py6-DC-Uzl"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ohe-1G-kjr">
@@ -143,8 +119,6 @@
                     <connections>
                         <outlet property="collectionView" destination="ohe-1G-kjr" id="4G8-kR-DIs"/>
                         <outlet property="searchBuyerTextfield" destination="gvs-4r-NYr" id="SNe-Zd-tND"/>
-                        <outlet property="searchSellerTextField" destination="MBd-Vi-17q" id="WLf-tH-HCU"/>
-                        <outlet property="searchSymbolTextField" destination="Kym-45-tHu" id="le6-Kf-NRn"/>
                         <outlet property="tradingSwitch" destination="iGM-Cv-3Px" id="oOk-sO-jR5"/>
                     </connections>
                 </viewController>

@@ -71,9 +71,14 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func searchCompany(_ sender: UIButton) {
-        let companyProfile = Wireframe.shared.getCompanyProfile()
-        companyProfile.companyCode = self.selectedCompany.symbol
-        self.navigationController?.pushViewController(companyProfile, animated: true)
+        CompanyService().fetchCompanyProfile(companyCode: self.selectedCompany.symbol ?? "", success: { (model) in
+            let companyProfile = Wireframe.shared.getCompanyProfile()
+            companyProfile.companyCode = self.selectedCompany.symbol
+            self.navigationController?.pushViewController(companyProfile, animated: true)
+        }) { (error) in
+            self.showError(error: error.localizedDescription, completion: nil)
+        }
+        
     }
 }
 

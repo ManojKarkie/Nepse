@@ -8,6 +8,8 @@
 
 import Foundation
 import ObjectMapper
+import RealmSwift
+import ObjectMapper_Realm
 
 class LiveTrading: Mappable {
     
@@ -27,22 +29,20 @@ class LiveTrading: Mappable {
     
 }
 
-class LiveTradingData: Mappable {
+class LiveTradingData: Object, Mappable {
     
-    var volume: Int?
-    var turnover: String?
-    var open: String?
-    var high: String?
-    var diffP: String?
-    var low: String?
-    var close: String?
-    var diffVal: String?
-    var prflCode: String?
+    @objc dynamic var volume: Int = 0
+    @objc dynamic var turnover: String = ""
+    @objc dynamic var open: String = ""
+    @objc dynamic var high: String = ""
+    @objc dynamic var diffP: String = ""
+    @objc dynamic var low: String = ""
+    @objc dynamic var close: String = ""
+    @objc dynamic var diffVal: String = ""
+    @objc dynamic var prflCode: String = ""
     
-    init() {}
-    
-    required init?(map: Map) {
-        
+    required convenience init?(map: Map) {
+        self.init()
     }
     
     func mapping(map: Map) {

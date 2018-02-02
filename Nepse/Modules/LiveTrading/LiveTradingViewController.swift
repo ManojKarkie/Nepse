@@ -15,12 +15,11 @@ class LiveTradingViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
-    @IBOutlet weak var searchSymbolTextField: UITextField!
-    @IBOutlet weak var searchSellerTextField: UITextField!
+    
     @IBOutlet weak var searchBuyerTextfield: UITextField!
-    @IBOutlet weak var searchWiidth: NSLayoutConstraint!
 
     var tradingData = [LiveTradingData]()
+    var originalData = [LiveTradingData]()
     var headers = [String]()
     let service = LiveTradingService()
     
@@ -49,7 +48,8 @@ class LiveTradingViewController: UIViewController {
             self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ios7-keypad"), style: .plain, target: self, action: #selector(self.showSideMenu))
             sideMenuController?.swipeGestureArea = .full
         }
-    
+        searchBuyerTextfield.delegate = self
+        searchBuyerTextfield.addTarget(self, action: #selector(UITextFieldDelegate.textFieldShouldEndEditing(_:)), for: UIControlEvents.editingChanged)
     }
     
     override func didReceiveMemoryWarning() {
@@ -62,6 +62,7 @@ class LiveTradingViewController: UIViewController {
             (data) in
             if let array = data.data {
                 self.tradingData = array
+                self.originalData = array
             }
             if let headers = data.header {
                 self.headers = headers
@@ -98,17 +99,17 @@ extension LiveTradingViewController: UICollectionViewDataSource {
         cell.headerBar.isHidden = indexPath.section == 0 ? false : true
         switch currentDff {
         case .percent:
-            if (Float(self.tradingData[indexPath.section].diffP ?? "") ?? 0) < 0.0 && indexPath.row == 7 && indexPath.section != 0{
+            if (Float(self.tradingData[indexPath.section].diffP ) ?? 0) < 0.0 && indexPath.row == 7 && indexPath.section != 0{
                 cell.contentLabel.textColor = UIColor.red
-            }else if (Float(self.tradingData[indexPath.section].diffP ?? "") ?? 0) >= 0.0 && indexPath.row == 7 && indexPath.section != 0{
+            }else if (Float(self.tradingData[indexPath.section].diffP ) ?? 0) >= 0.0 && indexPath.row == 7 && indexPath.section != 0{
                 cell.contentLabel.textColor = UIColor.green
             }else{
                 cell.contentLabel.textColor = UIColor.gray
             }
         case .value:
-            if (Float(self.tradingData[indexPath.section].diffVal ?? "") ?? 0) < 0.0 && indexPath.row == 7 && indexPath.section != 0{
+            if (Float(self.tradingData[indexPath.section].diffVal ) ?? 0) < 0.0 && indexPath.row == 7 && indexPath.section != 0{
                 cell.contentLabel.textColor = UIColor.red
-            }else if (Float(self.tradingData[indexPath.section].diffVal ?? "") ?? 0) >= 0.0 && indexPath.row == 7 && indexPath.section != 0{
+            }else if (Float(self.tradingData[indexPath.section].diffVal ) ?? 0) >= 0.0 && indexPath.row == 7 && indexPath.section != 0{
                 cell.contentLabel.textColor = UIColor.green
             }else{
                 cell.contentLabel.textColor = UIColor.gray
@@ -143,7 +144,7 @@ extension LiveTradingViewController: UICollectionViewDataSource {
             
             switch indexPath.row {
             case 0:
-                cell.contentLabel.underline(text: self.tradingData[indexPath.section].prflCode ?? "")
+                cell.contentLabel.underline(text: self.tradingData[indexPath.section].prflCode )
             case 1:
                 cell.contentLabel.text = self.tradingData[indexPath.section].close
             case 2:
@@ -153,7 +154,7 @@ extension LiveTradingViewController: UICollectionViewDataSource {
             case 4:
                 cell.contentLabel.text = self.tradingData[indexPath.section].low
             case 5:
-                cell.contentLabel.text = "\(self.tradingData[indexPath.section].volume ?? 0)"
+                cell.contentLabel.text = "\(self.tradingData[indexPath.section].volume )"
             case 6:
                 cell.contentLabel.text = self.tradingData[indexPath.section].turnover
             case 7:
@@ -185,6 +186,25 @@ extension LiveTradingViewController: UICollectionViewDelegate {
             break
         }
         }
+    }
+}
+
+extension LiveTradingViewController: UITextFieldDelegate {
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if (textField.text ?? "").characters.count > 0 {
+            let predicate = NSPredicate(format: "prflCode CONTAINS [c] %@", textField.text!)
+            self.tradingData = self.originalData
+            if let filteredArray = (self.tradingData as NSArray).filtered(using: predicate) as? [LiveTradingData] {
+                self.tradingData = filteredArray
+                self.collectionView.reloadData()
+            }
+        }else {
+            self.tradingData = []
+            self.originalData = []
+            fetchData()
+        }
+        return true
     }
 }
 

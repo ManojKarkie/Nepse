@@ -23,7 +23,7 @@
 		1A250E2B1F62A04A00BDCE62 /* RecieveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A250E2A1F62A04A00BDCE62 /* RecieveCell.swift */; };
 		1A250E2E1F62BED300BDCE62 /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A250E2D1F62BED300BDCE62 /* Calculator.storyboard */; };
 		1A250E301F62BEE800BDCE62 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A250E2F1F62BEE800BDCE62 /* CalculatorViewController.swift */; };
-		1A25B6691F5F152A004C5451 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		1A25B6691F5F152A004C5451 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		1A25B6701F5FBCF5004C5451 /* Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A25B66F1F5FBCF5004C5451 /* Wireframe.swift */; };
 		1A25B68F1F605020004C5451 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A25B6831F605020004C5451 /* Dashboard.storyboard */; };
 		1A25B6901F605020004C5451 /* DashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A25B6841F605020004C5451 /* DashboardCell.swift */; };
@@ -53,6 +53,7 @@
 		1A45214F1F922301006240A9 /* IndicesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A45214E1F922301006240A9 /* IndicesService.swift */; };
 		1A5BDE56201D0343004A2C33 /* LiveTradingColCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5BDE55201D0343004A2C33 /* LiveTradingColCell.swift */; };
 		1A5BDE58201D0D1B004A2C33 /* CollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5BDE57201D0D1B004A2C33 /* CollectionViewLayout.swift */; };
+		1A5FC3E3202452BA004B0F3B /* IndicesChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5FC3E2202452BA004B0F3B /* IndicesChartViewController.swift */; };
 		1A6C23D41F68EDFE00F0FCAF /* FloorsheetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23D31F68EDFE00F0FCAF /* FloorsheetService.swift */; };
 		1A6C23DA1F69283E00F0FCAF /* LiveTradingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23D91F69283E00F0FCAF /* LiveTradingService.swift */; };
 		1A6C23DC1F69286F00F0FCAF /* LiveTrading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23DB1F69286F00F0FCAF /* LiveTrading.swift */; };
@@ -185,6 +186,7 @@
 		1A45214E1F922301006240A9 /* IndicesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicesService.swift; sourceTree = "<group>"; };
 		1A5BDE55201D0343004A2C33 /* LiveTradingColCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTradingColCell.swift; sourceTree = "<group>"; };
 		1A5BDE57201D0D1B004A2C33 /* CollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLayout.swift; sourceTree = "<group>"; };
+		1A5FC3E2202452BA004B0F3B /* IndicesChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicesChartViewController.swift; sourceTree = "<group>"; };
 		1A6C23D31F68EDFE00F0FCAF /* FloorsheetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorsheetService.swift; sourceTree = "<group>"; };
 		1A6C23D91F69283E00F0FCAF /* LiveTradingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTradingService.swift; sourceTree = "<group>"; };
 		1A6C23DB1F69286F00F0FCAF /* LiveTrading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTrading.swift; sourceTree = "<group>"; };
@@ -452,6 +454,7 @@
 				1A3458231F93BD0900D26410 /* IndexSummaryCell.swift */,
 				1A45214C1F921B71006240A9 /* IndicesViewController.swift */,
 				1A8927B21F949291006B07BE /* SubIndexCell.swift */,
+				1A5FC3E2202452BA004B0F3B /* IndicesChartViewController.swift */,
 			);
 			path = Indices;
 			sourceTree = "<group>";
@@ -793,7 +796,7 @@
 				AF5AFC921F5C519400414214 /* Assets.xcassets in Resources */,
 				1A947589201FAFAD002072F0 /* CompanyHistory.storyboard in Resources */,
 				1AAA79092022DD7600B24E1E /* Profile.storyboard in Resources */,
-				1A25B6691F5F152A004C5451 /* BuildFile in Resources */,
+				1A25B6691F5F152A004C5451 /* (null) in Resources */,
 				1A2B6AEF1F7117B6005AA1CD /* PayPalSansSmall-Regular.ttf in Resources */,
 				1A25B6941F605020004C5451 /* Register.storyboard in Resources */,
 				1A947586201FAF86002072F0 /* BriefInfo.storyboard in Resources */,
@@ -999,6 +1002,7 @@
 				1AE1D2EC2019F1FA004D1F38 /* ChartViewControllerViewController.swift in Sources */,
 				1AAA78FB20220F5500B24E1E /* CompanyDividendService.swift in Sources */,
 				1A45214D1F921B71006240A9 /* IndicesViewController.swift in Sources */,
+				1A5FC3E3202452BA004B0F3B /* IndicesChartViewController.swift in Sources */,
 				1AF43498201B263A007A9147 /* CompanyViewController.swift in Sources */,
 				1A250E2B1F62A04A00BDCE62 /* RecieveCell.swift in Sources */,
 				1AE3DFB22011EC9700926111 /* AuthModel.swift in Sources */,
