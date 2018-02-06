@@ -98,7 +98,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="JBh-rR-U17">
                         <barButtonItem key="rightBarButtonItem" title="Login" id="IMQ-l1-Sa0">
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

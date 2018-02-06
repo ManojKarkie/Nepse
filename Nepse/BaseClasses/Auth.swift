@@ -119,6 +119,17 @@ extension Auth : RealmPersistenceType{
         }
     }
     
+    func validateLogin() {
+        let header = ["Authorization": "Bearer " + (AuthNormalModel.shared.token ?? "")]
+        Alamofire.request(Constants().baseURL + "api/v1/validateLogin", method: .get, parameters: nil, encoding: URLEncoding.default, headers: header).responseJSON { (response) in
+            if let data = Mapper<AuthModel>().map(JSON: (response.value as! [String: Any])) {
+                if let user = data.user?.normalModel() {
+                    UserModel.shared = user
+                }
+            }
+        }
+    }
+    
     @objc func logout() {
         if let authModel = realm.objects(AuthModel.self).first {
             try? realm.write {

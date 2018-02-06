@@ -1,13 +1,14 @@
-//  CustomCollectionViewLayout.swift
-//  CustomCollectionLayout
 //
-//  Created by JOSE MARTINEZ on 15/12/2014.
-//  Copyright (c) 2014 brightec. All rights reserved.
+//  collectionVIewSellLayout.swift
+//  Nepse
 //
-import UIKit
+//  Created by Lizan Pradhanang on 2/6/18.
+//  Copyright © 2018 Swiftech. All rights reserved.
+//
 
-class CollectionLayout4: UICollectionViewLayout {
-    
+import Foundation
+import UIKit
+class CollectionViewSellLayout: UICollectionViewLayout {
     
     var numberOfColumns = 4
     var shouldPinFirstColumn = true
@@ -82,7 +83,7 @@ class CollectionLayout4: UICollectionViewLayout {
 }
 
 // MARK: - Helpers
-extension CollectionLayout4 {
+extension CollectionViewSellLayout {
     
     func generateItemAttributes(collectionView: UICollectionView) {
         if itemsSize.count != numberOfColumns {
@@ -175,4 +176,5 @@ extension CollectionLayout4 {
     }
     
 }
+
 

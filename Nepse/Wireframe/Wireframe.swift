@@ -135,6 +135,26 @@ class Wireframe {
     func getProfileView() -> ProfileViewController {
         return UIStoryboard(name: StoryboardNames.profile , bundle: nil).instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
     }
+    
+    func getCompanyPortfolio() -> CompanyPortfolioViewController {
+        return UIStoryboard(name: StoryboardNames.portfolio , bundle: nil).instantiateViewController(withIdentifier: "CompanyPortfolioViewController") as! CompanyPortfolioViewController
+    }
+    
+    func getProtfolioaIndex() -> IndexChartViewController {
+        return UIStoryboard(name: StoryboardNames.portfolio , bundle: nil).instantiateViewController(withIdentifier: "IndexChartViewController") as! IndexChartViewController
+    }
+    
+    func getProtfolioIssueType() -> IssueTypeViewController {
+        return UIStoryboard(name: StoryboardNames.portfolio , bundle: nil).instantiateViewController(withIdentifier: "IssueTypeViewController") as! IssueTypeViewController
+    }
+    
+    func getProtfolioBuy() -> PortfolioBuyViewController {
+        return UIStoryboard(name: StoryboardNames.portfolio , bundle: nil).instantiateViewController(withIdentifier: "PortfolioBuyViewController") as! PortfolioBuyViewController
+    }
+    
+    func getProtfolioSell() -> PortfolioSellViewController {
+        return UIStoryboard(name: StoryboardNames.portfolio , bundle: nil).instantiateViewController(withIdentifier: "PortfolioSellViewController") as! PortfolioSellViewController
+    }
 }
 
 extension Wireframe: SideMenu {

@@ -17,7 +17,7 @@ class User: Object, Mappable {
     @objc dynamic var mrchCode: String?
     @objc dynamic var brokerCode: String?
     @objc dynamic var name: String = ""
-    @objc dynamic var code: String = ""
+    @objc dynamic var code: Int = 0
     @objc dynamic var descr: String?
     @objc dynamic var addr: String?
     @objc dynamic var email: String = ""
@@ -72,7 +72,7 @@ class User: Object, Mappable {
     }
     
     func normalModel() -> UserModel {
-        return UserModel(id: self.id, mrchCode: self.mrchCode ?? "", brokerCode: self.brokerCode ?? "", name: self.name, code: self.code, descr: self.descr ?? "", addr: self.addr ?? "", email: self.email, cellularVND: self.cellularVND ?? "", regDT: self.regDT ?? "", dmatNO: self.dmatNO ?? "", cellphone: self.cellphone ?? "", dob: self.dob ?? "", pin: self.pin ?? "", mac1: self.mac1 ?? "", mac2: self.mac2 ?? "", mac3: self.mac3 ?? "", sq1: self.sq1 ?? "", sq2: self.sq2 ?? "", sq1Ans: self.sq1Ans ?? "", sq2Ans: self.sq2Ans ?? "", created: self.created, updated: self.updated)
+        return UserModel(id: self.id, mrchCode: self.mrchCode ?? "", brokerCode: self.brokerCode ?? "", name: self.name, code: String(self.code) , descr: self.descr ?? "", addr: self.addr ?? "", email: self.email, cellularVND: self.cellularVND ?? "", regDT: self.regDT ?? "", dmatNO: self.dmatNO ?? "", cellphone: self.cellphone ?? "", dob: self.dob ?? "", pin: self.pin ?? "", mac1: self.mac1 ?? "", mac2: self.mac2 ?? "", mac3: self.mac3 ?? "", sq1: self.sq1 ?? "", sq2: self.sq2 ?? "", sq1Ans: self.sq1Ans ?? "", sq2Ans: self.sq2Ans ?? "", created: self.created, updated: self.updated)
     }
 }
 

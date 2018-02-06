@@ -755,7 +755,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="barButtonView" destination="Lgl-YX-T2s" id="aBS-lq-KBd"/>
+                        <outlet property="buttonBarView" destination="Lgl-YX-T2s" id="8rN-3x-aMi"/>
                         <outlet property="containerView" destination="Bu1-HH-B99" id="1qk-md-37V"/>
                     </connections>
                 </viewController>

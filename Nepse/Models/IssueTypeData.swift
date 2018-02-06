@@ -1,20 +1,17 @@
 //
-//  Portfolio.swift
+//  IssueTypeData.swift
 //  Nepse
 //
-//  Created by Lizan Pradhanang on 1/22/18.
+//  Created by Lizan Pradhanang on 2/6/18.
 //  Copyright © 2018 Swiftech. All rights reserved.
 //
 
 import Foundation
-import RealmSwift
 import ObjectMapper
-import ObjectMapper_Realm
 
-
-class PortfolioArrayModel: Mappable {
-    var data: [Portfolio]?
-    var header: [String]?
+class IssueTypeData: Mappable {
+    
+    var data: [IssueType]?
     
     init() {}
     
@@ -24,26 +21,24 @@ class PortfolioArrayModel: Mappable {
     
     func mapping(map: Map) {
         data <- map["data"]
-        header <- map["header"]
     }
 }
 
-class Portfolio: Mappable {
+class  IssueType: Mappable {
     
-    var prflCode: String?
+    var issueTypeCode: String?
     var units: String?
     var value: String?
     
-    init() {}
+     init() {}
     
     required init?(map: Map) {
+        
     }
     
     func mapping(map: Map) {
-        prflCode <- map["prfl_code"]
+        issueTypeCode <- map["ISSU_TYPE_CODE"]
         units <- map["units"]
         value <- map["value"]
     }
-    }
-
-
+}

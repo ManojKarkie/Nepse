@@ -54,6 +54,22 @@
 		1A5BDE56201D0343004A2C33 /* LiveTradingColCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5BDE55201D0343004A2C33 /* LiveTradingColCell.swift */; };
 		1A5BDE58201D0D1B004A2C33 /* CollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5BDE57201D0D1B004A2C33 /* CollectionViewLayout.swift */; };
 		1A5FC3E3202452BA004B0F3B /* IndicesChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5FC3E2202452BA004B0F3B /* IndicesChartViewController.swift */; };
+		1A5FC3E520277E29004B0F3B /* PortfolioHeaderChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5FC3E420277E29004B0F3B /* PortfolioHeaderChartViewController.swift */; };
+		1A5FC3E820277F74004B0F3B /* CompanyPortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5FC3E720277F74004B0F3B /* CompanyPortfolioViewController.swift */; };
+		1A5FC3EA2027817C004B0F3B /* CompanyPortfolioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5FC3E92027817C004B0F3B /* CompanyPortfolioCell.swift */; };
+		1A5FC3EF202782C4004B0F3B /* IndexChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5FC3EE202782C4004B0F3B /* IndexChartViewController.swift */; };
+		1A5FC3F420286CF1004B0F3B /* IssueTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5FC3F320286CF1004B0F3B /* IssueTypeViewController.swift */; };
+		1A5FC3F620296688004B0F3B /* IssueTypeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5FC3F520296688004B0F3B /* IssueTypeService.swift */; };
+		1A5FC3F820297038004B0F3B /* IssueTypeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5FC3F720297038004B0F3B /* IssueTypeData.swift */; };
+		1A5FC3FA2029784E004B0F3B /* PortfolioSellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5FC3F92029784E004B0F3B /* PortfolioSellViewController.swift */; };
+		1A5FC3FC202993C4004B0F3B /* BuySellPortfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5FC3FB202993C4004B0F3B /* BuySellPortfolio.swift */; };
+		1A5FC3FF2029A05B004B0F3B /* PortfolioMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5FC3FE2029A05B004B0F3B /* PortfolioMainViewController.swift */; };
+		1A5FC4012029A0FB004B0F3B /* PortfolioBuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5FC4002029A0FB004B0F3B /* PortfolioBuyViewController.swift */; };
+		1A5FC4032029C7CD004B0F3B /* BoughtSoldShares.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5FC4022029C7CD004B0F3B /* BoughtSoldShares.swift */; };
+		1A5FC4072029CD0B004B0F3B /* PortfolioBuySellCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5FC4062029CD0B004B0F3B /* PortfolioBuySellCell.swift */; };
+		1A5FC4092029EF81004B0F3B /* CollectionViewLayoutCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5FC4082029EF81004B0F3B /* CollectionViewLayoutCustom.swift */; };
+		1A5FC40B202A11E0004B0F3B /* CollectionViewSoldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5FC40A202A11E0004B0F3B /* CollectionViewSoldCell.swift */; };
+		1A5FC40D202A1430004B0F3B /* collectionVIewSellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5FC40C202A1430004B0F3B /* collectionVIewSellLayout.swift */; };
 		1A6C23D41F68EDFE00F0FCAF /* FloorsheetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23D31F68EDFE00F0FCAF /* FloorsheetService.swift */; };
 		1A6C23DA1F69283E00F0FCAF /* LiveTradingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23D91F69283E00F0FCAF /* LiveTradingService.swift */; };
 		1A6C23DC1F69286F00F0FCAF /* LiveTrading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23DB1F69286F00F0FCAF /* LiveTrading.swift */; };
@@ -187,6 +203,22 @@
 		1A5BDE55201D0343004A2C33 /* LiveTradingColCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTradingColCell.swift; sourceTree = "<group>"; };
 		1A5BDE57201D0D1B004A2C33 /* CollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLayout.swift; sourceTree = "<group>"; };
 		1A5FC3E2202452BA004B0F3B /* IndicesChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicesChartViewController.swift; sourceTree = "<group>"; };
+		1A5FC3E420277E29004B0F3B /* PortfolioHeaderChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioHeaderChartViewController.swift; sourceTree = "<group>"; };
+		1A5FC3E720277F74004B0F3B /* CompanyPortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyPortfolioViewController.swift; sourceTree = "<group>"; };
+		1A5FC3E92027817C004B0F3B /* CompanyPortfolioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyPortfolioCell.swift; sourceTree = "<group>"; };
+		1A5FC3EE202782C4004B0F3B /* IndexChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexChartViewController.swift; sourceTree = "<group>"; };
+		1A5FC3F320286CF1004B0F3B /* IssueTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueTypeViewController.swift; sourceTree = "<group>"; };
+		1A5FC3F520296688004B0F3B /* IssueTypeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueTypeService.swift; sourceTree = "<group>"; };
+		1A5FC3F720297038004B0F3B /* IssueTypeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueTypeData.swift; sourceTree = "<group>"; };
+		1A5FC3F92029784E004B0F3B /* PortfolioSellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioSellViewController.swift; sourceTree = "<group>"; };
+		1A5FC3FB202993C4004B0F3B /* BuySellPortfolio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuySellPortfolio.swift; sourceTree = "<group>"; };
+		1A5FC3FE2029A05B004B0F3B /* PortfolioMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioMainViewController.swift; sourceTree = "<group>"; };
+		1A5FC4002029A0FB004B0F3B /* PortfolioBuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioBuyViewController.swift; sourceTree = "<group>"; };
+		1A5FC4022029C7CD004B0F3B /* BoughtSoldShares.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoughtSoldShares.swift; sourceTree = "<group>"; };
+		1A5FC4062029CD0B004B0F3B /* PortfolioBuySellCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioBuySellCell.swift; sourceTree = "<group>"; };
+		1A5FC4082029EF81004B0F3B /* CollectionViewLayoutCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLayoutCustom.swift; sourceTree = "<group>"; };
+		1A5FC40A202A11E0004B0F3B /* CollectionViewSoldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSoldCell.swift; sourceTree = "<group>"; };
+		1A5FC40C202A1430004B0F3B /* collectionVIewSellLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionVIewSellLayout.swift; sourceTree = "<group>"; };
 		1A6C23D31F68EDFE00F0FCAF /* FloorsheetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorsheetService.swift; sourceTree = "<group>"; };
 		1A6C23D91F69283E00F0FCAF /* LiveTradingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTradingService.swift; sourceTree = "<group>"; };
 		1A6C23DB1F69286F00F0FCAF /* LiveTrading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTrading.swift; sourceTree = "<group>"; };
@@ -284,6 +316,8 @@
 				1A019F801FF9F4E900958803 /* ApiSerivceInfo.swift */,
 				1A5BDE57201D0D1B004A2C33 /* CollectionViewLayout.swift */,
 				1AAA790020223CDB00B24E1E /* CollectionLayout4.swift */,
+				1A5FC4082029EF81004B0F3B /* CollectionViewLayoutCustom.swift */,
+				1A5FC40C202A1430004B0F3B /* collectionVIewSellLayout.swift */,
 			);
 			path = BaseClasses;
 			sourceTree = "<group>";
@@ -378,6 +412,9 @@
 				1AF43499201B4677007A9147 /* Floorsheet.swift */,
 				1A947580201F12F8002072F0 /* CompanyProfile.swift */,
 				1AAA78FE2022223E00B24E1E /* CompanyDividend.swift */,
+				1A5FC3F720297038004B0F3B /* IssueTypeData.swift */,
+				1A5FC3FB202993C4004B0F3B /* BuySellPortfolio.swift */,
+				1A5FC4022029C7CD004B0F3B /* BoughtSoldShares.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -459,6 +496,41 @@
 			path = Indices;
 			sourceTree = "<group>";
 		};
+		1A5FC3E620277F65004B0F3B /* Company */ = {
+			isa = PBXGroup;
+			children = (
+				1A5FC3E720277F74004B0F3B /* CompanyPortfolioViewController.swift */,
+				1A5FC3E92027817C004B0F3B /* CompanyPortfolioCell.swift */,
+			);
+			path = Company;
+			sourceTree = "<group>";
+		};
+		1A5FC3EB20278248004B0F3B /* IndexChart */ = {
+			isa = PBXGroup;
+			children = (
+				1A5FC3EE202782C4004B0F3B /* IndexChartViewController.swift */,
+			);
+			path = IndexChart;
+			sourceTree = "<group>";
+		};
+		1A5FC3ED2027827E004B0F3B /* IssueType */ = {
+			isa = PBXGroup;
+			children = (
+				1A5FC3F320286CF1004B0F3B /* IssueTypeViewController.swift */,
+			);
+			path = IssueType;
+			sourceTree = "<group>";
+		};
+		1A5FC3FD2029A04C004B0F3B /* PortfolioMain */ = {
+			isa = PBXGroup;
+			children = (
+				1A5FC3FE2029A05B004B0F3B /* PortfolioMainViewController.swift */,
+				1A5FC3F92029784E004B0F3B /* PortfolioSellViewController.swift */,
+				1A5FC4002029A0FB004B0F3B /* PortfolioBuyViewController.swift */,
+			);
+			path = PortfolioMain;
+			sourceTree = "<group>";
+		};
 		1A6C23D21F68EDEC00F0FCAF /* ApiServices */ = {
 			isa = PBXGroup;
 			children = (
@@ -469,6 +541,7 @@
 				1A2D8AAD2015B994008E0356 /* PortfolioService.swift */,
 				1A94757E201F0F37002072F0 /* CompanyService.swift */,
 				1AAA78FA20220F5500B24E1E /* CompanyDividendService.swift */,
+				1A5FC3F520296688004B0F3B /* IssueTypeService.swift */,
 			);
 			path = ApiServices;
 			sourceTree = "<group>";
@@ -609,8 +682,15 @@
 		244AFBD01F7205F50049B2EF /* Portfolio */ = {
 			isa = PBXGroup;
 			children = (
+				1A5FC3FD2029A04C004B0F3B /* PortfolioMain */,
+				1A5FC3ED2027827E004B0F3B /* IssueType */,
+				1A5FC3EB20278248004B0F3B /* IndexChart */,
+				1A5FC3E620277F65004B0F3B /* Company */,
 				244AFBD11F7206420049B2EF /* Portfolio.storyboard */,
+				1A5FC40A202A11E0004B0F3B /* CollectionViewSoldCell.swift */,
 				244AFBD71F7206B80049B2EF /* PortfolioViewController.swift */,
+				1A5FC3E420277E29004B0F3B /* PortfolioHeaderChartViewController.swift */,
+				1A5FC4062029CD0B004B0F3B /* PortfolioBuySellCell.swift */,
 			);
 			path = Portfolio;
 			sourceTree = "<group>";
@@ -961,6 +1041,7 @@
 				1A25B6911F605020004C5451 /* DashboardViewController.swift in Sources */,
 				1A25B6951F605020004C5451 /* RegisterViewController.swift in Sources */,
 				1A29A7291F697DBD00AAF1A4 /* Dashboard.swift in Sources */,
+				1A5FC4012029A0FB004B0F3B /* PortfolioBuyViewController.swift in Sources */,
 				1A250E181F624D4300BDCE62 /* FloorsheetCell.swift in Sources */,
 				1AE1D2E2201997AD004D1F38 /* Indices.swift in Sources */,
 				1AAA78FF2022223E00B24E1E /* CompanyDividend.swift in Sources */,
@@ -969,10 +1050,14 @@
 				1A6C23DA1F69283E00F0FCAF /* LiveTradingService.swift in Sources */,
 				1AF43495201B1DD1007A9147 /* LossCell.swift in Sources */,
 				1AB44F571F643D76002F578A /* CustomCell.swift in Sources */,
+				1A5FC3EF202782C4004B0F3B /* IndexChartViewController.swift in Sources */,
 				AF5AFC901F5C519400414214 /* Nepse.xcdatamodeld in Sources */,
+				1A5FC3F420286CF1004B0F3B /* IssueTypeViewController.swift in Sources */,
 				241EC8FE1F64514900343316 /* WishlistViewController.swift in Sources */,
+				1A5FC3E820277F74004B0F3B /* CompanyPortfolioViewController.swift in Sources */,
 				1A5BDE58201D0D1B004A2C33 /* CollectionViewLayout.swift in Sources */,
 				1ABC11C41F8877920050F6DF /* TrunOverCell.swift in Sources */,
+				1A5FC40B202A11E0004B0F3B /* CollectionViewSoldCell.swift in Sources */,
 				1AB44F581F643D76002F578A /* ViewController.swift in Sources */,
 				1AEF8091201EED9F00D93B30 /* CompanyProfileViewController.swift in Sources */,
 				1A8927B31F949291006B07BE /* SubIndexCell.swift in Sources */,
@@ -986,14 +1071,18 @@
 				1A2D8AB02015B9CA008E0356 /* Portfolio.swift in Sources */,
 				1A2FA8E72012FD1300F9FC46 /* PersistenceType.swift in Sources */,
 				1AE1D2E42019C290004D1F38 /* Index.swift in Sources */,
+				1A5FC4072029CD0B004B0F3B /* PortfolioBuySellCell.swift in Sources */,
 				1A94757F201F0F37002072F0 /* CompanyService.swift in Sources */,
 				1AEF8093201EEF0200D93B30 /* BasicInfoViewController.swift in Sources */,
+				1A5FC3F620296688004B0F3B /* IssueTypeService.swift in Sources */,
 				1A25B6701F5FBCF5004C5451 /* Wireframe.swift in Sources */,
 				1AE1D2EE201AF682004D1F38 /* IndexList.swift in Sources */,
 				1A8404AE1F922B55006F2A81 /* MarketSummary.swift in Sources */,
+				1A5FC4092029EF81004B0F3B /* CollectionViewLayoutCustom.swift in Sources */,
 				1AE1D2E72019E809004D1F38 /* IndexViewController.swift in Sources */,
 				1A947581201F12F8002072F0 /* CompanyProfile.swift in Sources */,
 				1A8927AF1F949158006B07BE /* SubIndexSummary.swift in Sources */,
+				1A5FC3FF2029A05B004B0F3B /* PortfolioMainViewController.swift in Sources */,
 				1A947583201FAA49002072F0 /* CompanyHistoryViewController.swift in Sources */,
 				1AE3DFB62011F67F00926111 /* RegisterModel.swift in Sources */,
 				1A3458261F93BDD500D26410 /* IndexSummary.swift in Sources */,
@@ -1006,10 +1095,14 @@
 				1AF43498201B263A007A9147 /* CompanyViewController.swift in Sources */,
 				1A250E2B1F62A04A00BDCE62 /* RecieveCell.swift in Sources */,
 				1AE3DFB22011EC9700926111 /* AuthModel.swift in Sources */,
+				1A5FC3FA2029784E004B0F3B /* PortfolioSellViewController.swift in Sources */,
 				1AE3DFB42011ECAE00926111 /* User.swift in Sources */,
 				1AAA79062022407F00B24E1E /* CompanyNewsViewController.swift in Sources */,
+				1A5FC3F820297038004B0F3B /* IssueTypeData.swift in Sources */,
 				1A25B6971F605020004C5451 /* SideMenuViewController.swift in Sources */,
 				241EC9021F6457B100343316 /* WishListCell.swift in Sources */,
+				1A5FC4032029C7CD004B0F3B /* BoughtSoldShares.swift in Sources */,
+				1A5FC3E520277E29004B0F3B /* PortfolioHeaderChartViewController.swift in Sources */,
 				1A250E221F62925700BDCE62 /* LiveTradingViewController.swift in Sources */,
 				AF5AFC881F5C519400414214 /* AppDelegate.swift in Sources */,
 				1AAA790B2022DD8F00B24E1E /* ProfileViewController.swift in Sources */,
@@ -1017,10 +1110,13 @@
 				1A019F811FF9F4E900958803 /* ApiSerivceInfo.swift in Sources */,
 				1A6C23D41F68EDFE00F0FCAF /* FloorsheetService.swift in Sources */,
 				1A1E5E881F6991B6001FDB0E /* DashboardService.swift in Sources */,
+				1A5FC3EA2027817C004B0F3B /* CompanyPortfolioCell.swift in Sources */,
 				244AFBD81F7206B80049B2EF /* PortfolioViewController.swift in Sources */,
 				1A947590201FB26E002072F0 /* CompanyFloorsheetCell.swift in Sources */,
 				1A250E1B1F628B6700BDCE62 /* ColorExtension.swift in Sources */,
+				1A5FC3FC202993C4004B0F3B /* BuySellPortfolio.swift in Sources */,
 				1AAA790120223CDB00B24E1E /* CollectionLayout4.swift in Sources */,
+				1A5FC40D202A1430004B0F3B /* collectionVIewSellLayout.swift in Sources */,
 				1AF4348F201B1DB4007A9147 /* ShareTradedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

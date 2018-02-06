@@ -49,6 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func entryPoint() {
         if isAuthenticated() {
+            Auth.shared.validateLogin()
             self.setupSideMenu()
         }else{
             status = .notLogged

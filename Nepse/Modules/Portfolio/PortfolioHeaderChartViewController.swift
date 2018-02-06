@@ -1,21 +1,22 @@
 //
-//  ChartViewControllerViewController.swift
+//  PortfolioHeaderChartViewController.swift
 //  Nepse
 //
-//  Created by Lizan Pradhanang on 1/25/18.
+//  Created by Lizan Pradhanang on 2/4/18.
 //  Copyright © 2018 Swiftech. All rights reserved.
 //
 
 import UIKit
 import XLPagerTabStrip
 
-class ChartViewControllerViewController: ButtonBarPagerTabStripViewController {
+class PortfolioHeaderChartViewController: ButtonBarPagerTabStripViewController {
+    
 
- 
+    @IBOutlet weak var barButtonView: ButtonBarView!
+    
     struct Constants {
         static let barColor = UIColor.init(hex: "#2D6687")
     }
-    
     override func viewDidLoad() {
         setupBar()
         super.viewDidLoad()
@@ -28,7 +29,7 @@ class ChartViewControllerViewController: ButtonBarPagerTabStripViewController {
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        return [Wireframe.shared.getIndexView(), Wireframe.shared.getSubIndexView(), Wireframe.shared.getCompanyView()]
+        return [Wireframe.shared.getCompanyPortfolio(), Wireframe.shared.getProtfolioaIndex(), Wireframe.shared.getProtfolioIssueType()]
     }
     
     private func setupBar() {
@@ -38,6 +39,7 @@ class ChartViewControllerViewController: ButtonBarPagerTabStripViewController {
         settings.style.buttonBarItemFont = .boldSystemFont(ofSize: 15)
         settings.style.selectedBarHeight = 3.0
         settings.style.buttonBarMinimumLineSpacing = 0
+
         settings.style.buttonBarItemTitleColor = .white
         settings.style.buttonBarItemsShouldFillAvailiableWidth = true
         settings.style.buttonBarHeight = 60

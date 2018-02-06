@@ -48,7 +48,7 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func buyBtnTapped(_ sender: Any) {
-        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
             if self.defaultType != .buy{
                 self.buyUnderline.center.x = self.buyUnderline.bounds.width - (self.buttonView.bounds.width/4)
                 self.defaultType = .buy

@@ -6,10 +6,9 @@
 //
 import UIKit
 
-class CollectionLayout4: UICollectionViewLayout {
+class CollectionViewLayoutCustom: UICollectionViewLayout {
     
-    
-    var numberOfColumns = 4
+    var numberOfColumns = 5
     var shouldPinFirstColumn = true
     var shouldPinFirstRow = true
     
@@ -82,7 +81,7 @@ class CollectionLayout4: UICollectionViewLayout {
 }
 
 // MARK: - Helpers
-extension CollectionLayout4 {
+extension CollectionViewLayoutCustom {
     
     func generateItemAttributes(collectionView: UICollectionView) {
         if itemsSize.count != numberOfColumns {
