@@ -69,6 +69,7 @@ class PortfolioViewController: UIViewController {
     @IBAction func viewSoldShares(_ sender: Any) {
         self.soldCollectionView?.isHidden = false
         self.collectionView.isHidden = true
+        self.soldCollectionheight.constant = CGFloat((self.soldShares.count + 1) * 40)
         self.soldCollectionView?.reloadData()
     }
 }
@@ -198,7 +199,7 @@ extension PortfolioViewController: UICollectionViewDataSource {
     }
 }
 
-extension UIButton {
+extension UIView {
     
     func slightlyCurved() {
         self.layer.cornerRadius = 5

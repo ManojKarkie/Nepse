@@ -37,6 +37,8 @@ class SideMenuViewController: UITableViewController {
             Wireframe.shared.openPortfolio()
         case 5:
             Wireframe.shared.openWatchList()
+        case 6:
+            Wireframe.shared.openAlerts()
         case 7:
             Wireframe.shared.openIndices()
         case 8:

@@ -135,6 +135,7 @@ extension Auth : RealmPersistenceType{
             try? realm.write {
                 realm.delete(authModel)
             }
+            status = .notLogged
             appdelegate?.window?.rootViewController = UINavigationController(rootViewController: Wireframe.shared.getMain())
         }
     }

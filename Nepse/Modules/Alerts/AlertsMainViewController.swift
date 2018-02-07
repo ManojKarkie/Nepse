@@ -1,23 +1,25 @@
 //
-//  ChartViewControllerViewController.swift
+//  AlertsMainViewController.swift
 //  Nepse
 //
-//  Created by Lizan Pradhanang on 1/25/18.
+//  Created by Lizan Pradhanang on 2/7/18.
 //  Copyright © 2018 Swiftech. All rights reserved.
 //
 
 import UIKit
 import XLPagerTabStrip
 
-class ChartViewControllerViewController: ButtonBarPagerTabStripViewController {
+class AlertsMainViewController: ButtonBarPagerTabStripViewController {
 
- 
+     @IBOutlet weak var barButtonView: ButtonBarView!
+    
     struct Constants {
         static let barColor = UIColor.init(hex: "#2D6687")
     }
     
     override func viewDidLoad() {
         setupBar()
+        self.title = "Alerts"
         super.viewDidLoad()
         changeCurrentIndexProgressive = {(oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat,
             changeCurrentIndex: Bool, animated: Bool) -> Void in
@@ -25,11 +27,13 @@ class ChartViewControllerViewController: ButtonBarPagerTabStripViewController {
             oldCell?.label.textColor = .white
             newCell?.label.textColor = .white
         }
+        if status != .notLogged {
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ios7-keypad"), style: .plain, target: self, action: #selector(self.showSideMenu))
+        }
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        return status == .loggedIn ? [Wireframe.shared.getCompanyPortfolio(), Wireframe.shared.getProtfolioaIndex(), Wireframe.shared.getProtfolioIssueType()] :
-            [Wireframe.shared.getIndexView(), Wireframe.shared.getSubIndexView(), Wireframe.shared.getCompanyView()]
+        return [Wireframe.shared.getAlerts(), Wireframe.shared.getAlertsNews()]
     }
     
     private func setupBar() {
@@ -45,4 +49,5 @@ class ChartViewControllerViewController: ButtonBarPagerTabStripViewController {
         settings.style.buttonBarLeftContentInset = 0
         settings.style.buttonBarRightContentInset = 0
     }
+
 }

@@ -73,6 +73,16 @@
 		1A6C23D41F68EDFE00F0FCAF /* FloorsheetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23D31F68EDFE00F0FCAF /* FloorsheetService.swift */; };
 		1A6C23DA1F69283E00F0FCAF /* LiveTradingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23D91F69283E00F0FCAF /* LiveTradingService.swift */; };
 		1A6C23DC1F69286F00F0FCAF /* LiveTrading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C23DB1F69286F00F0FCAF /* LiveTrading.swift */; };
+		1A71E6F3202AD66800EFFF4A /* WatchListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E6F2202AD66800EFFF4A /* WatchListService.swift */; };
+		1A71E6F6202AF35D00EFFF4A /* Alerts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A71E6F5202AF35D00EFFF4A /* Alerts.storyboard */; };
+		1A71E6F8202AF4A000EFFF4A /* AlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E6F7202AF4A000EFFF4A /* AlertsViewController.swift */; };
+		1A71E6FA202AF4B000EFFF4A /* AlertsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E6F9202AF4B000EFFF4A /* AlertsCell.swift */; };
+		1A71E6FC202AF60D00EFFF4A /* AlertsMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E6FB202AF60D00EFFF4A /* AlertsMainViewController.swift */; };
+		1A71E6FE202AF89F00EFFF4A /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E6FD202AF89F00EFFF4A /* AlertService.swift */; };
+		1A71E700202B055B00EFFF4A /* AlertCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E6FF202B055B00EFFF4A /* AlertCode.swift */; };
+		1A71E702202B100D00EFFF4A /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E701202B100D00EFFF4A /* Alert.swift */; };
+		1A71E704202B159400EFFF4A /* AlertNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E703202B159400EFFF4A /* AlertNotificationViewController.swift */; };
+		1A71E706202B496A00EFFF4A /* WatchListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E705202B496A00EFFF4A /* WatchListData.swift */; };
 		1A8404AE1F922B55006F2A81 /* MarketSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8404AD1F922B55006F2A81 /* MarketSummary.swift */; };
 		1A8927AF1F949158006B07BE /* SubIndexSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8927AE1F949158006B07BE /* SubIndexSummary.swift */; };
 		1A8927B31F949291006B07BE /* SubIndexCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8927B21F949291006B07BE /* SubIndexCell.swift */; };
@@ -222,6 +232,16 @@
 		1A6C23D31F68EDFE00F0FCAF /* FloorsheetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorsheetService.swift; sourceTree = "<group>"; };
 		1A6C23D91F69283E00F0FCAF /* LiveTradingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTradingService.swift; sourceTree = "<group>"; };
 		1A6C23DB1F69286F00F0FCAF /* LiveTrading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTrading.swift; sourceTree = "<group>"; };
+		1A71E6F2202AD66800EFFF4A /* WatchListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListService.swift; sourceTree = "<group>"; };
+		1A71E6F5202AF35D00EFFF4A /* Alerts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alerts.storyboard; sourceTree = "<group>"; };
+		1A71E6F7202AF4A000EFFF4A /* AlertsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsViewController.swift; sourceTree = "<group>"; };
+		1A71E6F9202AF4B000EFFF4A /* AlertsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsCell.swift; sourceTree = "<group>"; };
+		1A71E6FB202AF60D00EFFF4A /* AlertsMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsMainViewController.swift; sourceTree = "<group>"; };
+		1A71E6FD202AF89F00EFFF4A /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		1A71E6FF202B055B00EFFF4A /* AlertCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCode.swift; sourceTree = "<group>"; };
+		1A71E701202B100D00EFFF4A /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		1A71E703202B159400EFFF4A /* AlertNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNotificationViewController.swift; sourceTree = "<group>"; };
+		1A71E705202B496A00EFFF4A /* WatchListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListData.swift; sourceTree = "<group>"; };
 		1A8404AD1F922B55006F2A81 /* MarketSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketSummary.swift; sourceTree = "<group>"; };
 		1A8927AE1F949158006B07BE /* SubIndexSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubIndexSummary.swift; sourceTree = "<group>"; };
 		1A8927B21F949291006B07BE /* SubIndexCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubIndexCell.swift; sourceTree = "<group>"; };
@@ -415,6 +435,9 @@
 				1A5FC3F720297038004B0F3B /* IssueTypeData.swift */,
 				1A5FC3FB202993C4004B0F3B /* BuySellPortfolio.swift */,
 				1A5FC4022029C7CD004B0F3B /* BoughtSoldShares.swift */,
+				1A71E6FF202B055B00EFFF4A /* AlertCode.swift */,
+				1A71E701202B100D00EFFF4A /* Alert.swift */,
+				1A71E705202B496A00EFFF4A /* WatchListData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -422,6 +445,7 @@
 		1A25B6811F605020004C5451 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				1A71E6F4202AF34E00EFFF4A /* Alerts */,
 				1AAA79072022DD6800B24E1E /* Profile */,
 				1AEF808D201EED7200D93B30 /* CompanyProfile */,
 				1A4521491F921B5F006240A9 /* Indices */,
@@ -542,8 +566,22 @@
 				1A94757E201F0F37002072F0 /* CompanyService.swift */,
 				1AAA78FA20220F5500B24E1E /* CompanyDividendService.swift */,
 				1A5FC3F520296688004B0F3B /* IssueTypeService.swift */,
+				1A71E6F2202AD66800EFFF4A /* WatchListService.swift */,
+				1A71E6FD202AF89F00EFFF4A /* AlertService.swift */,
 			);
 			path = ApiServices;
+			sourceTree = "<group>";
+		};
+		1A71E6F4202AF34E00EFFF4A /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				1A71E6F5202AF35D00EFFF4A /* Alerts.storyboard */,
+				1A71E6F7202AF4A000EFFF4A /* AlertsViewController.swift */,
+				1A71E6F9202AF4B000EFFF4A /* AlertsCell.swift */,
+				1A71E6FB202AF60D00EFFF4A /* AlertsMainViewController.swift */,
+				1A71E703202B159400EFFF4A /* AlertNotificationViewController.swift */,
+			);
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 		1A947584201FAF73002072F0 /* BriefInfo */ = {
@@ -865,6 +903,7 @@
 				1A25B6921F605020004C5451 /* Login.storyboard in Resources */,
 				1A250E2E1F62BED300BDCE62 /* Calculator.storyboard in Resources */,
 				AF5AFC951F5C519400414214 /* LaunchScreen.storyboard in Resources */,
+				1A71E6F6202AF35D00EFFF4A /* Alerts.storyboard in Resources */,
 				1A2B6AEE1F7117B4005AA1CD /* PayPalSansBig-Light.ttf in Resources */,
 				1A94758C201FB022002072F0 /* CompanyFloorSheet.storyboard in Resources */,
 				241EC8FA1F64510000343316 /* WishList.storyboard in Resources */,
@@ -1025,6 +1064,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A71E700202B055B00EFFF4A /* AlertCode.swift in Sources */,
 				1A5BDE56201D0343004A2C33 /* LiveTradingColCell.swift in Sources */,
 				1A2D8AAE2015B994008E0356 /* PortfolioService.swift in Sources */,
 				1A250E161F624D3100BDCE62 /* FloorsheetViewController.swift in Sources */,
@@ -1102,13 +1142,20 @@
 				1A25B6971F605020004C5451 /* SideMenuViewController.swift in Sources */,
 				241EC9021F6457B100343316 /* WishListCell.swift in Sources */,
 				1A5FC4032029C7CD004B0F3B /* BoughtSoldShares.swift in Sources */,
+				1A71E702202B100D00EFFF4A /* Alert.swift in Sources */,
 				1A5FC3E520277E29004B0F3B /* PortfolioHeaderChartViewController.swift in Sources */,
 				1A250E221F62925700BDCE62 /* LiveTradingViewController.swift in Sources */,
+				1A71E6FC202AF60D00EFFF4A /* AlertsMainViewController.swift in Sources */,
 				AF5AFC881F5C519400414214 /* AppDelegate.swift in Sources */,
 				1AAA790B2022DD8F00B24E1E /* ProfileViewController.swift in Sources */,
 				1A6C23DC1F69286F00F0FCAF /* LiveTrading.swift in Sources */,
+				1A71E6F8202AF4A000EFFF4A /* AlertsViewController.swift in Sources */,
 				1A019F811FF9F4E900958803 /* ApiSerivceInfo.swift in Sources */,
+				1A71E6F3202AD66800EFFF4A /* WatchListService.swift in Sources */,
+				1A71E6FE202AF89F00EFFF4A /* AlertService.swift in Sources */,
 				1A6C23D41F68EDFE00F0FCAF /* FloorsheetService.swift in Sources */,
+				1A71E6FA202AF4B000EFFF4A /* AlertsCell.swift in Sources */,
+				1A71E704202B159400EFFF4A /* AlertNotificationViewController.swift in Sources */,
 				1A1E5E881F6991B6001FDB0E /* DashboardService.swift in Sources */,
 				1A5FC3EA2027817C004B0F3B /* CompanyPortfolioCell.swift in Sources */,
 				244AFBD81F7206B80049B2EF /* PortfolioViewController.swift in Sources */,
@@ -1116,6 +1163,7 @@
 				1A250E1B1F628B6700BDCE62 /* ColorExtension.swift in Sources */,
 				1A5FC3FC202993C4004B0F3B /* BuySellPortfolio.swift in Sources */,
 				1AAA790120223CDB00B24E1E /* CollectionLayout4.swift in Sources */,
+				1A71E706202B496A00EFFF4A /* WatchListData.swift in Sources */,
 				1A5FC40D202A1430004B0F3B /* collectionVIewSellLayout.swift in Sources */,
 				1AF4348F201B1DB4007A9147 /* ShareTradedCell.swift in Sources */,
 			);

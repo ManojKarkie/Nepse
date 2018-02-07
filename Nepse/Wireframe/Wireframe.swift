@@ -42,6 +42,7 @@ struct StoryboardNames {
     static let companyDividend = "CompanyDividend"
     static let companyNews = "CompanyNews"
     static let profile = "Profile"
+    static let alerts = "Alerts"
 }
 
 class Wireframe {
@@ -155,6 +156,18 @@ class Wireframe {
     func getProtfolioSell() -> PortfolioSellViewController {
         return UIStoryboard(name: StoryboardNames.portfolio , bundle: nil).instantiateViewController(withIdentifier: "PortfolioSellViewController") as! PortfolioSellViewController
     }
+    
+    func getAlertsMain() -> AlertsMainViewController {
+        return UIStoryboard(name: StoryboardNames.alerts , bundle: nil).instantiateViewController(withIdentifier: "AlertsMainViewController") as! AlertsMainViewController
+    }
+    
+    func getAlerts() -> AlertsViewController {
+        return UIStoryboard(name: StoryboardNames.alerts , bundle: nil).instantiateViewController(withIdentifier: "AlertsViewController") as! AlertsViewController
+    }
+    
+    func getAlertsNews() -> AlertNotificationViewController {
+        return UIStoryboard(name: StoryboardNames.alerts , bundle: nil).instantiateViewController(withIdentifier: "AlertNotificationViewController") as! AlertNotificationViewController
+    }
 }
 
 extension Wireframe: SideMenu {
@@ -206,6 +219,11 @@ extension Wireframe: SideMenu {
     func openPortfolio() {
         let sideMenu = UIApplication.shared.keyWindow?.rootViewController?.sideMenuController?.rootViewController as? UINavigationController
         sideMenu?.viewControllers = [getProtfolio()]
+    }
+    
+    func openAlerts() {
+        let sideMenu = UIApplication.shared.keyWindow?.rootViewController?.sideMenuController?.rootViewController as? UINavigationController
+        sideMenu?.viewControllers = [getAlertsMain()]
     }
     
     func openLogin() {

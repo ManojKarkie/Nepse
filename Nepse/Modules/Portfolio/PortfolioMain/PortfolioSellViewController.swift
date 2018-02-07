@@ -66,6 +66,7 @@ class PortfolioSellViewController: UIViewController , IndicatorInfoProvider{
     
     @IBAction func addAction(_ sender: Any) {
         let model = BuySellPortfolio()
+        model.cstmCode = UserModel.shared.code
         model.prflCode = stockSymbolField.text
         model.rate = sellRateField.text
         model.units = stockVolumeField.text
