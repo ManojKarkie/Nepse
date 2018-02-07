@@ -472,11 +472,23 @@
                                 <state key="normal" title="ADD">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addAction:" destination="pla-0R-gGA" eventType="touchUpInside" id="A0c-2s-2sT"/>
+                                </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9IB-D6-j9c">
+                                <rect key="frame" x="10" y="33" width="1" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="ucS-20-mRQ"/>
+                                    <constraint firstAttribute="width" constant="1" id="zDt-da-OCb"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="YHT-ar-wX8" firstAttribute="leading" secondItem="GFr-0C-ysq" secondAttribute="leading" constant="10" id="2He-1F-AIs"/>
+                            <constraint firstItem="9IB-D6-j9c" firstAttribute="leading" secondItem="vyQ-oW-JhD" secondAttribute="leading" id="2gI-hg-TsN"/>
                             <constraint firstItem="aZr-sK-7z5" firstAttribute="width" secondItem="JmM-Wb-CWu" secondAttribute="width" id="5QE-sM-LJp"/>
                             <constraint firstItem="s6I-8d-1HG" firstAttribute="top" secondItem="vyQ-oW-JhD" secondAttribute="bottom" constant="10" id="7SM-o6-ai5"/>
                             <constraint firstItem="aZr-sK-7z5" firstAttribute="leading" secondItem="JmM-Wb-CWu" secondAttribute="trailing" constant="20" id="KJ6-Lc-MlX"/>
@@ -487,6 +499,7 @@
                             <constraint firstItem="s6I-8d-1HG" firstAttribute="leading" secondItem="YHT-ar-wX8" secondAttribute="leading" id="bhY-T7-fy9"/>
                             <constraint firstItem="cio-eE-uiq" firstAttribute="centerX" secondItem="1aB-VV-0BV" secondAttribute="centerX" id="e8E-zm-qQv"/>
                             <constraint firstItem="vyQ-oW-JhD" firstAttribute="top" secondItem="YHT-ar-wX8" secondAttribute="bottom" constant="5" id="eZV-sB-eHb"/>
+                            <constraint firstItem="vyQ-oW-JhD" firstAttribute="top" secondItem="9IB-D6-j9c" secondAttribute="bottom" id="lVt-IN-AW9"/>
                             <constraint firstItem="vyQ-oW-JhD" firstAttribute="width" secondItem="JmM-Wb-CWu" secondAttribute="width" id="lu4-Xh-55l"/>
                             <constraint firstItem="YHT-ar-wX8" firstAttribute="top" secondItem="GFr-0C-ysq" secondAttribute="top" constant="8" id="miH-pE-UNx"/>
                             <constraint firstItem="9Tb-WT-EKx" firstAttribute="centerY" secondItem="s6I-8d-1HG" secondAttribute="centerY" id="noW-Hu-zWE"/>
@@ -498,10 +511,17 @@
                         <viewLayoutGuide key="safeArea" id="GFr-0C-ysq"/>
                     </view>
                     <size key="freeformSize" width="345" height="220"/>
+                    <connections>
+                        <outlet property="addBtn" destination="cio-eE-uiq" id="7rd-ag-qPz"/>
+                        <outlet property="anchorView" destination="9IB-D6-j9c" id="yye-0o-we1"/>
+                        <outlet property="sellRateField" destination="JmM-Wb-CWu" id="cnr-bo-rCO"/>
+                        <outlet property="stockSymbolField" destination="vyQ-oW-JhD" id="xUM-zX-HAX"/>
+                        <outlet property="stockVolumeField" destination="aZr-sK-7z5" id="VGn-0l-Kzy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qS0-M3-f0B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3466" y="-834"/>
+            <point key="canvasLocation" x="3465.9420289855075" y="-834.78260869565224"/>
         </scene>
         <!--Portfolio Header Chart View Controller-->
         <scene sceneID="fdK-Ky-VKr">

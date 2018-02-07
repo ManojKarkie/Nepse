@@ -33,6 +33,16 @@ class IssueTypeService : ApiServiceType {
         }
     }
     
+    func sellPortfolio(model: BuySellPortfolio, success: @escaping (String) -> (), failure: @escaping (Error) -> ()) {
+        let url = self.baseUrl + "api/v1/cstm-prfl-prtf-sell"
+        let param = ["CSTM_CODE": model.cstmCode ?? "", "SELL_UNITS": model.units ?? "", "SELL_RATE": model.rate ?? "", "PRFL_CODE": model.prflCode ?? ""]
+        self.apiManager.request(url: url, parameters: param, headers: ["Authorization" : "Bearer " + (AuthNormalModel.shared.token ?? "")], method: .post, encoding: JSONEncoding.default, success: { (response) in
+            success(response["message"] as! String)
+        }) { (error) in
+            failure(error)
+        }
+    }
+    
     func fetchBoughtSoldShares(success: @escaping (BoughtSoldShares) -> (), failure: @escaping (Error) -> ()) {
         let url = self.baseUrl + "api/v1/bought-sold-share"
         self.apiManager.request(url: url, parameters: ["CSTM_CODE": UserModel.shared.code ?? ""], headers: ["Authorization": "Bearer" + (AuthNormalModel.shared.token ?? "")], method: .get, encoding: URLEncoding.default, success: { (response) in
