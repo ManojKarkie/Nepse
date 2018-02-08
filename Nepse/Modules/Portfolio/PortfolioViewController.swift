@@ -11,12 +11,13 @@ import LGSideMenuController
 import DropDown
 
 class PortfolioViewController: UIViewController {
-
+    @IBOutlet weak var buyBtn: UIButton!
+    
+    @IBOutlet weak var sellBtn: UIButton!
+    @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var soldCollectionheight: NSLayoutConstraint!
     
     @IBOutlet weak var collectionHeight: NSLayoutConstraint!
-    @IBOutlet weak var viewSellBtn: UIButton!
-    @IBOutlet weak var viewBuyBtn: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var buyView: UIView!
@@ -27,7 +28,7 @@ class PortfolioViewController: UIViewController {
     fileprivate var soldShares = [SoldShares]()
     fileprivate var boughtShareHeader = ["BUY_DT", "ISSU_TYPE", "PRFL_CODE", "BUY_UNITS", "BUY_RATE"]
     fileprivate var soldShareHeader = ["SELL_DT", "PRFL_CODE", "SELL_UNITS", "SELL_RATE"]
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
@@ -45,6 +46,7 @@ class PortfolioViewController: UIViewController {
         collectionView.dataSource = self
         self.soldCollectionView.dataSource = self
         self.soldCollectionView.isHidden = true
+        self.bottomView.center.x = self.buyBtn.center.x
     }
     
     private func fetchBuySell() {
@@ -55,21 +57,30 @@ class PortfolioViewController: UIViewController {
             if let soldData = sharesData.soldShares {
                 self.soldShares = soldData
             }
-            self.collectionHeight.constant = CGFloat(self.boughtShares.count * 40)
+            self.collectionHeight.constant = CGFloat(30 + (self.boughtShares.count * 30))
             self.collectionView.reloadData()
         }) { (error) in
             self.showError(error: error.localizedDescription, completion: nil)
         }
     }
+    
     @IBAction func viewBoughtShares(_ sender: Any) {
+        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
+            self.bottomView.frame.origin.x = self.buyBtn.center.x - (self.bottomView.bounds.width/2)
+        }){ _ in
+        }
         self.soldCollectionView?.isHidden = true
         self.collectionView.isHidden = false
         self.collectionView.reloadData()
     }
     @IBAction func viewSoldShares(_ sender: Any) {
+        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
+             self.bottomView.frame.origin.x = (self.buyBtn.bounds.width/2) + self.buyBtn.center.x
+        }){ _ in
+        }
         self.soldCollectionView?.isHidden = false
         self.collectionView.isHidden = true
-        self.soldCollectionheight.constant = CGFloat((self.soldShares.count + 1) * 40)
+        self.soldCollectionheight.constant = CGFloat(30 + (self.soldShares.count) * 30)
         self.soldCollectionView?.reloadData()
     }
 }

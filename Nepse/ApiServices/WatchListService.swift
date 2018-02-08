@@ -31,4 +31,13 @@ class WatchListService: ApiServiceType {
             failure(error)
         }
     }
+    
+    func deleteWatchList(_ prflCode: String, success: @escaping (String) -> (), failure: @escaping (Error) -> ()) {
+        let url = self.baseUrl + "api/v1/delete/watch-list"
+        self.apiManager.request(url: url, parameters: ["PRFL_CODE" : prflCode], headers: ["Authorization": "Bearer" + (AuthNormalModel.shared.token ?? "")], method: .get, encoding: URLEncoding.default, success: { (response) in
+            success(response["message"] as! String)
+        }) { (error) in
+            failure(error)
+        }
+    }
 }

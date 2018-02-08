@@ -37,7 +37,12 @@ class IssueTypeService : ApiServiceType {
         let url = self.baseUrl + "api/v1/cstm-prfl-prtf-sell"
         let param = ["CSTM_CODE": model.cstmCode ?? "", "SELL_UNITS": model.units ?? "", "SELL_RATE": model.rate ?? "", "PRFL_CODE": model.prflCode ?? ""]
         self.apiManager.request(url: url, parameters: param, headers: ["Authorization" : "Bearer " + (AuthNormalModel.shared.token ?? "")], method: .post, encoding: JSONEncoding.default, success: { (response) in
+            if let error = response["CSTM_CODE"] {
+                let errorData = NSError(domain: "CSTM_CODE", code: 400, userInfo: [NSLocalizedDescriptionKey : error as! String])
+                failure(errorData)
+            }else{
             success(response["message"] as! String)
+            }
         }) { (error) in
             failure(error)
         }

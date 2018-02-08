@@ -42,7 +42,9 @@ class WishlistViewController: UIViewController {
         if status != .notLogged {
             self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ios7-keypad"), style: .plain, target: self, action: #selector(self.showSideMenu))
         }
+        sideMenuController?.swipeGestureArea = .borders
         self.tableView.dataSource = self
+        self.tableView.delegate = self
         fetchCompanies()
         setupField()
         setupDropDown()
@@ -120,6 +122,17 @@ extension WishlistViewController: UITableViewDataSource {
 
 extension WishlistViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let cell = tableView.cellForRow(at: indexPath) as! WishListCell
+            service.deleteWatchList(cell.model?.prflCode ?? "", success: { (success) in
+                self.showSuccess(message: success)
+                self.fetchData()
+            }, failure: { (error) in
+                self.showError(error: error.localizedDescription, completion: nil)
+            })
+        }
+    }
 }
 
 extension WishlistViewController: UITextFieldDelegate {
