@@ -26,7 +26,7 @@ class Alert: Mappable {
     
     var prflCode: String?
     var alrtCode: String?
-    var cstmCode: String?
+    var cstmCode: Int?
     
     required init?(map: Map) {
         

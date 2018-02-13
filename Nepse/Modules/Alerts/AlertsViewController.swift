@@ -99,6 +99,8 @@ class AlertsViewController: UIViewController, IndicatorInfoProvider {
     private func setup() {
         self.addBtn.slightlyCurved()
         self.tableView.dataSource = self
+        self.tableView.delegate = self
+        sideMenuController?.swipeGestureArea = .borders
     }
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
@@ -134,12 +136,29 @@ extension AlertsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = getCell()
         cell.data = (getAlert(alert: alertList[indexPath.row]).descr ?? "") + " Of " + (alertList[indexPath.row].prflCode ?? "")
+        cell.alert = alertList[indexPath.row]
         cell.setup()
         return cell
     }
     
     private func getCell() -> AlertsCell {
         return self.tableView.dequeueReusableCell(withIdentifier: "AlertsCell") as! AlertsCell
+    }
+}
+
+extension AlertsViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let cell = tableView.cellForRow(at: indexPath) as! AlertsCell
+            if let data = cell.alert {
+                service.deleteAlerts(UserModel.shared.code ?? "", data.prflCode ?? "", data.alrtCode ?? "", success: { (response) in
+                    
+                }, failure: { (error) in
+                    
+                })
+            }
+        }
     }
 }
 

@@ -95,6 +95,7 @@ class PortfolioBuyViewController: UIViewController , IndicatorInfoProvider{
         model.rate = buyRateField.text
         service.buyPortfolio(model: model, success: { (response) in
             self.showSuccess(message: response)
+            NotificationCenter.default.post(name: NotificationName().updateBuys, object: nil)
         }) { (error) in
             self.showError(error: error.localizedDescription, completion: nil)
         }

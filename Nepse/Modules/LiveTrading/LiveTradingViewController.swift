@@ -13,6 +13,7 @@ class LiveTradingViewController: UIViewController {
  
     @IBOutlet weak var tradingSwitch: UISwitch!
 
+
     @IBOutlet weak var collectionView: UICollectionView!
 
     
@@ -22,19 +23,26 @@ class LiveTradingViewController: UIViewController {
     var originalData = [LiveTradingData]()
     var headers = [String]()
     let service = LiveTradingService()
+    fileprivate var watchListArray = [WatchList]()
     
     enum Diff {
         case percent
         case value
     }
     
-    var currentDff: Diff = .percent
+    enum CurrentData {
+        case liveTrading
+        case watchList
+    }
     
+    var currentData: CurrentData = .liveTrading
+    var currentDff: Diff = .percent
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         fetchData()
+        fetchWatchList()
     }
     
     func setup(){
@@ -42,14 +50,15 @@ class LiveTradingViewController: UIViewController {
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         self.collectionView.isDirectionalLockEnabled = true
-        tradingSwitch.onTintColor = UIColor.white
-        tradingSwitch.thumbTintColor = UIColor(hex: "#2D6687")
+        tradingSwitch.onTintColor = UIColor(hex: "#2D6687")
+        tradingSwitch.thumbTintColor = UIColor.white
         if status != .notLogged {
             self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ios7-keypad"), style: .plain, target: self, action: #selector(self.showSideMenu))
             sideMenuController?.swipeGestureArea = .full
         }
         searchBuyerTextfield.delegate = self
         searchBuyerTextfield.addTarget(self, action: #selector(UITextFieldDelegate.textFieldShouldEndEditing(_:)), for: UIControlEvents.editingChanged)
+        self.tradingSwitch.addTarget(self, action: #selector(switchTable(_:)), for: .valueChanged)
     }
     
     override func didReceiveMemoryWarning() {
@@ -70,6 +79,24 @@ class LiveTradingViewController: UIViewController {
             self.collectionView.reloadData()
         })
     }
+    
+    @objc private func switchTable(_ sender: UISwitch) {
+    if sender.isOn {
+        currentData = .watchList
+        self.collectionView.reloadData()
+    }else {
+        currentData = .liveTrading
+        self.collectionView.reloadData()
+    }
+    }
+    
+    private func fetchWatchList() {
+        WatchListService().fetchWatchList(UserModel.shared.code ?? "") { (data) in
+            if let array = data.data {
+                self.watchListArray = array
+            }
+        }
+    }
 
 }
 
@@ -78,7 +105,12 @@ class LiveTradingViewController: UIViewController {
 extension LiveTradingViewController: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return self.tradingData.count
+        switch currentData {
+        case .liveTrading:
+            return self.tradingData.count
+        case .watchList:
+            return self.watchListArray.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -140,34 +172,63 @@ extension LiveTradingViewController: UICollectionViewDataSource {
                 break
             }
         } else {
+            
             cell.contentLabel.font = UIFont.systemFont(ofSize: 14, weight: .light)
             
-            switch indexPath.row {
-            case 0:
-                cell.contentLabel.underline(text: self.tradingData[indexPath.section].prflCode )
-            case 1:
-                cell.contentLabel.text = self.tradingData[indexPath.section].close
-            case 2:
-                cell.contentLabel.text = self.tradingData[indexPath.section].open
-            case 3:
-                cell.contentLabel.text = self.tradingData[indexPath.section].high
-            case 4:
-                cell.contentLabel.text = self.tradingData[indexPath.section].low
-            case 5:
-                cell.contentLabel.text = "\(self.tradingData[indexPath.section].volume )"
-            case 6:
-                cell.contentLabel.text = self.tradingData[indexPath.section].turnover
-            case 7:
-                cell.contentLabel.text = currentDff == .percent ? self.tradingData[indexPath.section].diffP : self.tradingData[indexPath.section].diffVal
-                
-            default:
-                break
+            switch currentData {
+            case .liveTrading:
+                switch indexPath.row {
+                case 0:
+                    cell.contentLabel.underline(text: self.tradingData[indexPath.section].prflCode )
+                case 1:
+                    cell.contentLabel.text = self.tradingData[indexPath.section].close
+                case 2:
+                    cell.contentLabel.text = self.tradingData[indexPath.section].open
+                case 3:
+                    cell.contentLabel.text = self.tradingData[indexPath.section].high
+                case 4:
+                    cell.contentLabel.text = self.tradingData[indexPath.section].low
+                case 5:
+                    cell.contentLabel.text = "\(self.tradingData[indexPath.section].volume )"
+                case 6:
+                    cell.contentLabel.text = self.tradingData[indexPath.section].turnover
+                case 7:
+                    cell.contentLabel.text = currentDff == .percent ? self.tradingData[indexPath.section].diffP : self.tradingData[indexPath.section].diffVal
+                    
+                default:
+                    break
+                }
+            case .watchList:
+                switch indexPath.row {
+                case 0:
+                    cell.contentLabel.underline(text: self.watchListArray[indexPath.section].prflCode ?? "" )
+                case 1:
+                    cell.contentLabel.text = self.watchListArray[indexPath.section].liveTrading?.close
+                case 2:
+                    cell.contentLabel.text = self.watchListArray[indexPath.section].liveTrading?.open
+                case 3:
+                    cell.contentLabel.text = self.watchListArray[indexPath.section].liveTrading?.high
+                case 4:
+                    cell.contentLabel.text = self.watchListArray[indexPath.section].liveTrading?.low
+                case 5:
+                    cell.contentLabel.text = "\(self.watchListArray[indexPath.section].liveTrading?.volume ?? 0 )"
+                case 6:
+                    cell.contentLabel.text = self.watchListArray[indexPath.section].liveTrading?.turnover
+                case 7:
+                    cell.contentLabel.text = currentDff == .percent ? self.watchListArray[indexPath.section].liveTrading?.diffP : self.watchListArray[indexPath.section].liveTrading?.diffVal
+                    
+                default:
+                    break
+                }
             }
+            
+            
         }
         
         return cell
     }
 }
+
 
 extension LiveTradingViewController: UICollectionViewDelegate {
     

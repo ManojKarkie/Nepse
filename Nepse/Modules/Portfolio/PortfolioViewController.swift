@@ -10,6 +10,11 @@ import UIKit
 import LGSideMenuController
 import DropDown
 
+struct NotificationName {
+    let updateSales = NSNotification.Name(rawValue: "UPDATE_SELLS")
+    let updateBuys = NSNotification.Name(rawValue: "UPDATE_BUYS")
+}
+
 class PortfolioViewController: UIViewController {
     @IBOutlet weak var buyBtn: UIButton!
     
@@ -47,6 +52,19 @@ class PortfolioViewController: UIViewController {
         self.soldCollectionView.dataSource = self
         self.soldCollectionView.isHidden = true
         self.bottomView.center.x = self.buyBtn.center.x
+        NotificationCenter.default.addObserver(self, selector: #selector(buyUpdated), name: NotificationName().updateBuys, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(sellUpdated), name: NotificationName().updateSales, object: nil)
+    }
+    
+    @objc private func buyUpdated() {
+        viewBoughtShares(self)
+        fetchBuySell()
+        
+    }
+    
+    @objc private func sellUpdated() {
+        viewSoldShares(self)
+        fetchBuySell()
     }
     
     private func fetchBuySell() {

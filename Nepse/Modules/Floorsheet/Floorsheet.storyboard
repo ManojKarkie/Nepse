@@ -24,27 +24,20 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cCV-EK-v2H">
                                 <rect key="frame" x="0.0" y="20" width="414" height="50"/>
                                 <subviews>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sKx-U6-W3F">
-                                        <rect key="frame" x="355" y="10" width="51" height="31"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="31" id="Kjo-Rx-sTn"/>
-                                            <constraint firstAttribute="width" constant="49" id="sYL-9w-B1j"/>
-                                        </constraints>
-                                    </switch>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Buyer" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rmf-0E-2kK">
-                                        <rect key="frame" x="15" y="10.333333333333332" width="93.666666666666671" height="29.999999999999996"/>
+                                        <rect key="frame" x="15" y="10.333333333333332" width="115" height="29.999999999999996"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Symbol" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qw4-mh-Xpr">
-                                        <rect key="frame" x="241.66666666666666" y="10.333333333333332" width="93.333333333333343" height="29.999999999999996"/>
+                                        <rect key="frame" x="284.33333333333331" y="10.333333333333332" width="114.66666666666669" height="29.999999999999996"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seller" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7sH-DM-1di">
-                                        <rect key="frame" x="128.66666666666666" y="10.333333333333332" width="93" height="29.999999999999996"/>
+                                        <rect key="frame" x="150" y="10.333333333333332" width="114.33333333333331" height="29.999999999999996"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -53,12 +46,10 @@
                                 <color key="backgroundColor" red="0.1770810783" green="0.40184986589999999" blue="0.53094953300000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0Pv-yr-H1f"/>
-                                    <constraint firstItem="sKx-U6-W3F" firstAttribute="leading" secondItem="qw4-mh-Xpr" secondAttribute="trailing" constant="20" id="2RM-1x-qMh"/>
-                                    <constraint firstItem="sKx-U6-W3F" firstAttribute="centerY" secondItem="cCV-EK-v2H" secondAttribute="centerY" id="5Io-cT-751"/>
                                     <constraint firstItem="qw4-mh-Xpr" firstAttribute="leading" secondItem="7sH-DM-1di" secondAttribute="trailing" constant="20" id="8zV-30-KWb"/>
-                                    <constraint firstAttribute="trailing" secondItem="sKx-U6-W3F" secondAttribute="trailing" constant="10" id="FK4-7u-a4l"/>
                                     <constraint firstItem="7sH-DM-1di" firstAttribute="width" secondItem="qw4-mh-Xpr" secondAttribute="width" id="QJD-xe-DQK"/>
                                     <constraint firstItem="7sH-DM-1di" firstAttribute="leading" secondItem="Rmf-0E-2kK" secondAttribute="trailing" constant="20" id="RNw-vq-M8s"/>
+                                    <constraint firstAttribute="trailing" secondItem="qw4-mh-Xpr" secondAttribute="trailing" constant="15" id="YSN-O9-hyL"/>
                                     <constraint firstItem="Rmf-0E-2kK" firstAttribute="width" secondItem="7sH-DM-1di" secondAttribute="width" id="fwP-Td-oKK"/>
                                     <constraint firstItem="Rmf-0E-2kK" firstAttribute="leading" secondItem="cCV-EK-v2H" secondAttribute="leading" constant="15" id="kgL-YD-IeF"/>
                                     <constraint firstItem="Rmf-0E-2kK" firstAttribute="centerY" secondItem="cCV-EK-v2H" secondAttribute="centerY" id="tSx-FO-rnA"/>

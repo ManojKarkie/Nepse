@@ -14,7 +14,7 @@ class AlertsCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     
     var data: String?
-    
+    var alert: Alert?
     func setup() {
         descriptionView.slightlyCurved()
         self.descriptionLabel.text = data

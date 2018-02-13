@@ -43,4 +43,14 @@ class AlertService: ApiServiceType {
             }
         }
     }
+    
+    func deleteAlerts(_ code: String, _ prflCode: String, _ alertCode: String, success: @escaping (String) -> (), failure: @escaping (Error) -> ()) {
+        let url = self.baseUrl + "/api/v1/alrt-delete"
+        let param = ["CSTM_CODE": code, "PRFL_CODE": prflCode, "ALRT_CODE": alertCode]
+        self.apiManager.request(url: url, parameters: param, headers: ["Authorization": "Bearer" + (AuthNormalModel.shared.token ?? "")], method: .get, encoding: URLEncoding.default, success: { (response) in
+            print(response)
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+    }
 }

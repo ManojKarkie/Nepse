@@ -21,6 +21,7 @@ class PortfolioSellViewController: UIViewController , IndicatorInfoProvider{
     private var companyList = [Company]()
     private var dropDownList = [String]()
     private lazy var dropdown = DropDown()
+    fileprivate var filtered = [Company]()
     private var selectedCompany = Company()
     private var service = IssueTypeService()
     
@@ -55,7 +56,7 @@ class PortfolioSellViewController: UIViewController , IndicatorInfoProvider{
         dropdown.direction = .top
         dropdown.width = self.stockSymbolField.frame.width + 50
         dropdown.selectionAction = { (index,item) in
-           self.selectedCompany = self.companyList[index]
+           self.selectedCompany = self.filtered[index]
             self.stockSymbolField.text = self.selectedCompany.symbol
         }
     }
@@ -72,6 +73,7 @@ class PortfolioSellViewController: UIViewController , IndicatorInfoProvider{
         model.units = stockVolumeField.text
         service.sellPortfolio(model: model, success: { (success) in
             self.showSuccess(message: success)
+            NotificationCenter.default.post(name: NotificationName().updateSales, object: nil)
         }) { (error) in
             self.showError(error: error.localizedDescription, completion: nil)
         }
@@ -85,8 +87,13 @@ extension PortfolioSellViewController: UITextFieldDelegate {
                 dropdown.hide()
             }else{
                 let predicate = NSPredicate(format: "SELF CONTAINS [c] %@", textField.text!)
-                let filteredArray = (self.dropDownList as NSArray).filtered(using: predicate)
-                self.dropdown.dataSource = filteredArray as! [String]
+                let filteredArray = (self.dropDownList as NSArray).filtered(using: predicate) as! [String]
+                self.dropdown.dataSource = filteredArray
+                self.filtered = self.companyList.filter({ (model) -> Bool in
+                    return filteredArray.contains(where: { (data) -> Bool in
+                        return data == model.name
+                    })
+                })
                 dropdown.show()
             }
         return true
