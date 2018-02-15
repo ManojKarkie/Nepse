@@ -35,6 +35,8 @@
 		1A25B6961F605020004C5451 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A25B68D1F605020004C5451 /* SideMenu.storyboard */; };
 		1A25B6971F605020004C5451 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A25B68E1F605020004C5451 /* SideMenuViewController.swift */; };
 		1A29A7291F697DBD00AAF1A4 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A29A7281F697DBD00AAF1A4 /* Dashboard.swift */; };
+		1A2AD4FB2035A36400304662 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A2AD4FA2035A36400304662 /* UserProfile.storyboard */; };
+		1A2AD4FD2035A37700304662 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2AD4FC2035A37700304662 /* UserProfileViewController.swift */; };
 		1A2B6AE61F70E34E005AA1CD /* SellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B6AE51F70E34E005AA1CD /* SellViewController.swift */; };
 		1A2B6AEC1F7117AB005AA1CD /* PayPalSansSmall-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A25B6651F5F0EB8004C5451 /* PayPalSansSmall-Bold.ttf */; };
 		1A2B6AED1F7117B2005AA1CD /* PayPalSansBig-Regular_0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A25B6641F5F0EB8004C5451 /* PayPalSansBig-Regular_0.ttf */; };
@@ -199,6 +201,8 @@
 		1A25B68D1F605020004C5451 /* SideMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
 		1A25B68E1F605020004C5451 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		1A29A7281F697DBD00AAF1A4 /* Dashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		1A2AD4FA2035A36400304662 /* UserProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
+		1A2AD4FC2035A37700304662 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		1A2B6AE51F70E34E005AA1CD /* SellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellViewController.swift; sourceTree = "<group>"; };
 		1A2D8AAD2015B994008E0356 /* PortfolioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioService.swift; sourceTree = "<group>"; };
 		1A2D8AAF2015B9CA008E0356 /* Portfolio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Portfolio.swift; sourceTree = "<group>"; };
@@ -448,6 +452,7 @@
 		1A25B6811F605020004C5451 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				1A2AD4F92035A34800304662 /* UserProfile */,
 				1A71E6F4202AF34E00EFFF4A /* Alerts */,
 				1AAA79072022DD6800B24E1E /* Profile */,
 				1AEF808D201EED7200D93B30 /* CompanyProfile */,
@@ -509,6 +514,15 @@
 				1A25B68E1F605020004C5451 /* SideMenuViewController.swift */,
 			);
 			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		1A2AD4F92035A34800304662 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				1A2AD4FA2035A36400304662 /* UserProfile.storyboard */,
+				1A2AD4FC2035A37700304662 /* UserProfileViewController.swift */,
+			);
+			path = UserProfile;
 			sourceTree = "<group>";
 		};
 		1A4521491F921B5F006240A9 /* Indices */ = {
@@ -919,6 +933,7 @@
 				1A947589201FAFAD002072F0 /* CompanyHistory.storyboard in Resources */,
 				1AAA79092022DD7600B24E1E /* Profile.storyboard in Resources */,
 				1A25B6691F5F152A004C5451 /* (null) in Resources */,
+				1A2AD4FB2035A36400304662 /* UserProfile.storyboard in Resources */,
 				1A2B6AEF1F7117B6005AA1CD /* PayPalSansSmall-Regular.ttf in Resources */,
 				1A25B6941F605020004C5451 /* Register.storyboard in Resources */,
 				1A947586201FAF86002072F0 /* BriefInfo.storyboard in Resources */,
@@ -1140,6 +1155,7 @@
 				1A250E2B1F62A04A00BDCE62 /* RecieveCell.swift in Sources */,
 				1AE3DFB22011EC9700926111 /* AuthModel.swift in Sources */,
 				1A5FC3FA2029784E004B0F3B /* PortfolioSellViewController.swift in Sources */,
+				1A2AD4FD2035A37700304662 /* UserProfileViewController.swift in Sources */,
 				1AE3DFB42011ECAE00926111 /* User.swift in Sources */,
 				1AAA79062022407F00B24E1E /* CompanyNewsViewController.swift in Sources */,
 				1A5FC3F820297038004B0F3B /* IssueTypeData.swift in Sources */,

@@ -15,6 +15,7 @@ target 'Nepse' do
   pod 'XLPagerTabStrip', '~> 8.0'
   pod 'IQKeyboardManagerSwift'
   pod 'DropDown'
+  pod 'Material'
   target 'NepseTests' do
     inherit! :search_paths
     # Pods for testing
