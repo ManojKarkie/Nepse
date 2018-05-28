@@ -43,6 +43,7 @@ struct StoryboardNames {
     static let companyNews = "CompanyNews"
     static let profile = "Profile"
     static let alerts = "Alerts"
+    static let userProfile = "UserProfile"
 }
 
 class Wireframe {
@@ -168,6 +169,11 @@ class Wireframe {
     func getAlertsNews() -> AlertNotificationViewController {
         return UIStoryboard(name: StoryboardNames.alerts , bundle: nil).instantiateViewController(withIdentifier: "AlertNotificationViewController") as! AlertNotificationViewController
     }
+    
+    func getUserProfile() -> UserProfileViewController {
+        return UIStoryboard(name: StoryboardNames.userProfile , bundle: nil).instantiateViewController(withIdentifier: "UserProfileViewController") as! UserProfileViewController
+    }
+
 }
 
 extension Wireframe: SideMenu {
@@ -224,6 +230,11 @@ extension Wireframe: SideMenu {
     func openAlerts() {
         let sideMenu = UIApplication.shared.keyWindow?.rootViewController?.sideMenuController?.rootViewController as? UINavigationController
         sideMenu?.viewControllers = [getAlertsMain()]
+    }
+    
+    func openUserProfile() {
+        let sideMenu = UIApplication.shared.keyWindow?.rootViewController?.sideMenuController?.rootViewController as? UINavigationController
+        sideMenu?.viewControllers = [getUserProfile()]
     }
     
     func openLogin() {

@@ -15,16 +15,17 @@ class PortfolioHeaderChartViewController: ButtonBarPagerTabStripViewController {
     @IBOutlet weak var barButtonView: ButtonBarView!
     
     struct Constants {
-        static let barColor = UIColor.init(hex: "#2D6687")
+        static let barColor = UIColor.white
     }
+    
     override func viewDidLoad() {
         setupBar()
         super.viewDidLoad()
         changeCurrentIndexProgressive = {(oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat,
             changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }
-            oldCell?.label.textColor = .white
-            newCell?.label.textColor = .white
+            oldCell?.label.textColor = UIColor.init(hex: "#0077B5")
+            newCell?.label.textColor = UIColor.init(hex: "#0077B5")
         }
     }
     
@@ -35,12 +36,11 @@ class PortfolioHeaderChartViewController: ButtonBarPagerTabStripViewController {
     private func setupBar() {
         settings.style.buttonBarBackgroundColor = Constants.barColor
         settings.style.buttonBarItemBackgroundColor = Constants.barColor
-        settings.style.selectedBarBackgroundColor = UIColor.init(hex: "#90EAD7")
+        settings.style.selectedBarBackgroundColor = UIColor.init(hex: "#0077B5")
         settings.style.buttonBarItemFont = .boldSystemFont(ofSize: 15)
         settings.style.selectedBarHeight = 3.0
         settings.style.buttonBarMinimumLineSpacing = 0
-
-        settings.style.buttonBarItemTitleColor = .white
+        settings.style.buttonBarItemTitleColor = UIColor.init(hex: "#0077B5")
         settings.style.buttonBarItemsShouldFillAvailiableWidth = true
         settings.style.buttonBarHeight = 60
         settings.style.buttonBarLeftContentInset = 0

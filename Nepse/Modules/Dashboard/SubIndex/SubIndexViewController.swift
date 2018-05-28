@@ -41,7 +41,7 @@ class SubIndexViewController: UIViewController, IndicatorInfoProvider {
     }
 
     private func setup() {
-        self.contentView.getBorder()
+//        self.contentView.getBorder()
         self.monthBtn.setButton()
         self.month3Btn.setButton()
         self.month6Btn.setButton()
@@ -117,14 +117,19 @@ class SubIndexViewController: UIViewController, IndicatorInfoProvider {
                 chartEntries.append(chartData)
             }
             let chartDataSet = LineChartDataSet(values: chartEntries, label: self.codeListField.text ?? "")
-            chartDataSet.drawFilledEnabled = true
+//            chartDataSet.drawFilledEnabled = true
             chartDataSet.cubicIntensity = 5
             chartView.drawGridBackgroundEnabled = false
             
             chartDataSet.valueTextColor = NSUIColor.white
-            chartDataSet.drawCirclesEnabled = false
             chartDataSet.mode = .horizontalBezier
+            chartDataSet.setColor(NSUIColor.init(hex: "#FDBD2C"))
+            chartDataSet.circleRadius = 3
+            chartDataSet.circleHoleRadius = 0
+            chartDataSet.setCircleColor(NSUIColor.init(hex: "#FDBD2C"))
+            chartDataSet.drawCirclesEnabled = true
             let chartData = LineChartData(dataSet: chartDataSet)
+
             chartView.data = chartData
         }
     }

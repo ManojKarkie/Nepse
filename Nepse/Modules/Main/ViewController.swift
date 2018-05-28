@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     
-    var Images = [UIImage(named:"1"),UIImage(named:"2"),UIImage(named:"3"),UIImage(named:"4"),UIImage(named:"5"),UIImage(named:"6"),UIImage(named:"7"),UIImage(named:"8"),UIImage(named:"9")]
+    var Images = [#imageLiteral(resourceName: "Dashboard"),#imageLiteral(resourceName: "Floorsheet"), #imageLiteral(resourceName: "LiveTrading"),#imageLiteral(resourceName: "Portfolio"),#imageLiteral(resourceName: "watchlist"),#imageLiteral(resourceName: "CompanyProfile"),#imageLiteral(resourceName: "Indices"),#imageLiteral(resourceName: "Calculator"),#imageLiteral(resourceName: "support")]
     
     var naTitle = ["Dashboard","Floorsheet","Live Trading","Portfolio","Watchlist","Alerts","Indices","Calculator","Support"]
    

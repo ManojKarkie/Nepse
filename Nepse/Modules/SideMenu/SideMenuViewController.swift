@@ -43,6 +43,8 @@ class SideMenuViewController: UITableViewController {
             Wireframe.shared.openIndices()
         case 8:
             Wireframe.shared.openCalculator()
+        case 10:
+            Wireframe.shared.openUserProfile()
         default:
             break
         }
