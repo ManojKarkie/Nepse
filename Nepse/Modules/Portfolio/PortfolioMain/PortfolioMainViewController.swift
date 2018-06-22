@@ -8,8 +8,13 @@
 
 import UIKit
 import XLPagerTabStrip
-class PortfolioMainViewController: ButtonBarPagerTabStripViewController {
+class PortfolioMainViewController: ButtonBarPagerTabStripViewController, IndicatorInfoProvider {
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return IndicatorInfo(title: "Buy/Sell")
+    }
+    
 
+    @IBOutlet weak var shadowView: UIView!
     @IBOutlet weak var barButtonView: ButtonBarView!
     
     struct Constants {
@@ -18,11 +23,12 @@ class PortfolioMainViewController: ButtonBarPagerTabStripViewController {
     override func viewDidLoad() {
         setupBar()
         super.viewDidLoad()
+        self.shadowView.getStandardShadow()
         changeCurrentIndexProgressive = {(oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat,
             changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }
-            oldCell?.label.textColor = UIColor.white
-            newCell?.label.textColor = UIColor.white
+            oldCell?.label.textColor = Constants.barColor
+            newCell?.label.textColor = Constants.barColor
         }
     }
     
@@ -31,13 +37,13 @@ class PortfolioMainViewController: ButtonBarPagerTabStripViewController {
     }
     
     private func setupBar() {
-        settings.style.buttonBarBackgroundColor = Constants.barColor
-        settings.style.buttonBarItemBackgroundColor = Constants.barColor
-        settings.style.selectedBarBackgroundColor = UIColor.white
+        settings.style.buttonBarBackgroundColor = UIColor.init(hex: "#F5FDFF")
+        settings.style.buttonBarItemBackgroundColor = UIColor.init(hex: "#F5FDFF")
+        settings.style.selectedBarBackgroundColor = Constants.barColor
         settings.style.buttonBarItemFont = .boldSystemFont(ofSize: 15)
         settings.style.selectedBarHeight = 3.0
         settings.style.buttonBarMinimumLineSpacing = 0
-        settings.style.buttonBarItemTitleColor = UIColor.white
+        settings.style.buttonBarItemTitleColor = Constants.barColor
         settings.style.buttonBarItemsShouldFillAvailiableWidth = true
         settings.style.buttonBarHeight = 60
         settings.style.buttonBarLeftContentInset = 0

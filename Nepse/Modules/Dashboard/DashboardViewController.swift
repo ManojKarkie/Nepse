@@ -52,6 +52,10 @@ class DashboardViewController: UIViewController {
     
     private func setup() {
         self.title = "Dashboard"
+        lossTableView.getStandardShadow()
+        turnOverTableView.getStandardShadow()
+        gainTableView.getStandardShadow()
+        shareTradeTableView.getStandardShadow()
         let tableViews = [shareTradeTableView, turnOverTableView, gainTableView, lossTableView]
         tableViews.forEach({ (table) in
             self.setDataSource(tableView: table ?? UITableView())

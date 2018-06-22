@@ -10,6 +10,7 @@ import UIKit
 
 class FloorsheetViewController: UIViewController {
 
+    @IBOutlet weak var shadowView: UIView!
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet var header: UIView!
     @IBOutlet weak var searchSymbolTextField: UITextField!
@@ -31,7 +32,8 @@ class FloorsheetViewController: UIViewController {
     }
     
     func setup(){
-        self.title = "Flowsheet"
+        self.title = "Floorsheet"
+        self.shadowView.getStandardShadow()
         if status != .notLogged {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ios7-keypad"), style: .plain, target: self, action: #selector(self.showSideMenu))
         sideMenuController?.swipeGestureArea = .full
@@ -73,11 +75,11 @@ extension FloorsheetViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FloorsheetCell") as! FloorsheetCell
-        if indexPath.row % 2 != 0 {
-            cell.backgroundColor = UIColor(white: 242/255.0, alpha: 1.0)
-        } else {
+//        if indexPath.row % 2 != 0 {
+//            cell.backgroundColor = UIColor(white: 242/255.0, alpha: 1.0)
+//        } else {
             cell.backgroundColor = UIColor.white
-        }
+//        }
         cell.data = self.data[indexPath.row]
         cell.setup()
         if indexPath.row == (self.data.count - 1) && self.floorsheet.nextPageUrl != "" && cell.data?.rate == self.originaldata.last?.rate

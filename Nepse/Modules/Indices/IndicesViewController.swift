@@ -17,6 +17,7 @@ class IndicesViewController: UIViewController {
     }
     
     //Market SUmmary Data Outlets
+    @IBOutlet weak var marketShadowView: UIView!
     
     @IBOutlet weak var turnOverLabel: UILabel!
     @IBOutlet weak var tradedSharesLabel: UILabel!
@@ -58,8 +59,13 @@ class IndicesViewController: UIViewController {
     }
     
     private func setup() {
+        self.marketShadowView.getStandardShadow()
         self.title = "Indices"
         let tableViews = [shareTradeTableView, turnOverTableView, gainTableView, lossTableView]
+        self.shareTradeTableView.getStandardShadow()
+        self.lossTableView.getStandardShadow()
+        self.turnOverTableView.getStandardShadow()
+        self.gainTableView.getStandardShadow()
         tableViews.forEach({ (table) in
             self.setDataSource(tableView: table ?? UITableView())
         })

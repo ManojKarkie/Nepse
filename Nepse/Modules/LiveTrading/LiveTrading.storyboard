@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -52,8 +52,12 @@
                                     <constraint firstItem="iGM-Cv-3Px" firstAttribute="centerY" secondItem="TBB-ae-VUB" secondAttribute="centerY" id="odq-pH-6Il"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ohe-1G-kjr">
-                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kiQ-LG-5bJ">
+                                <rect key="frame" x="9.5" y="80" width="355" height="577"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ohe-1G-kjr">
+                                <rect key="frame" x="10" y="80" width="355" height="577"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewLayout key="collectionViewLayout" id="Gzg-85-O1b" customClass="CustomCollectionViewLayout" customModule="Nepse" customModuleProvider="target"/>
                                 <cells>
@@ -105,20 +109,25 @@
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.99215686270000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ohe-1G-kjr" firstAttribute="top" secondItem="TBB-ae-VUB" secondAttribute="bottom" id="0YS-u9-ERF"/>
+                            <constraint firstItem="ohe-1G-kjr" firstAttribute="top" secondItem="TBB-ae-VUB" secondAttribute="bottom" constant="10" id="0YS-u9-ERF"/>
                             <constraint firstItem="TBB-ae-VUB" firstAttribute="leading" secondItem="QaV-vJ-pBe" secondAttribute="leading" id="Jfr-f9-rmH"/>
                             <constraint firstAttribute="trailing" secondItem="TBB-ae-VUB" secondAttribute="trailing" id="Qmk-gS-4Gu"/>
-                            <constraint firstItem="MWm-YD-FeR" firstAttribute="top" secondItem="ohe-1G-kjr" secondAttribute="bottom" id="WVh-y5-sX5"/>
+                            <constraint firstItem="kiQ-LG-5bJ" firstAttribute="width" secondItem="ohe-1G-kjr" secondAttribute="width" id="Skz-dV-zOf"/>
+                            <constraint firstItem="kiQ-LG-5bJ" firstAttribute="centerX" secondItem="ohe-1G-kjr" secondAttribute="centerX" id="So5-wV-eY5"/>
+                            <constraint firstItem="MWm-YD-FeR" firstAttribute="top" secondItem="ohe-1G-kjr" secondAttribute="bottom" constant="10" id="WVh-y5-sX5"/>
                             <constraint firstItem="TBB-ae-VUB" firstAttribute="top" secondItem="4Ha-4o-HNL" secondAttribute="bottom" id="e3r-if-WE2"/>
-                            <constraint firstAttribute="trailing" secondItem="ohe-1G-kjr" secondAttribute="trailing" id="l8V-nS-u3h"/>
-                            <constraint firstItem="ohe-1G-kjr" firstAttribute="leading" secondItem="QaV-vJ-pBe" secondAttribute="leading" id="qld-KX-azM"/>
+                            <constraint firstItem="kiQ-LG-5bJ" firstAttribute="height" secondItem="ohe-1G-kjr" secondAttribute="height" id="l1f-Zh-ZMA"/>
+                            <constraint firstAttribute="trailing" secondItem="ohe-1G-kjr" secondAttribute="trailing" constant="10" id="l8V-nS-u3h"/>
+                            <constraint firstItem="kiQ-LG-5bJ" firstAttribute="centerY" secondItem="ohe-1G-kjr" secondAttribute="centerY" id="myo-Px-DqE"/>
+                            <constraint firstItem="ohe-1G-kjr" firstAttribute="leading" secondItem="QaV-vJ-pBe" secondAttribute="leading" constant="10" id="qld-KX-azM"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="ohe-1G-kjr" id="4G8-kR-DIs"/>
                         <outlet property="searchBuyerTextfield" destination="gvs-4r-NYr" id="SNe-Zd-tND"/>
+                        <outlet property="shadowView" destination="kiQ-LG-5bJ" id="FQW-p4-eif"/>
                         <outlet property="tradingSwitch" destination="iGM-Cv-3Px" id="oOk-sO-jR5"/>
                     </connections>
                 </viewController>

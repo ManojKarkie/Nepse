@@ -173,6 +173,10 @@ class Wireframe {
     func getUserProfile() -> UserProfileViewController {
         return UIStoryboard(name: StoryboardNames.userProfile , bundle: nil).instantiateViewController(withIdentifier: "UserProfileViewController") as! UserProfileViewController
     }
+    
+    func getPorfolioBuySellView() -> PortfolioMainViewController {
+        return UIStoryboard(name: StoryboardNames.portfolio , bundle: nil).instantiateViewController(withIdentifier: "PortfolioMainViewController") as! PortfolioMainViewController
+    }
 
 }
 

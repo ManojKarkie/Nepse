@@ -171,7 +171,7 @@ extension CollectionLayout4 {
         
         let size: CGSize = text.size(withAttributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14.0)])
         let width: CGFloat = size.width + 16
-        return CGSize(width: width, height: 30)
+        return CGSize(width: width, height: 40)
     }
     
 }

@@ -51,11 +51,11 @@ extension CompanyPortfolioViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.getCell()
-        if indexPath.row % 2 != 0 {
-            cell.backgroundColor = UIColor(white: 242/255.0, alpha: 1.0)
-        } else {
-            cell.backgroundColor = UIColor.white
-        }
+//        if indexPath.row % 2 != 0 {
+//            cell.backgroundColor = UIColor(white: 242/255.0, alpha: 1.0)
+//        } else {
+//            cell.backgroundColor = UIColor.white
+//        }
         cell.model = self.portfolioArray[indexPath.row]
         cell.setup()
         return cell

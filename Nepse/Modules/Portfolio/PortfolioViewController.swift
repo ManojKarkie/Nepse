@@ -24,6 +24,7 @@ class PortfolioViewController: UIViewController {
     
     @IBOutlet weak var collectionHeight: NSLayoutConstraint!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var sellSelectedBar: UIView!
     
     @IBOutlet weak var buyView: UIView!
     @IBOutlet weak var soldCollectionView: UICollectionView!
@@ -46,6 +47,7 @@ class PortfolioViewController: UIViewController {
 
     private func setUp(){
         self.title = "Portfolio"
+        self.sellSelectedBar.isHidden = true
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ios7-keypad"), style: .plain, target: self, action: #selector(self.showSideMenu))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(Auth.shared.logout))
         collectionView.dataSource = self
@@ -83,19 +85,15 @@ class PortfolioViewController: UIViewController {
     }
     
     @IBAction func viewBoughtShares(_ sender: Any) {
-        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
-            self.bottomView.frame.origin.x = self.buyBtn.center.x - (self.bottomView.bounds.width/2)
-        }){ _ in
-        }
+        self.bottomView.isHidden = false
+        self.sellSelectedBar.isHidden = true
         self.soldCollectionView?.isHidden = true
         self.collectionView.isHidden = false
         self.collectionView.reloadData()
     }
     @IBAction func viewSoldShares(_ sender: Any) {
-        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
-             self.bottomView.frame.origin.x = (self.buyBtn.bounds.width/2) + self.buyBtn.center.x
-        }){ _ in
-        }
+        self.sellSelectedBar.isHidden = false
+        self.bottomView.isHidden = true
         self.soldCollectionView?.isHidden = false
         self.collectionView.isHidden = true
         self.soldCollectionheight.constant = CGFloat(30 + (self.soldShares.count) * 30)
@@ -135,11 +133,11 @@ extension PortfolioViewController: UICollectionViewDataSource {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PortfolioBuySellCell",
                                                           for: indexPath) as! PortfolioBuySellCell
             
-            if indexPath.section % 2 != 0 {
-                cell.backgroundColor = UIColor(white: 242/255.0, alpha: 1.0)
-            } else {
+//            if indexPath.section % 2 != 0 {
+//                cell.backgroundColor = UIColor(white: 242/255.0, alpha: 1.0)
+//            } else {
                 cell.backgroundColor = UIColor.white
-            }
+//            }
             
             cell.column.isHidden = indexPath.row == 0 ? false : true
             cell.headerBar.isHidden = indexPath.section == 0 ? false : true
@@ -182,11 +180,11 @@ extension PortfolioViewController: UICollectionViewDataSource {
         case self.soldCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewSoldCell",
                                                           for: indexPath) as! CollectionViewSoldCell
-            if indexPath.section % 2 != 0 {
-                cell.backgroundColor = UIColor(white: 242/255.0, alpha: 1.0)
-            } else {
+//            if indexPath.section % 2 != 0 {
+//                cell.backgroundColor = UIColor(white: 242/255.0, alpha: 1.0)
+//            } else {
                 cell.backgroundColor = UIColor.white
-            }
+//            }
             cell.column.isHidden = indexPath.row == 0 ? false : true
             cell.headerBar.isHidden = indexPath.section == 0 ? false : true
             if indexPath.section == 0 {

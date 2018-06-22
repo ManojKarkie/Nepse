@@ -8,9 +8,19 @@
 
 import UIKit
 
+extension UIView {
+    func getStandardShadow() {
+        self.layer.shadowColor = UIColor.lightGray.cgColor
+        self.layer.shadowOpacity = 0.4
+        self.layer.shadowOffset  = CGSize(width: 0, height: 0)
+        self.layer.shadowRadius = 3
+    }
+}
+
 class LiveTradingViewController: UIViewController {
 
  
+    @IBOutlet weak var shadowView: UIView!
     @IBOutlet weak var tradingSwitch: UISwitch!
 
 
@@ -47,6 +57,7 @@ class LiveTradingViewController: UIViewController {
     
     func setup(){
         self.title = "Live Trading"
+        self.shadowView.getStandardShadow()
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         self.collectionView.isDirectionalLockEnabled = true
@@ -121,11 +132,11 @@ extension LiveTradingViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LiveTradingColCell",
                                                       for: indexPath) as! LiveTradingColCell
         
-        if indexPath.section % 2 != 0 {
-            cell.backgroundColor = UIColor(white: 242/255.0, alpha: 1.0)
-        } else {
+//        if indexPath.section % 2 != 0 {
+//            cell.backgroundColor = UIColor(white: 242/255.0, alpha: 1.0)
+//        } else {
             cell.backgroundColor = UIColor.white
-        }
+//        }
        
         cell.column.isHidden = indexPath.row == 0 ? false : true
         cell.headerBar.isHidden = indexPath.section == 0 ? false : true
@@ -180,6 +191,7 @@ extension LiveTradingViewController: UICollectionViewDataSource {
                 switch indexPath.row {
                 case 0:
                     cell.contentLabel.underline(text: self.tradingData[indexPath.section].prflCode )
+                    cell.contentLabel.textColor = UIColor(hex: "#0077B5")
                 case 1:
                     cell.contentLabel.text = self.tradingData[indexPath.section].close
                 case 2:
@@ -202,6 +214,7 @@ extension LiveTradingViewController: UICollectionViewDataSource {
                 switch indexPath.row {
                 case 0:
                     cell.contentLabel.underline(text: self.watchListArray[indexPath.section].prflCode ?? "" )
+                    cell.contentLabel.textColor = UIColor(hex: "#0077B5")
                 case 1:
                     cell.contentLabel.text = self.watchListArray[indexPath.section].liveTrading?.close
                 case 2:

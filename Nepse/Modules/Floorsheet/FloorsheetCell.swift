@@ -29,6 +29,7 @@ class FloorsheetCell: UITableViewCell {
         self.seller.text = data?.seller
         self.buyer.text = data?.buyer
         self.sym.underline(text: data?.prflCode ?? "")
+        
         self.rate.text = data?.rate
         
     }
